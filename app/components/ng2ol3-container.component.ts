@@ -16,9 +16,6 @@ export class Ng2ol3ContainerComponent {
 
   constructor() {
 
-
-
-
     this.view = new ol.View({
       center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
       // center: [19, 47],
@@ -34,5 +31,6 @@ export class Ng2ol3ContainerComponent {
       layers: this.layers,
       target: 'map'
     });
+
   }
 }
