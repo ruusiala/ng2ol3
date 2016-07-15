@@ -1,4 +1,4 @@
-/// <reference path="../definitely_typed/openlayers/openlayers.d.ts" />
+/// <reference path="../../definitely_typed/openlayers/openlayers.d.ts" />
 
 import {Component, Input, Output} from '@angular/core';
 
