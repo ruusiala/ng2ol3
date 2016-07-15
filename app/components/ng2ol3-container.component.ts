@@ -29,12 +29,13 @@ export class Ng2ol3ContainerComponent {
     }));
 
     this.map = new Ng2ol3Map({
+      target: 'map',
+      renderer: "webgl",
       view: this.view,
       layers: this.layers,
-      target: 'map'
     });
 
-    this.map.setTitle("This is a sample app created by ng2ol3.");
+    this.map.setTitle("This is a demo app created by ng2ol3.");
     console.log(this.map.getTitle());
 
   }

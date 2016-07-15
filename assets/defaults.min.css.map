@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "defaults.min.css",
+	"sources": [
+		"defaults.scss"
+	],
+	"mappings": "",
+	"names": []
+}
