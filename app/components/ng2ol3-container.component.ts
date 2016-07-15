@@ -2,6 +2,9 @@
 
 import {Component, Input, Output} from '@angular/core';
 
+import {Ng2ol3Map} from '../classes/ng2ol3map';
+import {Ng2ol3View} from '../classes/ng2ol3view';
+
 @Component({
   selector: 'ng2ol3-container',
   template: ``,
@@ -10,15 +13,14 @@ import {Component, Input, Output} from '@angular/core';
 
 export class Ng2ol3ContainerComponent {
 
-  map: ol.Map;
-  view: ol.View;
+  map: Ng2ol3Map;
+  view: Ng2ol3View;
   layers: any[] = [];
 
   constructor() {
 
-    this.view = new ol.View({
+    this.view = new Ng2ol3View({
       center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
-      // center: [19, 47],
       zoom: 7
     });
 
@@ -26,11 +28,14 @@ export class Ng2ol3ContainerComponent {
       source: new ol.source.OSM()
     }));
 
-    this.map = new ol.Map({
+    this.map = new Ng2ol3Map({
       view: this.view,
       layers: this.layers,
       target: 'map'
     });
+
+    this.map.setTitle("This is a sample app created by ng2ol3.");
+    console.log(this.map.getTitle());
 
   }
 }

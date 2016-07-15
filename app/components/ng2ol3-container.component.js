@@ -10,22 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const ng2ol3map_1 = require('../classes/ng2ol3map');
+const ng2ol3view_1 = require('../classes/ng2ol3view');
 let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
     constructor() {
         this.layers = [];
-        this.view = new ol.View({
+        this.view = new ng2ol3view_1.Ng2ol3View({
             center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
-            // center: [19, 47],
             zoom: 7
         });
         this.layers.push(new ol.layer.Tile({
             source: new ol.source.OSM()
         }));
-        this.map = new ol.Map({
+        this.map = new ng2ol3map_1.Ng2ol3Map({
             view: this.view,
             layers: this.layers,
             target: 'map'
         });
+        this.map.setTitle("This is a sample app created by ng2ol3.");
+        console.log(this.map.getTitle());
     }
 };
 Ng2ol3ContainerComponent = __decorate([
