@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-        "lite": "lite-server",
+        "lite": "lite-server -c ./bs-config.js",
         "postinstall": "typings install",
         "tsc": "tsc",
         "tsc:w": "tsc -w",
@@ -28,6 +28,7 @@
         "zone.js": "^0.6.12",
         "angular2-in-memory-web-api": "0.0.14",
         "bootstrap": "^3.3.6",
+        "connect-history-api-fallback": "^1.2.0",
         "openlayers": "^3.17.1",
         "proj4": "^2.3.14",
         "node-sass": "^3.8.0"

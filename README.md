@@ -1,5 +1,5 @@
 # ng2ol3
-> A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript & RxJS</i> for creating customizable, modern web apps
+> A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript & RxJS & SCSS</i> for creating customizable, modern web apps
 
 ## Usage
 First run ```npm install``` to download all dependencies ([node with npm](https://nodejs.org/en/) is required). Then simply run ```npm start``` to load the sample page.
