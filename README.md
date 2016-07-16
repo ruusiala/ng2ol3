@@ -1,4 +1,4 @@
-# <div style="vertical-align: middle;"><img src="etc/img/logo/apple-touch-icon-57x57.png"><span>ng2ol3</span></div>
+# ng2ol3
 > A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript, RxJS & SCSS</i> for creating customizable, modern web maps
 
 ## Usage
@@ -12,3 +12,5 @@ Have fun!
 
 ## Author
 ```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://www.gpadanyig.com)
+
+<img src="etc/img/logo/favicon-96x96.png">
