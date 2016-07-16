@@ -5,7 +5,7 @@
 First run ```npm install``` to download all dependencies ([Node.js with npm](https://nodejs.org/en/) is required). Then simply run ```npm start``` to load the sample page. For the project [Atom](https://atom.io/) editor is recommended with the following packages: <i><b>atom-typescript, sass-autocompile</b>, color-picker, emmet, file-icons, git-plus, keyboard-localization, minimap, pigments, project-manager</i>.
 
 ## Present & Future
-This is just a basic app at the moment. In the near future I intend to add customizable widgets such as layertree, featureinfo panel, printing etc.
+This is just a basic demo app at the moment. In the near future I intend to add customizable widgets such as layertree, featureinfo panel, printing etc.
 RxJS is not yet implemented.
 
 Have fun!

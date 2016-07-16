@@ -15,6 +15,8 @@ const ng2ol3view_1 = require('../classes/ng2ol3view');
 let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
     constructor() {
         this.layers = [];
+    }
+    ngOnInit() {
         this.view = new ng2ol3view_1.Ng2ol3View({
             center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
             zoom: 7
@@ -28,10 +30,18 @@ let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
             view: this.view,
             layers: this.layers,
         });
-        this.map.setTitle("This is a demo app created by ng2ol3.");
+        this.map.setTitle(this.title);
         console.log(this.map.getTitle());
     }
 };
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', String)
+], Ng2ol3ContainerComponent.prototype, "title", void 0);
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', Boolean)
+], Ng2ol3ContainerComponent.prototype, "createHeader", void 0);
 Ng2ol3ContainerComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-container',

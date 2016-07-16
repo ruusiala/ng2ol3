@@ -1,6 +1,6 @@
 /// <reference path="../../definitely_typed/openlayers/openlayers.d.ts" />
 
-import {Component, Input, Output} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 import {Ng2ol3Map} from '../classes/ng2ol3map';
 import {Ng2ol3View} from '../classes/ng2ol3view';
@@ -12,13 +12,14 @@ import {Ng2ol3View} from '../classes/ng2ol3view';
 })
 
 export class Ng2ol3ContainerComponent {
+  @Input() title: string;
+  @Input() createHeader: boolean;
 
   map: Ng2ol3Map;
   view: Ng2ol3View;
   layers: any[] = [];
 
-  constructor() {
-
+  ngOnInit() {
     this.view = new Ng2ol3View({
       center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
       zoom: 7
@@ -35,8 +36,9 @@ export class Ng2ol3ContainerComponent {
       layers: this.layers,
     });
 
-    this.map.setTitle("This is a demo app created by ng2ol3.");
+    this.map.setTitle(this.title);
     console.log(this.map.getTitle());
 
   }
+
 }
