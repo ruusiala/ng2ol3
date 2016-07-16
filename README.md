@@ -1,4 +1,4 @@
-# <img src="etc/img/logo/favicon-96x96.png"> ng2ol3
+# <img src="etc/img/logo/apple-touch-icon-57x57.png"> ng2ol3
 > A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript, RxJS & SCSS</i> for creating customizable, modern web maps
 
 ## Usage
