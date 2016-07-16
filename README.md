@@ -1,4 +1,4 @@
-# <img src="etc/img/logo/apple-touch-icon-57x57.png"> ng2ol3
+# <div style="vertical-align: middle;"><img src="etc/img/logo/apple-touch-icon-57x57.png"><span>ng2ol3</span></div>
 > A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript, RxJS & SCSS</i> for creating customizable, modern web maps
 
 ## Usage
