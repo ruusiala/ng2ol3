@@ -12,36 +12,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 const ng2ol3map_1 = require('../classes/ng2ol3map');
 const ng2ol3view_1 = require('../classes/ng2ol3view');
+const ng2ol3config_1 = require('../classes/ng2ol3config');
 let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
-    constructor() {
-        this.layers = [];
-    }
     ngOnInit() {
-        this.view = new ng2ol3view_1.Ng2ol3View({
-            center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
-            zoom: 7
-        });
-        this.layers.push(new ol.layer.Tile({
-            source: new ol.source.OSM()
-        }));
         this.map = new ng2ol3map_1.Ng2ol3Map({
-            target: 'map',
-            renderer: "webgl",
-            view: this.view,
-            layers: this.layers,
+            target: this.config.getAppMapDomId() || 'map',
+            renderer: this.config.getAppMapRenderer() || 'webgl',
+            view: this.config.getAppView() || new ng2ol3view_1.Ng2ol3View({
+                center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
+                zoom: 7
+            }),
+            layers: this.config.getAppLayers() || [new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                })],
         });
-        this.map.setTitle(this.title);
-        console.log(this.map.getTitle());
     }
 };
 __decorate([
     core_1.Input(), 
-    __metadata('design:type', String)
-], Ng2ol3ContainerComponent.prototype, "title", void 0);
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', Boolean)
-], Ng2ol3ContainerComponent.prototype, "createHeader", void 0);
+    __metadata('design:type', ng2ol3config_1.Ng2ol3Config)
+], Ng2ol3ContainerComponent.prototype, "config", void 0);
 Ng2ol3ContainerComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-container',
