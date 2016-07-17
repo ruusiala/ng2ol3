@@ -7,7 +7,7 @@ First run ```npm install``` and ```npm run typings install``` to download all de
 ## Present & Future
 This is just a basic demo app at the moment. In the near future I intend to add customizable widgets such as layertree, featureinfo panel, printing etc. RxJS is not yet implemented.
 
-I hope you will find this project useful!
+I hope you will find this project useful! 
 
 ## Author
 ```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://www.gpadanyig.com)
