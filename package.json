@@ -28,6 +28,7 @@
         "zone.js": "^0.6.12",
         "angular2-in-memory-web-api": "0.0.14",
         "bootstrap": "^3.3.6",
+        "ng2-bootstrap": "^1.0.23",
         "connect-history-api-fallback": "^1.2.0",
         "openlayers": "^3.17.1",
         "proj4": "^2.3.14",

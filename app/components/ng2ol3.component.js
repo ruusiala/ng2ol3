@@ -13,11 +13,12 @@ const core_1 = require('@angular/core');
 const ng2ol3_container_component_1 = require('./ng2ol3-container.component');
 const ng2ol3config_1 = require('../classes/ng2ol3config');
 const ng2ol3view_1 = require('../classes/ng2ol3view');
+const ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
 let Ng2ol3Component = class Ng2ol3Component {
     constructor() {
         this.myConfig = new ng2ol3config_1.Ng2ol3Config();
         // CONFIGURE THE APP, THIS IS ALL YOU HAVE TO DO
-        this.title = "This is my first ng2ol3 map!";
+        this.title = "This is my first <b>ng2ol3</b> map!";
         this.renderer = 'webgl';
         this.domId = 'map';
         this.view = new ng2ol3view_1.Ng2ol3View({
@@ -35,19 +36,19 @@ let Ng2ol3Component = class Ng2ol3Component {
         this.myConfig.setAppMapDomId(this.domId);
         this.myConfig.setAppView(this.view);
         this.myConfig.setAppLayers(this.layers);
-        console.info(this.myConfig.getAppTitle());
     }
 };
 Ng2ol3Component = __decorate([
     core_1.Component({
         selector: 'ng2ol3',
         template: `
-    <ng2ol3-container
-      [config]="myConfig">
-    </ng2ol3-container>
-  `,
+      <alert type="info"><span [innerHTML]="title"></span></alert>
+      <ng2ol3-container
+        [config]="myConfig">
+      </ng2ol3-container>
+    `,
         styleUrls: [''],
-        directives: [ng2ol3_container_component_1.Ng2ol3ContainerComponent]
+        directives: [ng2_bootstrap_1.AlertComponent, ng2ol3_container_component_1.Ng2ol3ContainerComponent]
     }), 
     __metadata('design:paramtypes', [])
 ], Ng2ol3Component);

@@ -1,11 +1,18 @@
 @import "./defaults";
 /* Master Styles */
-.map,
 body,
 html {
     margin: 0;
     width: $default-width;
     height: $default-height;
+}
+.alert {
+    margin-bottom: 0 !important;
+}
+.map {
+    height: -webkit-calc(#{$default-height} - #{$alert-height});
+    height: -moz-calc(#{$default-height} - #{$alert-height});
+    height: calc(#{$default-height} - #{$alert-height});
 }
 /* . . . */
 /* everywhere else */
