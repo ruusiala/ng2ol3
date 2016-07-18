@@ -10,7 +10,7 @@ import {Ng2ol3Config} from '../classes/ng2ol3config';
 @Component({
     selector: 'ng2ol3-container',
     template: ``,
-    styleUrls: ['']
+    styleUrls: ['dist/css/components/ng2ol3-container.component.css']
 })
 
 export class Ng2ol3ContainerComponent {

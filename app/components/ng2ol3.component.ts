@@ -18,7 +18,7 @@ import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
         [config]="myConfig">
       </ng2ol3-container>
     `,
-    styleUrls: [''],
+    styleUrls: ['dist/css/components/ng2ol3.component.css'],
     directives: [AlertComponent, Ng2ol3ContainerComponent]
 })
 
