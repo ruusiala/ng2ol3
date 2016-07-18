@@ -1,5 +1,5 @@
 # ng2ol3
-> A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript, RxJS & SCSS</i> for creating customizable, modern web maps
+> A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript, RxJS, SCSS & Bootstrap</i> for creating customizable, modern web maps
 
 ## Usage
 [Node.js with npm](https://nodejs.org/en/download/) is required. The minimum version of Node.js is 4.x.x, the minimum version of npm is 3.x.x. You can check the versions with the following commands: ```node -v``` and ```npm -v```. It is possible that the Node.js is the correct version but npm is not (if you use the current LTS version). In this case install <b>npm3</b> like this: ```npm install npm3``` and from now on <b>use npm3 instead of npm.</b>
