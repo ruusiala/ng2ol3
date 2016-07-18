@@ -42,7 +42,10 @@ Ng2ol3Component = __decorate([
     core_1.Component({
         selector: 'ng2ol3',
         template: `
-      <alert type="info"><span [innerHTML]="title"></span></alert>
+      <alert type="info">
+        <span><img src="../etc/img/logo/apple-touch-icon-57x57.png"></span>
+        <span [innerHTML]="title"></span>
+      </alert>
       <ng2ol3-container
         [config]="myConfig">
       </ng2ol3-container>
