@@ -6,7 +6,7 @@
 
 Run ```npm install``` and ```npm run typings install``` to download all dependencies.
 
-As an editor I recommend [Atom](https://atom.io/) with the following packages: <i><b>atom-typescript, sass-autocompile,</b> color-picker, emmet, file-icons, git-plus, keyboard-localization, minimap, pigments, project-manager, atom-beautify, docblockr, markdown-preview-enhanced</i>.
+As a text editor I recommend [Atom](https://atom.io/) with the following necessary package: <b>atom-typescript</b>. Other packages can also make development more fun, such as: ```sass-autocompile```, ```color-picker```, ```emmet```, ```file-icons```, ```git-plus```, ```keyboard-localization```, ```minimap```, ```pigments```, ```project-manager```, ```atom-beautify```, ```docblockr```, ```markdown-preview-enhanced```. [This is how you install packages for Atom](http://joshbranchaud.com/blog/2014/02/27/Installing-Packages-In-Atom-Editor.html).
 
 ## Usage
 Simply Run ```npm start``` to load the sample page on ```localhost:3000```.
