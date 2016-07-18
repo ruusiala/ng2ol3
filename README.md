@@ -4,12 +4,12 @@
 ## Install
 [Node.js with npm](https://nodejs.org/en/download/) is required. The minimum version of Node.js is 4.x.x, the minimum version of npm is 3.x.x. You can check the versions with the following commands: ```node -v``` and ```npm -v```. It is possible that the Node.js is the correct version but npm is only v2.x.x (this can happen if you use the current LTS installer). In this case install <b>npm3</b> like this: ```npm install npm3``` and from now on <b>use npm3 instead of npm</b> (e.g. if you see ```npm install```, type ```npm3 install``` instead).
 
-First run ```npm install``` and ```npm run typings install``` to download all dependencies (quite a lot, ~180MB). It is highly recommended to install typescript and node-sass system-wide: ```npm install -g typescript``` and ```npm install -g node-sass```.
+Run ```npm install``` and ```npm run typings install``` to download all dependencies.
 
 As an editor I recommend [Atom](https://atom.io/) with the following packages: <i><b>atom-typescript, sass-autocompile,</b> color-picker, emmet, file-icons, git-plus, keyboard-localization, minimap, pigments, project-manager, atom-beautify, docblockr, markdown-preview-enhanced</i>.
 
 ## Usage
-Simply Run ```npm start``` to load the sample page.
+Simply Run ```npm start``` to load the sample page on ```localhost:3000```.
 
 <img src="etc/img/screenshots/examples_demo.png" width="100%">
 
