@@ -9,7 +9,7 @@ Run ```npm install``` and ```npm run typings install``` to download all dependen
 As a text editor I recommend [Atom](https://atom.io/) with the following necessary package: <b>atom-typescript</b>. Other packages can also make development more fun, such as: ```sass-autocompile```, ```color-picker```, ```emmet```, ```file-icons```, ```git-plus```, ```keyboard-localization```, ```minimap```, ```pigments```, ```project-manager```, ```atom-beautify```, ```docblockr```, ```markdown-preview-enhanced```. [This is how you install packages for Atom](http://joshbranchaud.com/blog/2014/02/27/Installing-Packages-In-Atom-Editor.html).
 
 ## Usage
-Simply Run ```npm start``` to load the sample page on ```localhost:3000```.
+Simply run ```npm start``` to load a sample page on ```localhost:3000```. This starts Node.js and watches for file changes until you shut it down. If you change a .ts, .scss or .html file, Node.js instantly translates .ts to .js, .scss to .css, and after that the page is reloaded by itself.
 
 <img src="etc/img/screenshots/examples_demo.png" width="100%">
 
