@@ -1,6 +1,7 @@
 /// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
 
 import {Ng2ol3View} from './ng2ol3view';
+import {Ng2ol3Sidebar} from './ng2ol3sidebar';
 
 export class Ng2ol3Config {
 
@@ -9,6 +10,7 @@ export class Ng2ol3Config {
     appMapRenderer: string;
     appView: Ng2ol3View;
     appLayers: any[] = [];
+    appSidebar: Ng2ol3Sidebar;
 
     constructor() {
 
@@ -52,6 +54,14 @@ export class Ng2ol3Config {
 
     setAppLayers(layers: any[]): void {
         this.appLayers = layers;
+    }
+
+    getAppSidebar(): Ng2ol3Sidebar {
+        return this.appSidebar;
+    }
+
+    setAppSidebar(sidebar: Ng2ol3Sidebar): void {
+        this.appSidebar = sidebar;
     }
 
 }

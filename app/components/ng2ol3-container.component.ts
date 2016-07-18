@@ -4,18 +4,28 @@ import {Component, Input, OnInit} from '@angular/core';
 
 import {Ng2ol3Map} from '../classes/ng2ol3map';
 import {Ng2ol3View} from '../classes/ng2ol3view';
-
 import {Ng2ol3Config} from '../classes/ng2ol3config';
+import {Ng2ol3Sidebar} from '../classes/ng2ol3sidebar';
+
+import {Ng2ol3SidebarComponent} from './ng2ol3-sidebar.component';
 
 @Component({
     selector: 'ng2ol3-container',
-    template: ``,
-    styleUrls: ['dist/css/components/ng2ol3-container.component.css']
+    template: `
+      <ng2ol3-sidebar
+        *ngIf="sidebar !== null"
+        [map]="map"
+        [config]="config">
+      </ng2ol3-sidebar>
+    `,
+    styleUrls: ['dist/css/components/ng2ol3-container.component.css'],
+    directives: [Ng2ol3SidebarComponent]
 })
 
 export class Ng2ol3ContainerComponent {
     @Input() config: Ng2ol3Config;
     map: Ng2ol3Map;
+    sidebar: Ng2ol3Sidebar;
 
     ngOnInit() {
         this.map = new Ng2ol3Map({
@@ -29,7 +39,7 @@ export class Ng2ol3ContainerComponent {
                 source: new ol.source.OSM()
             })],
         });
-
+        this.sidebar = this.config.getAppSidebar() || null;
     }
 
 }

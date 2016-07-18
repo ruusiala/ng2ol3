@@ -1,11 +1,12 @@
 /// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
 
 import {Component} from '@angular/core';
+import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
 import {Ng2ol3ContainerComponent} from './ng2ol3-container.component';
 import {Ng2ol3Config} from '../classes/ng2ol3config';
 import {Ng2ol3Map} from '../classes/ng2ol3map';
 import {Ng2ol3View} from '../classes/ng2ol3view';
-import {AlertComponent} from 'ng2-bootstrap/ng2-bootstrap';
+import {Ng2ol3Sidebar} from '../classes/ng2ol3sidebar';
 
 @Component({
     selector: 'ng2ol3',
@@ -29,6 +30,7 @@ export class Ng2ol3Component {
     domId: string;
     view: Ng2ol3View;
     layers: any[];
+    sidebar: Ng2ol3Sidebar;
 
     constructor() {
 
@@ -45,6 +47,7 @@ export class Ng2ol3Component {
                 source: new ol.source.OSM()
             })
         ];
+        this.sidebar = new Ng2ol3Sidebar();
 
         // LET NG2OL3 DO THE JOB FROM HERE...
         this.myConfig.setAppTitle(this.title);
@@ -52,6 +55,7 @@ export class Ng2ol3Component {
         this.myConfig.setAppMapDomId(this.domId);
         this.myConfig.setAppView(this.view);
         this.myConfig.setAppLayers(this.layers);
+        // this.myConfig.setAppSidebar(this.sidebar);
 
     }
 
