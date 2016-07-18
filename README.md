@@ -6,7 +6,7 @@
 
 First run ```npm install``` and ```npm run typings install``` to download all dependencies. Then simply run ```npm start``` to load the sample page. For using ```ng2ol3``` [Atom](https://atom.io/) editor is recommended with the following packages: <i><b>atom-typescript, sass-autocompile,</b> color-picker, emmet, file-icons, git-plus, keyboard-localization, minimap, pigments, project-manager</i>.
 
-<img src="etc/img/screenshots/examples_demo.png" width="500px">
+<img src="etc/img/screenshots/examples_demo.png" width="700px">
 
 ## Present & Future
 This is just a basic demo app at the moment. In the near future I intend to add customizable widgets such as layertree, featureinfo panel, printing etc. RxJS is not yet implemented.
