@@ -1,4 +1,4 @@
-/// <reference path="../../definitely_typed/openlayers/openlayers.d.ts" />
+/// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
 "use strict";
 class Ng2ol3View extends ol.View {
 }

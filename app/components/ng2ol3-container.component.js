@@ -1,4 +1,4 @@
-/// <reference path="../../definitely_typed/openlayers/openlayers.d.ts" />
+/// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
 "use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -17,9 +17,9 @@ let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
     ngOnInit() {
         this.map = new ng2ol3map_1.Ng2ol3Map({
             target: this.config.getAppMapDomId() || 'map',
-            renderer: this.config.getAppMapRenderer() || 'webgl',
+            renderer: this.config.getAppMapRenderer() || 'canvas',
             view: this.config.getAppView() || new ng2ol3view_1.Ng2ol3View({
-                center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
+                center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
                 zoom: 7
             }),
             layers: this.config.getAppLayers() || [new ol.layer.Tile({

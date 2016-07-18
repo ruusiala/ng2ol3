@@ -1,4 +1,4 @@
-/// <reference path="../../definitely_typed/openlayers/openlayers.d.ts" />
+/// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
 
 import {Component} from '@angular/core';
 import {Ng2ol3ContainerComponent} from './ng2ol3-container.component';

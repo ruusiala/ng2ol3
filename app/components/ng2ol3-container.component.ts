@@ -1,4 +1,4 @@
-/// <reference path="../../definitely_typed/openlayers/openlayers.d.ts" />
+/// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
 
 import {Component, Input, OnInit} from '@angular/core';
 
@@ -20,9 +20,9 @@ export class Ng2ol3ContainerComponent {
     ngOnInit() {
         this.map = new Ng2ol3Map({
             target: this.config.getAppMapDomId() || 'map',
-            renderer: this.config.getAppMapRenderer() || 'webgl',
+            renderer: this.config.getAppMapRenderer() || 'canvas',
             view: this.config.getAppView() || new Ng2ol3View({
-                center: ol.proj.fromLonLat([19, 47], "EPSG:900913"),
+                center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
                 zoom: 7
             }),
             layers: this.config.getAppLayers() || [new ol.layer.Tile({
