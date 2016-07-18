@@ -1,4 +1,6 @@
 /node_modules/
 /typings/
+/.tscache/
+/dist/
 npm-debug.log*
 .project
