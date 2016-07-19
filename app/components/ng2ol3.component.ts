@@ -64,6 +64,7 @@ export class Ng2ol3Component {
         /**************************************
          * LET NG2OL3 DO THE JOB FROM HERE *
          **************************************/
+        this.userLang = /(en|hu)/gi.test(this.userLang) ? this.userLang : 'en';
         translate.use(this.userLang);
         this.myConfig.setAppLang(this.userLang);
         this.myConfig.setAppTitle(this.title);
