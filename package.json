@@ -1,5 +1,6 @@
 {
     "name": "ng2ol3",
+    "description": "A combination of Angular2 & OpenLayers3 using TypeScript, RxJS, SCSS & Bootstrap for creating customizable, modern web maps",
     "version": "1.0.0",
     "scripts": {
         "start": "tsc && concurrently \"npm run watch-scss\" \"npm run tsc:w\" \"npm run lite\" ",
@@ -11,7 +12,18 @@
         "tsc:w": "tsc -w",
         "typings": "typings"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fegyi001/ng2ol3.git"
+    },
+    "keywords": [
+        "angular", "angular2", "openlayers", "ol3"
+    ],
+    "author": "Gergely Padányi-Gulyás",
     "license": "GNU GPL",
+    "bugs": {
+        "url": "https://github.com/fegyi001/ng2ol3/issues"
+    },
     "dependencies": {
         "@angular/common": "2.0.0-rc.4",
         "@angular/compiler": "2.0.0-rc.4",
@@ -38,7 +50,8 @@
         "openlayers": "3.17.1",
         "proj4": "2.3.14",
         "jspdf": "1.2.61",
-        "jsts":"1.2.0"
+        "jsts": "1.2.0",
+        "ng2-translate": "2.2.2"
     },
     "devDependencies": {
         "concurrently": "2.0.0",

@@ -10,6 +10,7 @@
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         'rxjs': 'node_modules/rxjs',
         'moment': 'node_modules/moment/moment.js',
+        'ng2-translate': 'node_modules/ng2-translate',
         'openlayers': 'node_modules/openlayers',
         'proj4': 'node_modules/proj4'
     };
@@ -26,6 +27,10 @@
             main: 'index.js',
             defaultExtension: 'js'
         },
+        'ng2-translate': {
+            main: 'ng2-translate.js',
+            defaultExtension: 'js'
+        }
     };
     var ngPackageNames = [
         'common',

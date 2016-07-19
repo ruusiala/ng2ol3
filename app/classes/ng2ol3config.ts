@@ -5,6 +5,7 @@ import {Ng2ol3Sidebar} from './ng2ol3sidebar';
 
 export class Ng2ol3Config {
 
+    appLang: string;
     appTitle: string;
     appMapDomId: string;
     appMapRenderer: string;
@@ -14,6 +15,14 @@ export class Ng2ol3Config {
 
     constructor() {
 
+    }
+
+    getAppLang(): string {
+        return this.appLang;
+    }
+
+    setAppLang(lang: string): void {
+        this.appLang = lang;
     }
 
     getAppTitle(): string {
