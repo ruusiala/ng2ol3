@@ -1,8 +1,6 @@
 @import "../defaults";
 .ng2ol3-map {
     & #map {
-        height: -webkit-calc(#{$default-height} - #{$alert-height});
-        height: -moz-calc(#{$default-height} - #{$alert-height});
-        height: calc(#{$default-height} - #{$alert-height});
+        height: 100%;
     }
 }

@@ -2,12 +2,12 @@
 
 import {Ng2ol3View} from './ng2ol3view';
 import {Ng2ol3Sidebar} from './ng2ol3sidebar';
+import {Ng2ol3Header} from './ng2ol3header';
 
 export class Ng2ol3Config {
 
     appLang: string;
-    appTitle: string;
-    appMapDomId: string;
+    appHeader: Ng2ol3Header;
     appMapRenderer: string;
     appView: Ng2ol3View;
     appLayers: any[] = [];
@@ -25,20 +25,12 @@ export class Ng2ol3Config {
         this.appLang = lang;
     }
 
-    getAppTitle(): string {
-        return this.appTitle
+    getAppHeader(): Ng2ol3Header {
+        return this.appHeader;
     }
 
-    setAppTitle(title: string): void {
-        this.appTitle = title;
-    }
-
-    getAppMapDomId(): string {
-        return this.appMapDomId;
-    }
-
-    setAppMapDomId(domId: string): void {
-        this.appMapDomId = domId;
+    setAppHeader(header: Ng2ol3Header): void {
+        this.appHeader = header;
     }
 
     getAppMapRenderer(): string {

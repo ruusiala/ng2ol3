@@ -1,0 +1,15 @@
+@import "../defaults";
+.ng2ol3-header {
+    position: absolute;
+    z-index: 200;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px #888888;
+    & .header-content {
+        background-color: #d9edf7;
+        height: 69px !important;
+        padding-left: 15px;
+        padding-top: 7px;
+        color: #31708f;
+        font-size: 1.2em;
+    }
+}
