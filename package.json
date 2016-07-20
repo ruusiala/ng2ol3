@@ -1,66 +1,69 @@
 {
-    "name": "ng2ol3",
-    "description": "A combination of Angular2 & OpenLayers3 using TypeScript, RxJS, SCSS & Bootstrap for creating customizable, modern web maps",
-    "version": "0.0.3",
-    "scripts": {
-        "start": "tsc && concurrently \"npm run watch-scss\" \"npm run tsc:w\" \"npm run lite\" ",
-        "lite": "lite-server -c ./bs-config.js",
-        "build-css": "node-sass assets/sass/ --output lib/css --output-style compressed --source-map true",
-        "watch-scss": "nodemon -e scss -x \"npm run build-css\"",
-        "postinstall": "typings install",
-        "tsc": "tsc",
-        "tsc:w": "tsc -w",
-        "typings": "typings",
-        "build": "rm -rf lib && tsc && npm run build-css"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/fegyi001/ng2ol3.git"
-    },
-    "keywords": [
-        "angular", "angular2", "openlayers", "ol3"
-    ],
-    "author": "Gergely Padányi-Gulyás",
-    "license": "GNU GPL",
-    "bugs": {
-        "url": "https://github.com/fegyi001/ng2ol3/issues"
-    },
-    "dependencies": {
-        "@angular/common": "2.0.0-rc.4",
-        "@angular/compiler": "2.0.0-rc.4",
-        "@angular/core": "2.0.0-rc.4",
-        "@angular/forms": "0.2.0",
-        "@angular/http": "2.0.0-rc.4",
-        "@angular/platform-browser": "2.0.0-rc.4",
-        "@angular/platform-browser-dynamic": "2.0.0-rc.4",
-        "@angular/router": "3.0.0-beta.1",
-        "@angular/router-deprecated": "2.0.0-rc.2",
-        "@angular/upgrade": "2.0.0-rc.4",
-        "@types/jspdf": "1.1.27",
-        "@types/openlayers": "3.6.27",
-        "@types/jsts": "0.16.27",
-        "systemjs": "0.19.27",
-        "core-js": "2.4.0",
-        "reflect-metadata": "0.1.3",
-        "rxjs": "5.0.0-beta.6",
-        "zone.js": "0.6.12",
-        "angular2-in-memory-web-api": "0.0.14",
-        "bootstrap": "3.3.6",
-        "ng2-bootstrap": "1.0.23",
-        "connect-history-api-fallback": "1.2.0",
-        "openlayers": "3.17.1",
-        "proj4": "2.3.14",
-        "jspdf": "1.2.61",
-        "jsts": "1.2.0",
-        "ng2-translate": "2.2.2",
-        "web-animations-js": "2.2.1"
-    },
-    "devDependencies": {
-        "concurrently": "2.0.0",
-        "lite-server": "2.2.0",
-        "typescript": "1.8.10",
-        "typings": "1.0.4",
-        "node-sass": "3.8.0",
-        "nodemon": "1.9.2"
-    }
+  "name": "ng2ol3",
+  "description": "A combination of Angular2 & OpenLayers3 using TypeScript, RxJS, SCSS & Bootstrap for creating customizable, modern web maps",
+  "version": "0.0.4",
+  "scripts": {
+    "start": "tsc && concurrently \"npm run watch-scss\" \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server -c ./bs-config.js",
+    "build-css": "node-sass assets/sass/ --output lib/css --output-style compressed --source-map true",
+    "watch-scss": "nodemon -e scss -x \"npm run build-css\"",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "build": "rm -rf lib && tsc && npm run build-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fegyi001/ng2ol3.git"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "openlayers",
+    "ol3"
+  ],
+  "author": "Gergely Padányi-Gulyás",
+  "license": "GNU GPL",
+  "bugs": {
+    "url": "https://github.com/fegyi001/ng2ol3/issues"
+  },
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4",
+    "@angular/forms": "0.2.0",
+    "@angular/http": "2.0.0-rc.4",
+    "@angular/platform-browser": "2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.4",
+    "@angular/router": "3.0.0-beta.1",
+    "@angular/router-deprecated": "2.0.0-rc.2",
+    "@angular/upgrade": "2.0.0-rc.4",
+    "@types/jspdf": "1.1.27",
+    "@types/openlayers": "3.6.27",
+    "@types/jsts": "0.16.27",
+    "systemjs": "0.19.27",
+    "core-js": "2.4.0",
+    "reflect-metadata": "0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "0.6.12",
+    "angular2-in-memory-web-api": "0.0.14",
+    "bootstrap": "3.3.6",
+    "ng2-bootstrap": "1.0.23",
+    "connect-history-api-fallback": "1.2.0",
+    "openlayers": "3.17.1",
+    "proj4": "2.3.14",
+    "jspdf": "1.2.61",
+    "jsts": "1.2.0",
+    "ng2-translate": "2.2.2",
+    "web-animations-js": "2.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "2.0.0",
+    "lite-server": "2.2.0",
+    "typescript": "1.8.10",
+    "typings": "1.0.4",
+    "node-sass": "3.8.0",
+    "nodemon": "1.9.2"
+  }
 }
