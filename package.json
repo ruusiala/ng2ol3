@@ -5,12 +5,13 @@
     "scripts": {
         "start": "tsc && concurrently \"npm run watch-scss\" \"npm run tsc:w\" \"npm run lite\" ",
         "lite": "lite-server -c ./bs-config.js",
-        "build-css": "node-sass assets/sass/ --output dist/css --output-style compressed --source-map true",
+        "build-css": "node-sass assets/sass/ --output lib/css --output-style compressed --source-map true",
         "watch-scss": "nodemon -e scss -x \"npm run build-css\"",
         "postinstall": "typings install",
         "tsc": "tsc",
         "tsc:w": "tsc -w",
-        "typings": "typings"
+        "typings": "typings",
+        "build": "rm -rf lib && tsc && npm run build-css"
     },
     "repository": {
         "type": "git",
@@ -51,7 +52,8 @@
         "proj4": "2.3.14",
         "jspdf": "1.2.61",
         "jsts": "1.2.0",
-        "ng2-translate": "2.2.2"
+        "ng2-translate": "2.2.2",
+        "web-animations-js": "2.2.1"
     },
     "devDependencies": {
         "concurrently": "2.0.0",

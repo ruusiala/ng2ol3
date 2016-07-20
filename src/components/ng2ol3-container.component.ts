@@ -30,7 +30,6 @@ import {Ng2Ol3MapComponent} from './ng2ol3-map.component';
         [config]="config">
       </ng2ol3-map>
     `,
-    styleUrls: ['dist/css/components/ng2ol3-container.component.css'],
     directives: [Ng2ol3HeaderComponent, Ng2ol3SidebarComponent, Ng2Ol3MapComponent]
 })
 

@@ -15,15 +15,10 @@ import {Ng2ol3Sidebar} from '../classes/ng2ol3sidebar';
 @Component({
     selector: 'ng2ol3',
     template: `
-      <!--<alert type="info">
-        <span><img src="../etc/img/logo/apple-touch-icon-57x57.png"></span>
-        <span>{{'THIS_IS_MY_FIRST_APP' | translate:{value: title} }}</span>
-      </alert>-->
       <ng2ol3-container
         [config]="myConfig">
       </ng2ol3-container>
     `,
-    styleUrls: ['dist/css/components/ng2ol3.component.css'],
     directives: [AlertComponent, Ng2ol3ContainerComponent],
     pipes: [TranslatePipe]
 })
@@ -71,7 +66,7 @@ export class Ng2ol3Component {
         this.header.setLogo(this.logo);
 
         // Configure a sidebar (optional)
-        // this.sidebar = new Ng2ol3Sidebar();
+        this.sidebar = new Ng2ol3Sidebar();
 
         /**************************************
          * LET NG2OL3 DO THE JOB FROM HERE *
