@@ -6,12 +6,13 @@
     "start": "tsc && concurrently \"npm run watch-scss\" \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server -c ./bs-config.js",
     "build-css": "node-sass assets/sass/ --output lib/css --output-style compressed --source-map true",
+    "build-css-nosourcemap": "node-sass assets/sass/style.scss --output lib/css --output-style compressed",
     "watch-scss": "nodemon -e scss -x \"npm run build-css\"",
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
-    "build": "rm -rf lib && tsc && npm run build-css"
+    "build": "rm -rf lib && tsc && npm run build-css-nosourcemap"
   },
   "repository": {
     "type": "git",
