@@ -1,5 +1,3 @@
-/// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
-
 import {Component, Input, OnInit, OnDestroy, ElementRef, Renderer} from '@angular/core';
 import {Ng2ol3Map} from '../classes/ng2ol3map';
 import {Ng2ol3Config} from '../classes/ng2ol3config';

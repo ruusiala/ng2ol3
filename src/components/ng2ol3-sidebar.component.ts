@@ -1,5 +1,3 @@
-/// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
-
 import {Component, Input, OnInit, ElementRef, Renderer} from '@angular/core';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
 

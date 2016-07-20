@@ -15,5 +15,22 @@
         "node_modules",
         "typings",
         "lib"
+    ],
+    "files": [
+      "node_modules/@types/openlayers/index.d.ts",
+      "node_modules/@types/jsts/index.d.ts",
+      "node_modules/@types/jspdf/index.d.ts",
+      "src/main.ts",
+      "src/classes/ng2ol3config.ts",
+      "src/classes/ng2ol3header.ts",
+      "src/classes/ng2ol3logo.ts",
+      "src/classes/ng2ol3map.ts",
+      "src/classes/ng2ol3sidebar.ts",
+      "src/classes/ng2ol3view.ts",
+      "src/components/ng2ol3-container.component.ts",
+      "src/components/ng2ol3-header.component.ts",
+      "src/components/ng2ol3-map.component.ts",
+      "src/components/ng2ol3-sidebar.component.ts",
+      "src/components/ng2ol3.component.ts"
     ]
 }
