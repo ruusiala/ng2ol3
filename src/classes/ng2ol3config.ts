@@ -1,5 +1,3 @@
-/// <reference path="../../node_modules/@types/openlayers/index.d.ts" />
-
 import {Ng2ol3View} from './ng2ol3view';
 import {Ng2ol3Sidebar} from './ng2ol3sidebar';
 import {Ng2ol3Header} from './ng2ol3header';

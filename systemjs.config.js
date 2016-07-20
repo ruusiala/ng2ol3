@@ -11,7 +11,6 @@
         'rxjs': 'node_modules/rxjs',
         'moment': 'node_modules/moment/moment.js',
         'ng2-translate': 'node_modules/ng2-translate',
-        'openlayers': 'node_modules/openlayers',
         'proj4': 'node_modules/proj4'
     };
     // packages tells the System loader how to load when no filename and/or no extension
