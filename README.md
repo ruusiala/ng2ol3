@@ -9,12 +9,14 @@ Run ```npm install``` and ```npm run typings install``` to download all dependen
 As a text editor I recommend [Atom](https://atom.io/) with the following necessary package: <b>atom-typescript</b>. Other packages can also make development more fun, such as: ```sass-autocompile```, ```color-picker```, ```emmet```, ```file-icons```, ```git-plus```, ```keyboard-localization```, ```minimap```, ```pigments```, ```project-manager```, ```atom-beautify```, ```docblockr```, ```markdown-preview-enhanced```. [This is how you install packages for Atom](https://zenagiwa.wordpress.com/2015/02/15/installing-packages-for-atom-on-windows/).
 
 ## Usage
-Simply run ```npm start``` to load a sample page on ```localhost:3000```. This starts Node.js and watches for file changes until you shut it down. For example, if you change a .ts, .scss or .html file, Node.js instantly translates .ts into .js, .scss into .css, and the page is reloaded by itself. You really can focus on the development instead of constantly recompiling and reloading!
+This project is the core library of ng2ol3. If you wish to use ng2ol3 in your own project, please visit the [ng2ol3-examples](https://github.com/fegyi001/ng2ol3-examples) repository for demos.
 
-<img src="etc/img/screenshots/examples_demo.png" width="100%">
+However, the lib also contains a single demo built from the core components. Simply run ```npm start``` to load a sample page on ```localhost:3000```. This starts Node.js and watches for file changes until you shut it down. For example, if you change a .ts, .scss or .html file, Node.js instantly translates .ts into .js, .scss into .css, and the page is reloaded by itself.
+
+<img src="etc/img/screenshots/sidebar.png" width="100%">
 
 ## Present & Future
-This is just a basic demo app at the moment. In the near future I intend to add customizable widgets such as layertree, featureinfo panel, printing etc. RxJS is not yet implemented. More examples will arrive as soon as the project becomes smarter.
+This is just a basic demo app at the moment with two customizable components: header and sidebar. In the near future I intend to add other widgets such as layertree, featureinfo panel, printing etc. RxJS is not yet implemented. More examples will arrive as soon as the project becomes smarter.
 
 ## Author
 ```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://www.gpadanyig.com)
