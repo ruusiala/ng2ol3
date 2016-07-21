@@ -2,3 +2,5 @@ examples
 node_modules
 src
 etc
+assets/sass
+.tscache/
