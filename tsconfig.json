@@ -30,6 +30,7 @@
       "src/components/ng2ol3-container.component.ts",
       "src/components/ng2ol3-header.component.ts",
       "src/components/ng2ol3-map.component.ts",
-      "src/components/ng2ol3-sidebar.component.ts"
+      "src/components/ng2ol3-sidebar.component.ts",
+      "core.d.ts"
     ]
 }
