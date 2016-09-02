@@ -1,8 +1,8 @@
-import {Ng2Ol3Logo} from './ng2ol3logo';
+import {Ng2ol3Logo} from './ng2ol3logo';
 
 export class Ng2ol3Header {
     title: string;
-    logo: Ng2Ol3Logo;
+    logo: Ng2ol3Logo;
 
     constructor() {
 
@@ -16,11 +16,11 @@ export class Ng2ol3Header {
         this.title = title;
     }
 
-    getLogo(): Ng2Ol3Logo {
+    getLogo(): Ng2ol3Logo {
         return this.logo;
     }
 
-    setLogo(logo: Ng2Ol3Logo): void {
+    setLogo(logo: Ng2ol3Logo): void {
         this.logo = logo;
     }
 }

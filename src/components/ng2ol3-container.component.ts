@@ -6,9 +6,9 @@ import {Ng2ol3Config} from '../classes/ng2ol3config';
 import {Ng2ol3Sidebar} from '../classes/ng2ol3sidebar';
 import {Ng2ol3Header} from '../classes/ng2ol3header';
 
-import {Ng2ol3HeaderComponent} from './ng2ol3-header.component';
-import {Ng2ol3SidebarComponent} from './ng2ol3-sidebar.component';
-import {Ng2Ol3MapComponent} from './ng2ol3-map.component';
+// import {Ng2ol3HeaderComponent} from './ng2ol3-header.component';
+// import {Ng2ol3SidebarComponent} from './ng2ol3-sidebar.component';
+// import {Ng2Ol3MapComponent} from './ng2ol3-map.component';
 
 @Component({
     selector: 'ng2ol3-container',
@@ -27,8 +27,8 @@ import {Ng2Ol3MapComponent} from './ng2ol3-map.component';
         [map]="map"
         [config]="config">
       </ng2ol3-map>
-    `,
-    directives: [Ng2ol3HeaderComponent, Ng2ol3SidebarComponent, Ng2Ol3MapComponent]
+    `
+    // directives: [Ng2ol3HeaderComponent, Ng2ol3SidebarComponent, Ng2Ol3MapComponent]
 })
 
 export class Ng2ol3ContainerComponent implements OnInit {

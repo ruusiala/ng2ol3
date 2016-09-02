@@ -1,4 +1,4 @@
-export class Ng2Ol3Logo {
+export class Ng2ol3Logo {
     src: string;
     width: number;
     height: number;

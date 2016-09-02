@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Ng2ol3Config} from '../classes/ng2ol3config';
 import {Ng2ol3Header} from '../classes/ng2ol3header';
-import {Ng2Ol3Logo} from '../classes/ng2ol3logo';
+import {Ng2ol3Logo} from '../classes/ng2ol3logo';
 
 @Component({
     selector: 'ng2ol3-header',
@@ -22,7 +22,7 @@ export class Ng2ol3HeaderComponent implements OnInit {
     @Input() config: Ng2ol3Config;
     header: Ng2ol3Header;
     title: string;
-    logo: Ng2Ol3Logo;
+    logo: Ng2ol3Logo;
     logoSrc: string;
 
     ngOnInit() {

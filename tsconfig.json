@@ -21,6 +21,7 @@
       "node_modules/@types/jsts/index.d.ts",
       "node_modules/@types/jspdf/index.d.ts",
       "src/main.ts",
+      "src/app.module.ts",
       "src/classes/ng2ol3config.ts",
       "src/classes/ng2ol3header.ts",
       "src/classes/ng2ol3logo.ts",

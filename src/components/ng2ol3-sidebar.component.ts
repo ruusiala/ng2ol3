@@ -12,8 +12,8 @@ import {Ng2ol3Config} from '../classes/ng2ol3config';
     `,
     host: {
         class: 'ng2ol3-sidebar'
-    },
-    pipes: [TranslatePipe]
+    }
+    // pipes: [TranslatePipe]
 })
 
 export class Ng2ol3SidebarComponent implements OnInit {

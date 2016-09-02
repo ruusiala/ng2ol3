@@ -12,7 +12,7 @@ import {Ng2ol3Config} from '../classes/ng2ol3config';
     }
 })
 
-export class Ng2Ol3MapComponent implements OnInit, OnDestroy {
+export class Ng2ol3MapComponent implements OnInit, OnDestroy {
     @Input() map: Ng2ol3Map;
     @Input() config: Ng2ol3Config;
 

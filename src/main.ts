@@ -1,13 +1,16 @@
 // The usual bootstrapping imports
-import { bootstrap }    from '@angular/platform-browser-dynamic';
-import {HTTP_PROVIDERS, Http} from '@angular/http';
+// import { bootstrap }    from '@angular/platform-browser-dynamic';
+// import {HTTP_PROVIDERS, Http} from '@angular/http';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {AppModule} from './app.module';
 import {Component} from '@angular/core';
+import {SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES} from 'ng-semantic';
 import {TranslateService, TranslateLoader, TranslateStaticLoader, TranslatePipe} from 'ng2-translate/ng2-translate';
 
 import {Ng2ol3ContainerComponent} from './components/ng2ol3-container.component';
 import {Ng2ol3Config} from './classes/ng2ol3config';
 import {Ng2ol3Header} from './classes/ng2ol3header';
-import {Ng2Ol3Logo} from './classes/ng2ol3logo';
+import {Ng2ol3Logo} from './classes/ng2ol3logo';
 import {Ng2ol3Map} from './classes/ng2ol3map';
 import {Ng2ol3View} from './classes/ng2ol3view';
 import {Ng2ol3Sidebar} from './classes/ng2ol3sidebar';
@@ -19,15 +22,15 @@ import {Ng2ol3Sidebar} from './classes/ng2ol3sidebar';
         [config]="myConfig">
       </ng2ol3-container>
     `,
-    directives: [Ng2ol3ContainerComponent],
-    pipes: [TranslatePipe]
+    // directives: [Ng2ol3ContainerComponent],
+    // pipes: [TranslatePipe]
 })
 
 export class Ng2ol3Component {
     myConfig: Ng2ol3Config;
     userLang: string;
     header: Ng2ol3Header;
-    logo: Ng2Ol3Logo;
+    logo: Ng2ol3Logo;
     title: string;
     renderer: string;
     view: Ng2ol3View;
@@ -59,7 +62,7 @@ export class Ng2ol3Component {
         // Add an app header if you like
         this.header = new Ng2ol3Header();
         this.header.setTitle("This is my first ng2ol3 map");
-        this.logo = new Ng2Ol3Logo();
+        this.logo = new Ng2ol3Logo();
         this.logo.setSrc("etc/img/logo/apple-touch-icon-57x57.png");
         this.logo.setWidth(57);
         this.logo.setHeight(57);
@@ -84,11 +87,13 @@ export class Ng2ol3Component {
 
 }
 
-bootstrap(Ng2ol3Component, [
-    HTTP_PROVIDERS, {
-        provide: TranslateLoader,
-        useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
-        deps: [Http]
-    },
-    TranslateService
-]);
+platformBrowserDynamic().bootstrapModule(AppModule);
+
+// bootstrap(Ng2ol3Component, [
+//     HTTP_PROVIDERS, {
+//         provide: TranslateLoader,
+//         useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
+//         deps: [Http]
+//     },
+//     TranslateService
+// ]);
