@@ -15,7 +15,7 @@ Simply run ```npm start``` to load a sample page on ```localhost:3000```. This s
 
 ## Present & Future
 This is just a basic demo app at the moment with a simple OL3 map with one OpenStreetMap layer. In the near future I intend to add other widgets such as header, sidebar, layertree, featureinfo panel, printing etc. RxJS is not yet implemented. More examples will arrive as soon as the project becomes smarter.
-Ng2ol3 has recently been to Angular2 RC6.
+Ng2ol3 has recently been updated to work with Angular2 RC6.
 
 ## Author
 ```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://www.gpadanyig.com)
