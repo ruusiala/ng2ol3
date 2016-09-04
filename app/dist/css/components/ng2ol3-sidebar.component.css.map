@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ng2ol3-sidebar.component.css",
+	"sources": [
+		"../../../src/assets/sass/components/ng2ol3-sidebar.component.scss",
+		"../../../src/assets/sass/defaults.scss"
+	],
+	"mappings": "AACA,AAAA,eAAe,AAAC,CACZ,KAAK,CAAE,KAAM,CACb,OAAO,CAAE,GAAI,CACb,QAAQ,CAAE,QAAS,CACnB,gBAAgB,CAAE,OAAQ,CAC1B,MAAM,CAAE,IAAK,CACb,UAAU,CAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,eAAI,CAI/B,AAVD,AAOM,eAPS,CAOT,gBAAgB,AAAC,CACf,OAAO,CAAE,IAAK,CACjB",
+	"names": []
+}

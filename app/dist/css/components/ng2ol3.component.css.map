@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "ng2ol3.component.css",
+	"sources": [
+		"../../../src/assets/sass/components/ng2ol3.component.scss",
+		"../../../src/assets/sass/defaults.scss"
+	],
+	"mappings": "",
+	"names": []
+}

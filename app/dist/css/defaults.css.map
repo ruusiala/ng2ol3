@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "defaults.css",
+	"sources": [
+		"../../src/assets/sass/defaults.scss"
+	],
+	"mappings": "",
+	"names": []
+}
