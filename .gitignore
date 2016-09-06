@@ -1,6 +1,5 @@
 /node_modules/
 /typings/
 /.tscache/
-/lib/
 npm-debug.log*
 .project

@@ -11,7 +11,7 @@ As a text editor I recommend the free [Visual Studio Code](https://www.visualstu
 ## Usage
 Simply run ```npm start``` to load a sample page on ```localhost:3000```. This starts Node.js and watches for file changes until you shut it down. For example, if you change a .ts, .scss or .html file, Node.js instantly translates .ts into .js, .scss into .css, and the page is reloaded by itself.
 
-<img src="etc/img/screenshots/full.png" width="100%">
+<img src="assets/img/screenshots/full.png" width="100%">
 
 ## Present & Future
 This is just a basic demo app at the moment with a simple OL3 map with one OpenStreetMap layer. In the near future I intend to add other widgets such as header, sidebar, layertree, featureinfo panel, printing etc. RxJS is not yet implemented. More examples will arrive as soon as the project becomes smarter.
@@ -20,4 +20,4 @@ Ng2ol3 has recently been updated to work with Angular2 RC6.
 ## Author
 ```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://www.gpadanyig.com)
 
-<img src="etc/img/logo/favicon-96x96.png">
+<img src="assets/img/logo/favicon-96x96.png">

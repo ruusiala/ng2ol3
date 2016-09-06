@@ -10,15 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const platform_browser_1 = require('@angular/platform-browser');
+const _index_1 = require('./src/components/@index');
 const app_component_1 = require('./app.component');
-const ng2ol3_container_component_1 = require('./src/components/ng2ol3-container.component');
-const ng2ol3_map_component_1 = require('./src/components/ng2ol3-map.component');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule],
-        declarations: [app_component_1.AppComponent, ng2ol3_container_component_1.Ng2ol3ContainerComponent, ng2ol3_map_component_1.Ng2ol3MapComponent],
+        imports: [platform_browser_1.BrowserModule, _index_1.Ng2ol3Module],
+        declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent]
     }), 
     __metadata('design:paramtypes', [])
