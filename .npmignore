@@ -1,3 +1,11 @@
 node_modules
-assets/sass
+assets/scss
 .tscache/
+app/demo
+app/app.*.js
+app/app.*.ts
+app/app.*.d.ts
+app/main.js
+app/main.ts
+app/main.d.ts
+./ng2ol3-examples.zip
