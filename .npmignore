@@ -10,8 +10,6 @@ style.css
 index.html
 bs-config.js
 systemjs.config.js
-README.md
-LICENSE.txt
-readme.md
-license.txt
+*.md
+*.txt
 .project
