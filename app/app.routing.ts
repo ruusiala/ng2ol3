@@ -6,7 +6,8 @@ import {Demo4326Component} from './demo/demo-4326';
 const appRoutes: Routes = [
     {
         path: '',
-        redirectTo: '/demo-simple',
+        // redirectTo: '/demo-simple',
+        component: DemoSimpleComponent,
         pathMatch: 'full'
     },
     {

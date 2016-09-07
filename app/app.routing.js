@@ -5,7 +5,8 @@ const demo_4326_1 = require('./demo/demo-4326');
 const appRoutes = [
     {
         path: '',
-        redirectTo: '/demo-simple',
+        // redirectTo: '/demo-simple',
+        component: demo_simple_1.DemoSimpleComponent,
         pathMatch: 'full'
     },
     {
