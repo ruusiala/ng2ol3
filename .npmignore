@@ -10,6 +10,4 @@ style.css
 index.html
 bs-config.js
 systemjs.config.js
-*.md
-*.txt
 .project
