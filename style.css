@@ -1,5 +1,35 @@
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0;
+    background-color: #ededed;
 }
+
+.demo {
+    padding: 20px;
+    /*height: 800px !important;*/
+}
+
+.demo-loading {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-style: italic;
+
+}
+
+.demo-header {
+    padding-bottom: 20px;
+}
+
+.ol-viewport {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    height: 600px !important;
+}
+
+button {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+

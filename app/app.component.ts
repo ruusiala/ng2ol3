@@ -1,41 +1,24 @@
-import {Component, Input, OnInit} from '@angular/core';
-
-import { Ng2ol3Config } from './src/models/config';
-import {Ng2ol3View} from './src/models/view';
+import {Component} from '@angular/core';
 
 @Component({
-    selector: 'ng2ol3',
+    selector: 'demo-app',
     template: `
-      <ng2ol3-container [config]="config"></ng2ol3-container> 
-    `,
-    host: {
-        class: 'ng2ol3'
-    }
+        <div class="demo">
+            <div class="demo-header">
+                <h1 class="title">ng2ol3 examples</h1>
+                <nav>
+                    <button routerLink="/demo-simple" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">simple demo</button>
+                    <button routerLink="/demo-4326" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">wgs84 demo</button>
+                </nav>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    `
 })
-export class AppComponent implements OnInit {
-    config: any;
-
-    public ngOnInit(): any {
-
-        this.config = {
-            map: {
-                renderer: 'canvas',
-                target: 'appmap',
-                view: {
-                    projection: "EPSG:900913",
-                    center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
-                    zoom: 7
-                },
-                layers: [
-                    new ol.layer.Tile({
-                        source: new ol.source.OSM()
-                    })
-                ]
-            }
-        }
-
-    }
-
-
+export class AppComponent {
 
 }

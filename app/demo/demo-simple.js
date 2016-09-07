@@ -9,25 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
+let DemoSimpleComponent = class DemoSimpleComponent {
     ngOnInit() {
+        this.config = {
+            map: {
+                renderer: 'canvas',
+                target: 'demo-simple-map',
+                view: {
+                    projection: "EPSG:900913",
+                    center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
+                    zoom: 7
+                },
+                layers: [
+                    new ol.layer.Tile({
+                        source: new ol.source.OSM()
+                    })
+                ]
+            }
+        };
     }
 };
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', Object)
-], Ng2ol3ContainerComponent.prototype, "config", void 0);
-Ng2ol3ContainerComponent = __decorate([
+DemoSimpleComponent = __decorate([
     core_1.Component({
-        selector: 'ng2ol3',
+        selector: 'demo-simple',
         template: `
-      <ng2ol3-map [config]="config"></ng2ol3-map>
-    `,
-        host: {
-            class: 'ng2ol3-container'
-        }
+      <ng2ol3 [config]="config"></ng2ol3> 
+    `
     }), 
     __metadata('design:paramtypes', [])
-], Ng2ol3ContainerComponent);
-exports.Ng2ol3ContainerComponent = Ng2ol3ContainerComponent;
-//# sourceMappingURL=container.component.js.map
+], DemoSimpleComponent);
+exports.DemoSimpleComponent = DemoSimpleComponent;
+//# sourceMappingURL=demo-simple.js.map

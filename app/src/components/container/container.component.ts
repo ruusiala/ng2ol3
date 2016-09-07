@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-    selector: 'ng2ol3-container',
+    selector: 'ng2ol3',
     template: `
       <ng2ol3-map [config]="config"></ng2ol3-map>
     `,

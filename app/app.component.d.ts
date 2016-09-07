@@ -1,5 +1,2 @@
-import { OnInit } from '@angular/core';
-export declare class AppComponent implements OnInit {
-    config: any;
-    ngOnInit(): any;
+export declare class AppComponent {
 }
