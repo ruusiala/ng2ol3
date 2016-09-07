@@ -9,25 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
+let Demo4326Component = class Demo4326Component {
     ngOnInit() {
+        this.config = {
+            map: {
+                renderer: 'canvas',
+                target: 'demo-4326-map',
+                view: {
+                    projection: "EPSG:4326",
+                    center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:4326"),
+                    zoom: 7
+                },
+                layers: [
+                    new ol.layer.Tile({
+                        source: new ol.source.OSM()
+                    })
+                ]
+            }
+        };
     }
 };
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', Object)
-], Ng2ol3ContainerComponent.prototype, "config", void 0);
-Ng2ol3ContainerComponent = __decorate([
+Demo4326Component = __decorate([
     core_1.Component({
-        selector: 'ng2ol3',
+        selector: 'demo-4326',
         template: `
-      <ng2ol3-map [config]="config"></ng2ol3-map>
-    `,
-        host: {
-            class: 'ng2ol3-container'
-        }
+      <ng2ol3 [config]="config"></ng2ol3> 
+    `
     }), 
     __metadata('design:paramtypes', [])
-], Ng2ol3ContainerComponent);
-exports.Ng2ol3ContainerComponent = Ng2ol3ContainerComponent;
-//# sourceMappingURL=container.component.js.map
+], Demo4326Component);
+exports.Demo4326Component = Demo4326Component;
+//# sourceMappingURL=demo-4326.js.map

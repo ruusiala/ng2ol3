@@ -12,12 +12,26 @@ const core_1 = require('@angular/core');
 const platform_browser_1 = require('@angular/platform-browser');
 const _index_1 = require('./src/components/@index');
 const app_component_1 = require('./app.component');
+const app_routing_1 = require('./app.routing');
+const demo_simple_1 = require('./demo/demo-simple');
+const demo_4326_1 = require('./demo/demo-4326');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, _index_1.Ng2ol3Module],
-        declarations: [app_component_1.AppComponent],
+        imports: [
+            platform_browser_1.BrowserModule,
+            _index_1.Ng2ol3Module,
+            app_routing_1.routing
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            demo_simple_1.DemoSimpleComponent,
+            demo_4326_1.Demo4326Component
+        ],
+        providers: [
+            app_routing_1.appRoutingProviders
+        ],
         bootstrap: [app_component_1.AppComponent]
     }), 
     __metadata('design:paramtypes', [])

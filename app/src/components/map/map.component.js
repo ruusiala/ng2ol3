@@ -38,7 +38,7 @@ Ng2ol3MapComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-map',
         template: `
-      <div [attr.id]="target"></div>
+      <div [attr.id]="target" class="ng2ol3-map-div"></div>
     `,
         host: {
             class: 'ng2ol3-map'
