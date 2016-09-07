@@ -5,7 +5,7 @@ import {Ng2ol3Map, Ng2ol3Config, Ng2ol3View} from '../../models/@index';
 @Component({
     selector: 'ng2ol3-map',
     template: `
-      <div [attr.id]="target"></div>
+      <div [attr.id]="target" class="ng2ol3-map-div"></div>
     `,
     host: {
         class: 'ng2ol3-map'
