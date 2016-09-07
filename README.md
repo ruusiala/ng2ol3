@@ -8,6 +8,9 @@ Run ```npm install``` and ```npm run typings install``` to download all dependen
 
 As a text editor I recommend the free [Visual Studio Code](https://www.visualstudio.com/en-us/products/code-vs.aspx). (Angular2 is developed with it!)
 
+## Live example
+An online example can be viewed [here](http://188.166.116.137/ng2ol3).
+
 ## Usage
 1. If you wish to see the built-in demos or modify the source files, simply run ```npm start``` to load the demo page on ```localhost:3000```. This starts Node.js and watches for file changes until you shut it down. For example, if you change a .ts, .scss or .html file, Node.js instantly translates .ts into .js, .scss into .css, and the page is reloaded by itself.
 <img src="assets/img/screenshots/demo.png" width="100%">
