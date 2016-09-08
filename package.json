@@ -1,7 +1,7 @@
 {
   "name": "ng2ol3",
   "description": "A combination of Angular2 & OpenLayers3 using TypeScript, RxJS, SCSS & Bootstrap for creating customizable, modern web maps",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "scripts": {
     "start": "tsc && concurrently \"npm run watch-scss\" \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server -c ./bs-config.js",
