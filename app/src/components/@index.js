@@ -13,6 +13,7 @@ const components_helper_service_1 = require('./utils/components-helper.service')
 const dummy_module_1 = require('./dummy/dummy.module');
 const map_module_1 = require('./map/map.module');
 const container_module_1 = require('./container/container.module');
+const sidebar_module_1 = require('./sidebar/sidebar.module');
 let Ng2ol3Module = class Ng2ol3Module {
 };
 Ng2ol3Module = __decorate([
@@ -20,7 +21,8 @@ Ng2ol3Module = __decorate([
         exports: [
             dummy_module_1.Ng2ol3DummyModule,
             map_module_1.Ng2ol3MapModule,
-            container_module_1.Ng2ol3ContainerModule
+            container_module_1.Ng2ol3ContainerModule,
+            sidebar_module_1.Ng2ol3SidebarModule
         ],
         providers: [
             { provide: components_helper_service_1.ComponentsHelper, useClass: components_helper_service_1.ComponentsHelper }

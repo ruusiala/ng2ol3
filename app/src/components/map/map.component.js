@@ -11,11 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 let Ng2ol3MapComponent = class Ng2ol3MapComponent {
     ngOnInit() {
-        this.target = this.config.map.target;
+        this.target = this.options.target;
         this.view = new ol.View({
-            projection: this.config.map.view.projection || 'EPSG:900913',
-            center: this.config.map.view.center || ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
-            zoom: this.config.map.view.zoom || 7
+            projection: this.options.view.projection || 'EPSG:900913',
+            center: this.options.view.center || ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
+            zoom: this.options.view.zoom || 7
         });
     }
     ngAfterViewInit() {
@@ -24,8 +24,8 @@ let Ng2ol3MapComponent = class Ng2ol3MapComponent {
             target: this.target,
             view: this.view
         });
-        for (let i = 0; i < this.config.map.layers.length; i++) {
-            this.map.addLayer(this.config.map.layers[i]);
+        for (let i = 0; i < this.options.layers.length; i++) {
+            this.map.addLayer(this.options.layers[i]);
         }
         this.map.updateSize();
     }
@@ -33,7 +33,7 @@ let Ng2ol3MapComponent = class Ng2ol3MapComponent {
 __decorate([
     core_1.Input(), 
     __metadata('design:type', Object)
-], Ng2ol3MapComponent.prototype, "config", void 0);
+], Ng2ol3MapComponent.prototype, "options", void 0);
 Ng2ol3MapComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-map',

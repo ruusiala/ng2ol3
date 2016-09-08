@@ -7,7 +7,7 @@ import {AppComponent} from './app.component';
 
 import {routing, appRoutingProviders} from './app.routing';
 import {DemoSimpleComponent} from './demo/demo-simple';
-import {Demo4326Component} from './demo/demo-4326';
+import {DemoSidebarComponent} from './demo/demo-sidebar';
 
 @NgModule({
     imports: [
@@ -18,7 +18,7 @@ import {Demo4326Component} from './demo/demo-4326';
     declarations: [
         AppComponent, 
         DemoSimpleComponent,
-        Demo4326Component
+        DemoSidebarComponent
     ],
     providers: [
         appRoutingProviders

@@ -8,35 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+const common_1 = require('@angular/common');
 const core_1 = require('@angular/core');
-let Demo4326Component = class Demo4326Component {
-    ngOnInit() {
-        this.config = {
-            map: {
-                renderer: 'canvas',
-                target: 'demo-4326-map',
-                view: {
-                    projection: "EPSG:4326",
-                    center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:4326"),
-                    zoom: 7
-                },
-                layers: [
-                    new ol.layer.Tile({
-                        source: new ol.source.OSM()
-                    })
-                ]
-            }
-        };
-    }
+const sidebar_component_1 = require('./sidebar.component');
+let Ng2ol3SidebarModule = class Ng2ol3SidebarModule {
 };
-Demo4326Component = __decorate([
-    core_1.Component({
-        selector: 'demo-4326',
-        template: `
-      <ng2ol3 [config]="config"></ng2ol3> 
-    `
+Ng2ol3SidebarModule = __decorate([
+    core_1.NgModule({
+        imports: [common_1.CommonModule],
+        declarations: [sidebar_component_1.Ng2ol3SidebarComponent],
+        exports: [sidebar_component_1.Ng2ol3SidebarComponent]
     }), 
     __metadata('design:paramtypes', [])
-], Demo4326Component);
-exports.Demo4326Component = Demo4326Component;
-//# sourceMappingURL=demo-4326.js.map
+], Ng2ol3SidebarModule);
+exports.Ng2ol3SidebarModule = Ng2ol3SidebarModule;
+//# sourceMappingURL=sidebar.module.js.map

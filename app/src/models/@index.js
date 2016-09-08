@@ -5,4 +5,5 @@ function __export(m) {
 __export(require('./config'));
 __export(require('./map'));
 __export(require('./view'));
+__export(require('./sidebar'));
 //# sourceMappingURL=@index.js.map

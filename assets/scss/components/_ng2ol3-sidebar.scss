@@ -1,0 +1,10 @@
+.ng2ol3-sidebar {
+    z-index: 2;
+    @include span-columns(3);
+    vertical-align: top;
+    background-color: $base-background-color;
+    
+    & .sidebar-content {
+        padding: $base-padding;
+    }
+}

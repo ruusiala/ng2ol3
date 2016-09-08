@@ -9,11 +9,11 @@ import {Component} from '@angular/core';
                 <nav>
                     <button routerLink="/demo-simple" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }">simple demo</button>
-                    <button routerLink="/demo-4326" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{ exact: true }">wgs84 demo</button>
+                    <button routerLink="/demo-sidebar" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">sidebar demo</button>
                 </nav>
             </div>
-            <div>
+            <div class="demo-content">
                 <router-outlet></router-outlet>
             </div>
         </div>

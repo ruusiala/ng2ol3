@@ -1,5 +1,7 @@
 .ng2ol3-map {
-    // height: 100%;
+    z-index: 0;
+    @include span-columns(9);
+    
     & .ng2ol3-map-div {
         height: 100%;
     }

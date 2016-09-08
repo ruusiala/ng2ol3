@@ -9,31 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
+let Ng2ol3SidebarComponent = class Ng2ol3SidebarComponent {
     ngOnInit() {
+        this.title = this.options.title || null;
     }
 };
 __decorate([
     core_1.Input(), 
     __metadata('design:type', Object)
-], Ng2ol3ContainerComponent.prototype, "config", void 0);
-Ng2ol3ContainerComponent = __decorate([
+], Ng2ol3SidebarComponent.prototype, "options", void 0);
+Ng2ol3SidebarComponent = __decorate([
     core_1.Component({
-        selector: 'ng2ol3',
+        selector: 'ng2ol3-sidebar',
         template: `
-        <div class="outer-container">
-            <div class="inner-container">
-                <ng2ol3-sidebar *ngIf="config.sidebar" [options]="config.sidebar"></ng2ol3-sidebar>
-                <ng2ol3-map *ngIf="config.map" [options]="config.map"></ng2ol3-map>
-            </div>
-        </div>
-    
+      <div class="sidebar-content">
+          <div *ngIf="title != null">{{title}}</div>
+      </div>
     `,
         host: {
-            class: 'ng2ol3-container'
+            class: 'ng2ol3-sidebar'
         }
     }), 
     __metadata('design:paramtypes', [])
-], Ng2ol3ContainerComponent);
-exports.Ng2ol3ContainerComponent = Ng2ol3ContainerComponent;
-//# sourceMappingURL=container.component.js.map
+], Ng2ol3SidebarComponent);
+exports.Ng2ol3SidebarComponent = Ng2ol3SidebarComponent;
+//# sourceMappingURL=sidebar.component.js.map

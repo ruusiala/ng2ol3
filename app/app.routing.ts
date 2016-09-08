@@ -1,12 +1,12 @@
 import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {DemoSimpleComponent} from './demo/demo-simple';
-import {Demo4326Component} from './demo/demo-4326';
+import {DemoSidebarComponent} from './demo/demo-sidebar';
 
 const appRoutes: Routes = [
     {
         path: '',
-        // redirectTo: '/demo-simple',
+        // redirectTo: '/demo-sidebar',
         component: DemoSimpleComponent,
         pathMatch: 'full'
     },
@@ -15,8 +15,8 @@ const appRoutes: Routes = [
         component: DemoSimpleComponent
     },
     {
-        path: 'demo-4326',
-        component: Demo4326Component
+        path: 'demo-sidebar',
+        component: DemoSidebarComponent
     }
 ];
 

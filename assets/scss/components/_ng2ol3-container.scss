@@ -1,3 +1,14 @@
 .ng2ol3-container {
+    @include outer-container(100%);
+
+    & .outer-container {
+        @include fill-parent();
+
+        & .inner-container {
+            // @include fill-parent();
+            @include row(table);
+        }   
+    }
+    
     
 }

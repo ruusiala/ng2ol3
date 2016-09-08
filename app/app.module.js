@@ -14,7 +14,7 @@ const _index_1 = require('./src/components/@index');
 const app_component_1 = require('./app.component');
 const app_routing_1 = require('./app.routing');
 const demo_simple_1 = require('./demo/demo-simple');
-const demo_4326_1 = require('./demo/demo-4326');
+const demo_sidebar_1 = require('./demo/demo-sidebar');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -27,7 +27,7 @@ AppModule = __decorate([
         declarations: [
             app_component_1.AppComponent,
             demo_simple_1.DemoSimpleComponent,
-            demo_4326_1.Demo4326Component
+            demo_sidebar_1.DemoSidebarComponent
         ],
         providers: [
             app_routing_1.appRoutingProviders
