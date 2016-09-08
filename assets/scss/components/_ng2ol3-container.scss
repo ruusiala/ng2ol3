@@ -5,7 +5,6 @@
         @include fill-parent();
 
         & .inner-container {
-            // @include fill-parent();
             @include row(table);
         }   
     }
