@@ -1,6 +1,6 @@
-import {Component, Input, OnInit, AfterViewInit, AfterContentInit} from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, AfterContentInit } from '@angular/core';
 
-import {Ng2ol3Map, Ng2ol3Config, Ng2ol3View} from '../../models/@index';
+import { Ng2ol3Map, Ng2ol3Config, Ng2ol3View } from '../../models/@index';
 
 @Component({
     selector: 'ng2ol3-map',
@@ -32,7 +32,7 @@ export class Ng2ol3MapComponent implements AfterViewInit, OnInit {
             target: this.target,
             view: this.view
         });
-        for(let i=0; i<this.options.layers.length; i++) {
+        for (let i = 0; i < this.options.layers.length; i++) {
             this.map.addLayer(this.options.layers[i]);
         }
         this.map.updateSize();
