@@ -31,7 +31,7 @@
 
     &:hover,
     &:focus {
-        background-color: shade($action-color, 20%);
+        background-color: shade($ribbon-background, 20%);
     }
 
     & a {
