@@ -4,12 +4,12 @@ body {
     height: 100%;
     margin: 0;
     background-color: #fafafa;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .demo {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     min-width: 700px;
 }
@@ -37,4 +37,12 @@ button {
 
 .ol-viewport {
     height: 500px !important;
+}
+
+.ribbon-box {
+    float: right !important;
+}
+
+.ribbon i {
+    font-size: 2em;
 }
