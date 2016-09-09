@@ -25,10 +25,6 @@ body {
     padding-bottom: 20px;
 }
 
-.ol-viewport {
-    height: 500px !important;
-}
-
 button {
     text-transform: uppercase;
     font-weight: normal;
@@ -37,4 +33,8 @@ button {
 .demo-content {
     border: 1px dashed rgba(0, 0, 0, 0.15);
     padding: 6px;
+}
+
+.ol-viewport {
+    height: 500px !important;
 }
