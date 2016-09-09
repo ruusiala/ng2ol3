@@ -2,8 +2,13 @@
 @import "lib/neat/neat";
 @import "base/base";
 
+@import "overrides/openlayers";
+
 @import "components/ng2ol3-container";
 @import "components/ng2ol3-map";
 @import "components/ng2ol3-sidebar";
 
+.pointer {
+    cursor: pointer;
+}
 

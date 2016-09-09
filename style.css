@@ -11,6 +11,7 @@ body {
 
 .demo {
     padding: 20px;
+    min-width: 700px;
 }
 
 .demo-loading {
@@ -34,5 +35,6 @@ button {
 }
 
 .demo-content {
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    padding: 6px;
 }

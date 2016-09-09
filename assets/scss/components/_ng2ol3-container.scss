@@ -5,6 +5,7 @@
         @include fill-parent();
 
         & .inner-container {
+            position: relative;
             @include row(table);
         }   
     }

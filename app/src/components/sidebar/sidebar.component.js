@@ -12,6 +12,11 @@ const core_1 = require('@angular/core');
 let Ng2ol3SidebarComponent = class Ng2ol3SidebarComponent {
     ngOnInit() {
         this.title = this.options.title || null;
+        this.sidebarClosed = false;
+    }
+    toggleSidebar() {
+        this.sidebarClosed = !this.sidebarClosed;
+        console.log(`sidebar will be closed: ${this.sidebarClosed}`);
     }
 };
 __decorate([
@@ -23,12 +28,27 @@ Ng2ol3SidebarComponent = __decorate([
         selector: 'ng2ol3-sidebar',
         template: `
       <div class="sidebar-content">
+          <div class="close-button pointer" (click)="toggleSidebar()" [@sidebarClosed]="sidebarClosed" *ngIf="false">
+              <i class="fa fa-angle-double-left"></i>
+          </div>
           <div *ngIf="title != null">{{title}}</div>
       </div>
     `,
         host: {
             class: 'ng2ol3-sidebar'
-        }
+        },
+        animations: [
+            core_1.trigger('sidebarClosed', [
+                core_1.state('true', core_1.style({
+                    transform: 'scale(1.0)'
+                })),
+                core_1.state('false', core_1.style({
+                    transform: 'scale(1.0)'
+                })),
+                core_1.transition('true => false', core_1.animate('100ms ease-in')),
+                core_1.transition('false => true', core_1.animate('100ms ease-out'))
+            ])
+        ]
     }), 
     __metadata('design:paramtypes', [])
 ], Ng2ol3SidebarComponent);
