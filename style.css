@@ -11,7 +11,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    min-width: 700px;
+    /*min-width: 700px;*/
 }
 
 .demo-loading {
@@ -41,6 +41,7 @@ button {
 
 .ribbon-box {
     float: right !important;
+    right: 1px;
 }
 
 .ribbon i {
