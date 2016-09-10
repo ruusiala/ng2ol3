@@ -2,11 +2,9 @@
 > A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript, RxJS & SCSS (Bourbon) </i> for creating customizable, modern web maps
 
 ## Install
-[Node.js with npm](https://nodejs.org/en/download/) is required. The minimum version of Node.js is 4.x.x, the minimum version of npm is 3.x.x. You can check the versions with the following commands: ```node -v``` and ```npm -v```. It is possible that the Node.js is the correct version but npm is only v2.x.x (this can happen if you use the current LTS installer). In this case install <b>npm3</b> like this: ```npm install npm3``` and from now on <b>use npm3 instead of npm</b> (e.g. if you see ```npm install```, type ```npm3 install``` instead).
+[Node.js with npm](https://nodejs.org/en/download/) is required. The minimum version of Node.js is 4.x.x, the minimum version of npm is 3.x.x. You can check the versions with the following commands: ```node -v``` and ```npm -v```. About installing and/or upgrading Node.js and npm [follow this tutorial](https://docs.npmjs.com/getting-started/installing-node).
 
-Run ```npm install``` and ```npm run typings install``` to download all dependencies.
-
-As a text editor I recommend the free [Visual Studio Code](https://www.visualstudio.com/en-us/products/code-vs.aspx). (Angular2 is developed with it!)
+Navigate to ng2ol3's main directory and run ```npm install``` to download all dependencies.
 
 ## Live example
 An online example can be viewed [here](http://188.166.116.137/ng2ol3).
