@@ -8,7 +8,7 @@ import {AppComponent} from './app.component';
 import {routing, appRoutingProviders} from './app.routing';
 import {DemoSimpleComponent} from './demo/demo-simple';
 import {DemoSidebarComponent} from './demo/demo-sidebar';
-import {DemoLayertreeComponent} from './demo/demo-layertree';
+import {DemoToolbarComponent} from './demo/demo-toolbar';
 
 @NgModule({
     imports: [
@@ -20,7 +20,7 @@ import {DemoLayertreeComponent} from './demo/demo-layertree';
         AppComponent, 
         DemoSimpleComponent,
         DemoSidebarComponent,
-        DemoLayertreeComponent
+        DemoToolbarComponent
     ],
     providers: [
         appRoutingProviders

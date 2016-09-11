@@ -30,22 +30,7 @@ let DemoSidebarComponent = class DemoSidebarComponent {
                     }
                 ]
             },
-            sidebar: {
-                title: "Sidebar will be here",
-                collapsible: true,
-                toolbar: {
-                    layertree: {
-                        enabled: true,
-                        active: true
-                    },
-                    measure: {
-                        enabled: false
-                    },
-                    featureinfo: {
-                        enabled: false
-                    }
-                }
-            }
+            sidebar: {}
         };
     }
 };

@@ -21,8 +21,8 @@ import {Component} from '@angular/core';
                     [routerLinkActiveOptions]="{ exact: true }">simple demo</button>
                 <button routerLink="/demo-sidebar" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }">sidebar</button>
-                <button routerLink="/demo-layertree" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">layertree</button>
+                <button routerLink="/demo-toolbar" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">toolbar</button>
             </nav>
         </div>
         <div class="demo-content">

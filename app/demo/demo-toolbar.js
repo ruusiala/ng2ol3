@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let DemoLayertreeComponent = class DemoLayertreeComponent {
+let DemoToolbarComponent = class DemoToolbarComponent {
     ngOnInit() {
         this.config = {
             map: {
@@ -37,26 +37,20 @@ let DemoLayertreeComponent = class DemoLayertreeComponent {
                 ]
             },
             sidebar: {
-                title: "Sidebar with layertree will be here",
                 collapsible: true,
-                toolbar: {
-                    layertree: {
-                        enabled: true,
-                        active: true
-                    }
-                }
+                toolbar: {}
             }
         };
     }
 };
-DemoLayertreeComponent = __decorate([
+DemoToolbarComponent = __decorate([
     core_1.Component({
-        selector: 'demo-layertree',
+        selector: 'demo-toolbar',
         template: `
       <ng2ol3 [config]="config"></ng2ol3> 
     `
     }), 
     __metadata('design:paramtypes', [])
-], DemoLayertreeComponent);
-exports.DemoLayertreeComponent = DemoLayertreeComponent;
-//# sourceMappingURL=demo-layertree.js.map
+], DemoToolbarComponent);
+exports.DemoToolbarComponent = DemoToolbarComponent;
+//# sourceMappingURL=demo-toolbar.js.map

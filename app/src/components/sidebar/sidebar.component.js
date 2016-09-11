@@ -12,8 +12,8 @@ const core_1 = require('@angular/core');
 const _index_1 = require('../../models/@index');
 let Ng2ol3SidebarComponent = class Ng2ol3SidebarComponent {
     ngOnInit() {
-        this.title = this.options.title || null;
         this.sidebarClosed = false;
+        this.hasToolbar = this.options.hasOwnProperty("toolbar");
         this.map.updateSize();
     }
     toggleSidebar() {
@@ -40,8 +40,10 @@ Ng2ol3SidebarComponent = __decorate([
                   *ngIf="false">
               <i class="fa fa-angle-double-left"></i>
           </div>
-          <div *ngIf="title != null">{{title}}</div>
-          <!--<ng2ol3-layertree>aha</ng2ol3-layertree>-->
+          <ng2ol3-toolbar 
+                  *ngIf="hasToolbar"
+                  [options]="options.toolbar">
+          </ng2ol3-toolbar>
       </div>
     `,
         host: {

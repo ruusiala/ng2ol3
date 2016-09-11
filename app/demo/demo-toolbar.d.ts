@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-export declare class DemoLayertreeComponent implements OnInit {
+export declare class DemoToolbarComponent implements OnInit {
     config: any;
     ngOnInit(): any;
 }

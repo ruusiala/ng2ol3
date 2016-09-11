@@ -1,0 +1,10 @@
+.ng2ol3-toolbar {
+    $background-color: lighten($light-gray, 10%);
+
+    & div {
+        background-color: $background-color;
+        padding: $base-padding;
+        border-bottom: 1px solid rgba($action-color, 0.5);
+    }
+    
+}

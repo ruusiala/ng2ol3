@@ -6,7 +6,8 @@ import { Ng2ol3DummyModule } from './dummy/dummy.module';
 import { Ng2ol3MapModule } from './map/map.module';
 import { Ng2ol3ContainerModule } from './container/container.module';
 import { Ng2ol3SidebarModule } from './sidebar/sidebar.module';
-import {Ng2ol3LayertreeModule} from './layertree/layertree.module';
+import { Ng2ol3LayertreeModule } from './layertree/layertree.module';
+import { Ng2ol3ToolbarModule } from './toolbar/toolbar.module';
 
 @NgModule({
     exports: [
@@ -14,7 +15,8 @@ import {Ng2ol3LayertreeModule} from './layertree/layertree.module';
         Ng2ol3MapModule,
         Ng2ol3ContainerModule,
         Ng2ol3SidebarModule,
-        Ng2ol3LayertreeModule
+        Ng2ol3LayertreeModule,
+        Ng2ol3ToolbarModule
     ],
     providers: [
         { provide: ComponentsHelper, useClass: ComponentsHelper }

@@ -15,7 +15,7 @@ const app_component_1 = require('./app.component');
 const app_routing_1 = require('./app.routing');
 const demo_simple_1 = require('./demo/demo-simple');
 const demo_sidebar_1 = require('./demo/demo-sidebar');
-const demo_layertree_1 = require('./demo/demo-layertree');
+const demo_toolbar_1 = require('./demo/demo-toolbar');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -29,7 +29,7 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             demo_simple_1.DemoSimpleComponent,
             demo_sidebar_1.DemoSidebarComponent,
-            demo_layertree_1.DemoLayertreeComponent
+            demo_toolbar_1.DemoToolbarComponent
         ],
         providers: [
             app_routing_1.appRoutingProviders

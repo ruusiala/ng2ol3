@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'demo-layertree',
+    selector: 'demo-toolbar',
     template: `
       <ng2ol3 [config]="config"></ng2ol3> 
     `
 })
-export class DemoLayertreeComponent implements OnInit {
+export class DemoToolbarComponent implements OnInit {
     config: any;
 
     public ngOnInit(): any {
@@ -37,14 +37,8 @@ export class DemoLayertreeComponent implements OnInit {
                 ]
             },
             sidebar: {
-                title: "Sidebar with layertree will be here",
                 collapsible: true,
-                toolbar: {
-                    layertree: {
-                        enabled: true,
-                        active: true
-                    }
-                }
+                toolbar: {}
             }
         }
 

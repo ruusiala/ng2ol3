@@ -2,7 +2,7 @@
 const router_1 = require('@angular/router');
 const demo_simple_1 = require('./demo/demo-simple');
 const demo_sidebar_1 = require('./demo/demo-sidebar');
-const demo_layertree_1 = require('./demo/demo-layertree');
+const demo_toolbar_1 = require('./demo/demo-toolbar');
 const appRoutes = [
     {
         path: '',
@@ -16,8 +16,8 @@ const appRoutes = [
         path: 'demo-sidebar',
         component: demo_sidebar_1.DemoSidebarComponent
     }, {
-        path: 'demo-layertree',
-        component: demo_layertree_1.DemoLayertreeComponent
+        path: 'demo-toolbar',
+        component: demo_toolbar_1.DemoToolbarComponent
     }
 ];
 exports.appRoutingProviders = [];

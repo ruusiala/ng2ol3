@@ -11,11 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const common_1 = require('@angular/common');
 const core_1 = require('@angular/core');
 const sidebar_component_1 = require('./sidebar.component');
+const toolbar_module_1 = require('../toolbar/toolbar.module');
 let Ng2ol3SidebarModule = class Ng2ol3SidebarModule {
 };
 Ng2ol3SidebarModule = __decorate([
     core_1.NgModule({
-        imports: [common_1.CommonModule],
+        imports: [
+            common_1.CommonModule,
+            toolbar_module_1.Ng2ol3ToolbarModule
+        ],
         declarations: [sidebar_component_1.Ng2ol3SidebarComponent],
         exports: [sidebar_component_1.Ng2ol3SidebarComponent]
     }), 

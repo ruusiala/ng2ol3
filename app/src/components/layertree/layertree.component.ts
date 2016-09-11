@@ -1,13 +1,9 @@
-import {
-    Component, Input, OnInit
-} from '@angular/core';
-
-import {Ng2ol3Map} from '../../models/@index';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'ng2ol3-layertree',
     template: `
-      <div>this is the layertree</div>
+      <div>This will be the layertree</div>
     `,
     host: {
         class: 'ng2ol3-layertree'

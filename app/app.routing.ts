@@ -2,7 +2,7 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {DemoSimpleComponent} from './demo/demo-simple';
 import {DemoSidebarComponent} from './demo/demo-sidebar';
-import {DemoLayertreeComponent} from './demo/demo-layertree';
+import {DemoToolbarComponent} from './demo/demo-toolbar';
 
 const appRoutes: Routes = [
     {
@@ -17,8 +17,8 @@ const appRoutes: Routes = [
         path: 'demo-sidebar',
         component: DemoSidebarComponent
     },    {
-        path: 'demo-layertree',
-        component: DemoLayertreeComponent
+        path: 'demo-toolbar',
+        component: DemoToolbarComponent
     }
 ];
 

@@ -9,21 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let Ng2ol3LayertreeComponent = class Ng2ol3LayertreeComponent {
+let Ng2ol3ToolbarComponent = class Ng2ol3ToolbarComponent {
     ngOnInit() {
+        this.hasLayertree = this.options.hasOwnProperty("layertree");
     }
 };
-Ng2ol3LayertreeComponent = __decorate([
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', Object)
+], Ng2ol3ToolbarComponent.prototype, "options", void 0);
+Ng2ol3ToolbarComponent = __decorate([
     core_1.Component({
-        selector: 'ng2ol3-layertree',
+        selector: 'ng2ol3-toolbar',
         template: `
-      <div>This will be the layertree</div>
+      <div>This will be the toolbar</div>
     `,
         host: {
-            class: 'ng2ol3-layertree'
+            class: 'ng2ol3-toolbar'
         }
     }), 
     __metadata('design:paramtypes', [])
-], Ng2ol3LayertreeComponent);
-exports.Ng2ol3LayertreeComponent = Ng2ol3LayertreeComponent;
-//# sourceMappingURL=layertree.component.js.map
+], Ng2ol3ToolbarComponent);
+exports.Ng2ol3ToolbarComponent = Ng2ol3ToolbarComponent;
+//# sourceMappingURL=toolbar.component.js.map

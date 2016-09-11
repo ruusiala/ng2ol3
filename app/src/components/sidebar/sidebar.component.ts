@@ -19,8 +19,10 @@ import {Ng2ol3Map} from '../../models/@index';
                   *ngIf="false">
               <i class="fa fa-angle-double-left"></i>
           </div>
-          <div *ngIf="title != null">{{title}}</div>
-          <!--<ng2ol3-layertree>aha</ng2ol3-layertree>-->
+          <ng2ol3-toolbar 
+                  *ngIf="hasToolbar"
+                  [options]="options.toolbar">
+          </ng2ol3-toolbar>
       </div>
     `,
     host: {
@@ -44,13 +46,13 @@ export class Ng2ol3SidebarComponent implements OnInit {
     @Input() options: any;
     @Input() map: Ng2ol3Map;
     
-    title: string;
-    
     sidebarClosed: boolean;
+    hasToolbar: boolean;
 
     public ngOnInit(): any {
-        this.title = this.options.title || null;
         this.sidebarClosed = false;
+        this.hasToolbar = this.options.hasOwnProperty("toolbar");
+
         this.map.updateSize();
     }
 
