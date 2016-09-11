@@ -10,24 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const common_1 = require('@angular/common');
 const core_1 = require('@angular/core');
-const map_module_1 = require('../map/map.module');
-const sidebar_module_1 = require('../sidebar/sidebar.module');
-const layertree_module_1 = require('../layertree/layertree.module');
-const container_component_1 = require('./container.component');
-let Ng2ol3ContainerModule = class Ng2ol3ContainerModule {
+const layertree_component_1 = require('./layertree.component');
+let Ng2ol3LayertreeModule = class Ng2ol3LayertreeModule {
 };
-Ng2ol3ContainerModule = __decorate([
+Ng2ol3LayertreeModule = __decorate([
     core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            map_module_1.Ng2ol3MapModule,
-            sidebar_module_1.Ng2ol3SidebarModule,
-            layertree_module_1.Ng2ol3LayertreeModule
-        ],
-        declarations: [container_component_1.Ng2ol3ContainerComponent],
-        exports: [container_component_1.Ng2ol3ContainerComponent]
+        imports: [common_1.CommonModule],
+        declarations: [layertree_component_1.Ng2ol3LayertreeComponent],
+        exports: [layertree_component_1.Ng2ol3LayertreeComponent]
     }), 
     __metadata('design:paramtypes', [])
-], Ng2ol3ContainerModule);
-exports.Ng2ol3ContainerModule = Ng2ol3ContainerModule;
-//# sourceMappingURL=container.module.js.map
+], Ng2ol3LayertreeModule);
+exports.Ng2ol3LayertreeModule = Ng2ol3LayertreeModule;
+//# sourceMappingURL=layertree.module.js.map

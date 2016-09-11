@@ -20,6 +20,7 @@ import {Ng2ol3Map} from '../../models/@index';
               <i class="fa fa-angle-double-left"></i>
           </div>
           <div *ngIf="title != null">{{title}}</div>
+          <!--<ng2ol3-layertree>aha</ng2ol3-layertree>-->
       </div>
     `,
     host: {

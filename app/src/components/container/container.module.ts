@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import {Ng2ol3MapModule} from '../map/map.module';
 import {Ng2ol3SidebarModule} from '../sidebar/sidebar.module';
+import {Ng2ol3LayertreeModule} from '../layertree/layertree.module';
 
 import { Ng2ol3ContainerComponent } from './container.component';
 
@@ -10,7 +11,8 @@ import { Ng2ol3ContainerComponent } from './container.component';
     imports: [
         CommonModule, 
         Ng2ol3MapModule,
-        Ng2ol3SidebarModule
+        Ng2ol3SidebarModule,
+        Ng2ol3LayertreeModule
     ],
     declarations: [Ng2ol3ContainerComponent],
     exports: [Ng2ol3ContainerComponent]

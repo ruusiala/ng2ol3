@@ -10,8 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
-    ngOnInit() {
-    }
     mapCreated(map) {
         this.map = map;
     }

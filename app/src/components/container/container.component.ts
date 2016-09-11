@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
     selector: 'ng2ol3',
@@ -23,15 +23,11 @@ import {Component, Input, OnInit} from '@angular/core';
     }
 })
 
-export class Ng2ol3ContainerComponent implements OnInit {
+export class Ng2ol3ContainerComponent {
     
     @Input() config: any;
     
     map: ol.Map;
-
-    public ngOnInit(): any {
-        
-    }
 
     public mapCreated(map) {
         this.map = map;
