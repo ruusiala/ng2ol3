@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'demo-sidebar',
+    selector: 'demo-layertree',
     template: `
       <ng2ol3 [config]="config"></ng2ol3> 
     `
 })
-export class DemoSidebarComponent implements OnInit {
+export class DemoLayertreeComponent implements OnInit {
     config: any;
 
     public ngOnInit(): any {
@@ -22,27 +22,27 @@ export class DemoSidebarComponent implements OnInit {
                 },
                 layers: [
                     {
-                        type: 'layer',
-                        name: 'OpenStreetMap layer',
-                        layer: new ol.layer.Tile({
-                            source: new ol.source.OSM()
-                        })
+                        type: 'layergroup',
+                        name: 'Base layers',
+                        children: [
+                            {
+                                type: 'layer',
+                                name: 'OpenStreetMap layer',
+                                layer: new ol.layer.Tile({
+                                    source: new ol.source.OSM()
+                                })
+                            }
+                        ]
                     }
                 ]
             },
             sidebar: {
-                title: "Sidebar will be here",
+                title: "Sidebar with layertree will be here",
                 collapsible: true,
                 toolbar: {
                     layertree: {
                         enabled: true,
                         active: true
-                    },
-                    measure: {
-                        enabled: false
-                    },
-                    featureinfo: {
-                        enabled: false
                     }
                 }
             }

@@ -2,20 +2,22 @@
 const router_1 = require('@angular/router');
 const demo_simple_1 = require('./demo/demo-simple');
 const demo_sidebar_1 = require('./demo/demo-sidebar');
+const demo_layertree_1 = require('./demo/demo-layertree');
 const appRoutes = [
     {
         path: '',
         // redirectTo: '/demo-sidebar',
         component: demo_simple_1.DemoSimpleComponent,
         pathMatch: 'full'
-    },
-    {
+    }, {
         path: 'demo-simple',
         component: demo_simple_1.DemoSimpleComponent
-    },
-    {
+    }, {
         path: 'demo-sidebar',
         component: demo_sidebar_1.DemoSidebarComponent
+    }, {
+        path: 'demo-layertree',
+        component: demo_layertree_1.DemoLayertreeComponent
     }
 ];
 exports.appRoutingProviders = [];

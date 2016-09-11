@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 import {routing, appRoutingProviders} from './app.routing';
 import {DemoSimpleComponent} from './demo/demo-simple';
 import {DemoSidebarComponent} from './demo/demo-sidebar';
+import {DemoLayertreeComponent} from './demo/demo-layertree';
 
 @NgModule({
     imports: [
@@ -18,7 +19,8 @@ import {DemoSidebarComponent} from './demo/demo-sidebar';
     declarations: [
         AppComponent, 
         DemoSimpleComponent,
-        DemoSidebarComponent
+        DemoSidebarComponent,
+        DemoLayertreeComponent
     ],
     providers: [
         appRoutingProviders

@@ -21,9 +21,13 @@ let DemoSimpleComponent = class DemoSimpleComponent {
                     zoom: 7
                 },
                 layers: [
-                    new ol.layer.Tile({
-                        source: new ol.source.OSM()
-                    })
+                    {
+                        type: 'layer',
+                        name: 'OpenStreetMap layer',
+                        layer: new ol.layer.Tile({
+                            source: new ol.source.OSM()
+                        })
+                    }
                 ]
             }
         };

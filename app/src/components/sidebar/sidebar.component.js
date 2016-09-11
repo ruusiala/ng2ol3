@@ -9,10 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const _index_1 = require('../../models/@index');
 let Ng2ol3SidebarComponent = class Ng2ol3SidebarComponent {
     ngOnInit() {
         this.title = this.options.title || null;
         this.sidebarClosed = false;
+        this.map.updateSize();
     }
     toggleSidebar() {
         this.sidebarClosed = !this.sidebarClosed;
@@ -23,12 +25,19 @@ __decorate([
     core_1.Input(), 
     __metadata('design:type', Object)
 ], Ng2ol3SidebarComponent.prototype, "options", void 0);
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', _index_1.Ng2ol3Map)
+], Ng2ol3SidebarComponent.prototype, "map", void 0);
 Ng2ol3SidebarComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-sidebar',
         template: `
       <div class="sidebar-content">
-          <div class="close-button pointer" (click)="toggleSidebar()" [@sidebarClosed]="sidebarClosed" *ngIf="false">
+          <div class="close-button pointer" 
+                  (click)="toggleSidebar()" 
+                  [@sidebarClosed]="sidebarClosed" 
+                  *ngIf="false">
               <i class="fa fa-angle-double-left"></i>
           </div>
           <div *ngIf="title != null">{{title}}</div>

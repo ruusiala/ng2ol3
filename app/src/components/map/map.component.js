@@ -9,7 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const _index_1 = require('../../models/@index');
 let Ng2ol3MapComponent = class Ng2ol3MapComponent {
+    constructor() {
+        this.mapCreated = new core_1.EventEmitter();
+    }
     ngOnInit() {
         this.target = this.options.target;
         this.view = new ol.View({
@@ -19,14 +23,13 @@ let Ng2ol3MapComponent = class Ng2ol3MapComponent {
         });
     }
     ngAfterViewInit() {
-        this.map = new ol.Map({
+        this.map = new _index_1.Ng2ol3Map({
             layers: [],
             target: this.target,
             view: this.view
         });
-        for (let i = 0; i < this.options.layers.length; i++) {
-            this.map.addLayer(this.options.layers[i]);
-        }
+        this.map.addLayersAndLayerGroups(this.options.layers);
+        this.mapCreated.emit(this.map);
         this.map.updateSize();
     }
 };
@@ -34,6 +37,10 @@ __decorate([
     core_1.Input(), 
     __metadata('design:type', Object)
 ], Ng2ol3MapComponent.prototype, "options", void 0);
+__decorate([
+    core_1.Output(), 
+    __metadata('design:type', Object)
+], Ng2ol3MapComponent.prototype, "mapCreated", void 0);
 Ng2ol3MapComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-map',

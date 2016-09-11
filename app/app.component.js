@@ -32,7 +32,9 @@ AppComponent = __decorate([
                 <button routerLink="/demo-simple" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }">simple demo</button>
                 <button routerLink="/demo-sidebar" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">sidebar demo</button>
+                    [routerLinkActiveOptions]="{ exact: true }">sidebar</button>
+                <button routerLink="/demo-layertree" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">layertree</button>
             </nav>
         </div>
         <div class="demo-content">

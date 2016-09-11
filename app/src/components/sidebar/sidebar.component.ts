@@ -7,11 +7,16 @@ import {
     animate
 } from '@angular/core';
 
+import {Ng2ol3Map} from '../../models/@index';
+
 @Component({
     selector: 'ng2ol3-sidebar',
     template: `
       <div class="sidebar-content">
-          <div class="close-button pointer" (click)="toggleSidebar()" [@sidebarClosed]="sidebarClosed" *ngIf="false">
+          <div class="close-button pointer" 
+                  (click)="toggleSidebar()" 
+                  [@sidebarClosed]="sidebarClosed" 
+                  *ngIf="false">
               <i class="fa fa-angle-double-left"></i>
           </div>
           <div *ngIf="title != null">{{title}}</div>
@@ -34,8 +39,10 @@ import {
     ]
 })
 export class Ng2ol3SidebarComponent implements OnInit {
+
     @Input() options: any;
-    // @Input() map: ol.Map;
+    @Input() map: Ng2ol3Map;
+    
     title: string;
     
     sidebarClosed: boolean;
@@ -43,13 +50,12 @@ export class Ng2ol3SidebarComponent implements OnInit {
     public ngOnInit(): any {
         this.title = this.options.title || null;
         this.sidebarClosed = false;
+        this.map.updateSize();
     }
 
     public toggleSidebar(): any {
         this.sidebarClosed = !this.sidebarClosed;
         console.log(`sidebar will be closed: ${this.sidebarClosed}`);
     }
-
-
 
 }

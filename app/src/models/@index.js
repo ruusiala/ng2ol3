@@ -6,4 +6,6 @@ __export(require('./config'));
 __export(require('./map'));
 __export(require('./view'));
 __export(require('./sidebar'));
+__export(require('./layer'));
+__export(require('./layergroup'));
 //# sourceMappingURL=@index.js.map

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterViewInit, AfterContentInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter, AfterViewInit, AfterContentInit } from '@angular/core';
 
 import { Ng2ol3Map, Ng2ol3Config, Ng2ol3View } from '../../models/@index';
 
@@ -12,8 +12,12 @@ import { Ng2ol3Map, Ng2ol3Config, Ng2ol3View } from '../../models/@index';
     }
 })
 export class Ng2ol3MapComponent implements AfterViewInit, OnInit {
+
     @Input() options: any;
-    map: ol.Map;
+
+    @Output() mapCreated = new EventEmitter();
+
+    map: Ng2ol3Map;
     view: ol.View;
     target: string;
 
@@ -27,14 +31,13 @@ export class Ng2ol3MapComponent implements AfterViewInit, OnInit {
     }
 
     public ngAfterViewInit(): any {
-        this.map = new ol.Map({
+        this.map = new Ng2ol3Map({
             layers: [],
             target: this.target,
             view: this.view
         });
-        for (let i = 0; i < this.options.layers.length; i++) {
-            this.map.addLayer(this.options.layers[i]);
-        }
+        this.map.addLayersAndLayerGroups(this.options.layers);
+        this.mapCreated.emit(this.map);
         this.map.updateSize();
     }
 

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let DemoSidebarComponent = class DemoSidebarComponent {
+let DemoLayertreeComponent = class DemoLayertreeComponent {
     ngOnInit() {
         this.config = {
             map: {
@@ -22,41 +22,41 @@ let DemoSidebarComponent = class DemoSidebarComponent {
                 },
                 layers: [
                     {
-                        type: 'layer',
-                        name: 'OpenStreetMap layer',
-                        layer: new ol.layer.Tile({
-                            source: new ol.source.OSM()
-                        })
+                        type: 'layergroup',
+                        name: 'Base layers',
+                        children: [
+                            {
+                                type: 'layer',
+                                name: 'OpenStreetMap layer',
+                                layer: new ol.layer.Tile({
+                                    source: new ol.source.OSM()
+                                })
+                            }
+                        ]
                     }
                 ]
             },
             sidebar: {
-                title: "Sidebar will be here",
+                title: "Sidebar with layertree will be here",
                 collapsible: true,
                 toolbar: {
                     layertree: {
                         enabled: true,
                         active: true
-                    },
-                    measure: {
-                        enabled: false
-                    },
-                    featureinfo: {
-                        enabled: false
                     }
                 }
             }
         };
     }
 };
-DemoSidebarComponent = __decorate([
+DemoLayertreeComponent = __decorate([
     core_1.Component({
-        selector: 'demo-sidebar',
+        selector: 'demo-layertree',
         template: `
       <ng2ol3 [config]="config"></ng2ol3> 
     `
     }), 
     __metadata('design:paramtypes', [])
-], DemoSidebarComponent);
-exports.DemoSidebarComponent = DemoSidebarComponent;
-//# sourceMappingURL=demo-sidebar.js.map
+], DemoLayertreeComponent);
+exports.DemoLayertreeComponent = DemoLayertreeComponent;
+//# sourceMappingURL=demo-layertree.js.map

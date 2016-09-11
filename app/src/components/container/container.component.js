@@ -12,6 +12,9 @@ const core_1 = require('@angular/core');
 let Ng2ol3ContainerComponent = class Ng2ol3ContainerComponent {
     ngOnInit() {
     }
+    mapCreated(map) {
+        this.map = map;
+    }
 };
 __decorate([
     core_1.Input(), 
@@ -23,11 +26,18 @@ Ng2ol3ContainerComponent = __decorate([
         template: `
         <div class="outer-container">
             <div class="inner-container">
-                <ng2ol3-sidebar *ngIf="config.sidebar" [options]="config.sidebar"></ng2ol3-sidebar>
-                <ng2ol3-map *ngIf="config.map" [options]="config.map"></ng2ol3-map>
+                <ng2ol3-sidebar 
+                    *ngIf="config.sidebar && map" 
+                    [options]="config.sidebar" 
+                    [map]="map">
+                </ng2ol3-sidebar>
+                <ng2ol3-map 
+                    *ngIf="config.map" 
+                    [options]="config.map"
+                    (mapCreated)="mapCreated($event)">
+                </ng2ol3-map>
             </div>
         </div>
-    
     `,
         host: {
             class: 'ng2ol3-container'

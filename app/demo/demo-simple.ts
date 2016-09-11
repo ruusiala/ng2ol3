@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'demo-simple',
@@ -21,9 +21,13 @@ export class DemoSimpleComponent implements OnInit {
                     zoom: 7
                 },
                 layers: [
-                    new ol.layer.Tile({
-                        source: new ol.source.OSM()
-                    })
+                    {
+                        type: 'layer',
+                        name: 'OpenStreetMap layer',
+                        layer: new ol.layer.Tile({
+                            source: new ol.source.OSM()
+                        })
+                    }
                 ]
             }
         }
