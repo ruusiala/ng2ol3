@@ -22,7 +22,9 @@ Ng2ol3ToolbarComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-toolbar',
         template: `
-      <div>This will be the toolbar</div>
+      <div>
+          <i class="ms ms-layers pointer" *ngIf="hasLayertree"></i>
+      </div>
     `,
         host: {
             class: 'ng2ol3-toolbar'

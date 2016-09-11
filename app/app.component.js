@@ -35,6 +35,8 @@ AppComponent = __decorate([
                     [routerLinkActiveOptions]="{ exact: true }">sidebar</button>
                 <button routerLink="/demo-toolbar" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }">toolbar</button>
+                <button routerLink="/demo-layertree" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">layertree</button>
             </nav>
         </div>
         <div class="demo-content">

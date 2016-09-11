@@ -9,12 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let DemoToolbarComponent = class DemoToolbarComponent {
+let DemoLayertreeComponent = class DemoLayertreeComponent {
     ngOnInit() {
         this.config = {
             map: {
                 renderer: 'canvas',
-                target: 'demo-toolbar-map',
+                target: 'demo-layertree-map',
                 view: {
                     projection: "EPSG:900913",
                     center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
@@ -38,19 +38,24 @@ let DemoToolbarComponent = class DemoToolbarComponent {
             },
             sidebar: {
                 collapsible: true,
-                toolbar: {}
+                toolbar: {
+                    layertree: {
+                        active: true,
+                        disabled: false
+                    }
+                }
             }
         };
     }
 };
-DemoToolbarComponent = __decorate([
+DemoLayertreeComponent = __decorate([
     core_1.Component({
-        selector: 'demo-toolbar',
+        selector: 'demo-layertree',
         template: `
       <ng2ol3 [config]="config"></ng2ol3> 
     `
     }), 
     __metadata('design:paramtypes', [])
-], DemoToolbarComponent);
-exports.DemoToolbarComponent = DemoToolbarComponent;
-//# sourceMappingURL=demo-toolbar.js.map
+], DemoLayertreeComponent);
+exports.DemoLayertreeComponent = DemoLayertreeComponent;
+//# sourceMappingURL=demo-layertree.js.map
