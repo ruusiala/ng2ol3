@@ -17,7 +17,7 @@ An online example can be viewed [here](http://188.166.116.137/ng2ol3).
 This is just a basic demo with two examples: simple demo and sidebar demo. In the near future I intend to add/extend other widgets such as header, layertree, featureinfo panel, printing etc. RxJS is not yet implemented. More examples will arrive as soon as the project becomes smarter.
 Ng2ol3 has recently been updated to work with Angular2 RC6 and TypeScript2.
 
-<img src="assets/img/screenshots/demo_20160909.png" width="100%">
+<img src="assets/img/screenshots/demo_20160912.png" width="100%">
 
 ## Author
 ```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://www.gpadanyig.com)
