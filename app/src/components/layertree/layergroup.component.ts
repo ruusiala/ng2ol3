@@ -1,12 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { NgClass } from '@angular/common';
 
-import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
+import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 
 @Component({
     selector: 'ng2ol3-layergroup',
     template: `
-      <div class="layergroup-header"><i class="ms ms-directory"></i>{{layerGroup.name}}</div>
-      <div class="layergroup-children">
+      <div class="layergroup-header">
+          <i class="ms" 
+                [ngClass]="{'ms-directory': !expanded, 'ms-directory-open': expanded}"
+                (click)="toggleExpanded()"></i>
+          <span>{{layerGroup.name}}</span>
+      </div>
+      <div class="layergroup-children" *ngIf="expanded">
           <ng2ol3-layer 
                   *ngFor="let l of nestedLayers" 
                   [layer]="l">
@@ -23,27 +29,35 @@ import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
 })
 export class Ng2ol3LayergroupComponent implements OnInit {
 
-    @Input() layerGroup: Ng2ol3LayerGroup; 
+    @Input() layerGroup: Ng2ol3LayerGroup;
+
+    expanded: boolean;
     children: any[];
     nestedLayers: Ng2ol3Layer[];
     nestedLayerGroups: Ng2ol3LayerGroup[];
 
     constructor() {
+        this.expanded = true;
         this.children = [];
         this.nestedLayers = [];
         this.nestedLayerGroups = [];
     }
 
     public ngOnInit(): any {
+        this.expanded = this.layerGroup.getExpanded();
         this.children = this.layerGroup.getChildren();
-        for(let i=0; i<this.children.length; i++) {
+        for (let i = 0; i < this.children.length; i++) {
             let children = this.children[i];
-            if(children instanceof Ng2ol3Layer) {
+            if (children instanceof Ng2ol3Layer) {
                 this.nestedLayers.push(children);
-            } else if(children instanceof Ng2ol3LayerGroup) {
+            } else if (children instanceof Ng2ol3LayerGroup) {
                 this.nestedLayerGroups.push(children);
             }
         }
+    }
+
+    public toggleExpanded(): void {
+        this.expanded = !this.expanded;
     }
 
 }

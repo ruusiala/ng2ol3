@@ -12,11 +12,13 @@ const core_1 = require('@angular/core');
 const _index_1 = require('../../models/@index');
 let Ng2ol3LayergroupComponent = class Ng2ol3LayergroupComponent {
     constructor() {
+        this.expanded = true;
         this.children = [];
         this.nestedLayers = [];
         this.nestedLayerGroups = [];
     }
     ngOnInit() {
+        this.expanded = this.layerGroup.getExpanded();
         this.children = this.layerGroup.getChildren();
         for (let i = 0; i < this.children.length; i++) {
             let children = this.children[i];
@@ -28,6 +30,9 @@ let Ng2ol3LayergroupComponent = class Ng2ol3LayergroupComponent {
             }
         }
     }
+    toggleExpanded() {
+        this.expanded = !this.expanded;
+    }
 };
 __decorate([
     core_1.Input(), 
@@ -37,8 +42,13 @@ Ng2ol3LayergroupComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-layergroup',
         template: `
-      <div class="layergroup-header"><i class="ms ms-directory"></i>{{layerGroup.name}}</div>
-      <div class="layergroup-children">
+      <div class="layergroup-header">
+          <i class="ms" 
+                [ngClass]="{'ms-directory': !expanded, 'ms-directory-open': expanded}"
+                (click)="toggleExpanded()"></i>
+          <span>{{layerGroup.name}}</span>
+      </div>
+      <div class="layergroup-children" *ngIf="expanded">
           <ng2ol3-layer 
                   *ngFor="let l of nestedLayers" 
                   [layer]="l">

@@ -11,7 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 const _index_1 = require('../../models/@index');
 let Ng2ol3LayerComponent = class Ng2ol3LayerComponent {
+    constructor() {
+        this.detailsExpanded = false;
+    }
     ngOnInit() {
+    }
+    toggleVisibility() {
+        this.layer.setVisible(!this.layer.getVisible());
+    }
+    toggleDetailsExpanded() {
+        this.detailsExpanded = !this.detailsExpanded;
     }
 };
 __decorate([
@@ -22,10 +31,12 @@ Ng2ol3LayerComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-layer',
         template: `
-        <div>
-            <span class="layer-name">{{layer.name}}</span>
-            <span class="layer-properties"><i class="ms ms-processes"></i></span>
+        <div class="layer-header">
+            <span class="layer-name" (click)="toggleVisibility()">{{layer.name}}</span>
+            <span class="layer-properties" (click)="toggleDetailsExpanded()"><i class="ms ms-processes"></i></span>
         </div>
+        <div class="layer-details"
+            *ngIf="detailsExpanded">layer details will come here</div>
     `,
         host: {
             class: 'ng2ol3-layer'

@@ -24,10 +24,14 @@ let DemoLayertreeComponent = class DemoLayertreeComponent {
                     {
                         type: 'layergroup',
                         name: 'Base layers',
+                        expanded: true,
+                        visible: true,
                         children: [
                             {
                                 type: 'layer',
                                 name: 'OpenStreetMap layer',
+                                visible: true,
+                                opacity: 1.0,
                                 layer: new ol.layer.Tile({
                                     source: new ol.source.OSM()
                                 })

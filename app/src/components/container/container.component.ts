@@ -29,7 +29,7 @@ export class Ng2ol3ContainerComponent {
     
     map: ol.Map;
 
-    public mapCreated(map) {
+    public mapCreated(map):void {
         this.map = map;
     }
 
