@@ -11,11 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const common_1 = require('@angular/common');
 const core_1 = require('@angular/core');
 const layertree_component_1 = require('./layertree.component');
+const layergroup_module_1 = require('./layergroup.module');
+const layer_module_1 = require('./layer.module');
 let Ng2ol3LayertreeModule = class Ng2ol3LayertreeModule {
 };
 Ng2ol3LayertreeModule = __decorate([
     core_1.NgModule({
-        imports: [common_1.CommonModule],
+        imports: [common_1.CommonModule, layergroup_module_1.Ng2ol3LayergroupModule, layer_module_1.Ng2ol3LayerModule],
         declarations: [layertree_component_1.Ng2ol3LayertreeComponent],
         exports: [layertree_component_1.Ng2ol3LayertreeComponent]
     }), 

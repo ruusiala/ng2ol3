@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let DemoSimpleComponent = class DemoSimpleComponent {
+let DemoMapComponent = class DemoMapComponent {
     ngOnInit() {
         this.config = {
             map: {
@@ -33,14 +33,14 @@ let DemoSimpleComponent = class DemoSimpleComponent {
         };
     }
 };
-DemoSimpleComponent = __decorate([
+DemoMapComponent = __decorate([
     core_1.Component({
-        selector: 'demo-simple',
+        selector: 'demo-map',
         template: `
       <ng2ol3 [config]="config"></ng2ol3> 
     `
     }), 
     __metadata('design:paramtypes', [])
-], DemoSimpleComponent);
-exports.DemoSimpleComponent = DemoSimpleComponent;
-//# sourceMappingURL=demo-simple.js.map
+], DemoMapComponent);
+exports.DemoMapComponent = DemoMapComponent;
+//# sourceMappingURL=demo-map.js.map

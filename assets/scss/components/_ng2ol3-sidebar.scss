@@ -7,12 +7,17 @@
     position: absolute;
     height: 100%;
     
-    & .sidebar-content {
+    & .sidebar-main {
         padding: 0;
 
         & .close-button {
             float: right;
             width: 1em;
+        }
+
+        & .sidebar-content {
+            padding: $base-padding;
+            font-size: 0.8em;
         }
     }
 }

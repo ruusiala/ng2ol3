@@ -1,19 +1,17 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DemoSimpleComponent } from './demo/demo-simple';
-import { DemoSidebarComponent } from './demo/demo-sidebar';
-import { DemoToolbarComponent } from './demo/demo-toolbar';
-import { DemoLayertreeComponent } from './demo/demo-layertree';
+import { DemoMapComponent } from './demo/demo-map';
+import {DemoSidebarComponent, DemoToolbarComponent, DemoLayertreeComponent} from './demo/@index';
 
 const appRoutes: Routes = [
     {
         path: '',
         // redirectTo: '/demo-sidebar',
-        component: DemoSimpleComponent,
+        component: DemoMapComponent,
         pathMatch: 'full'
     }, {
-        path: 'demo-simple',
-        component: DemoSimpleComponent
+        path: 'demo-map',
+        component: DemoMapComponent
     }, {
         path: 'demo-sidebar',
         component: DemoSidebarComponent

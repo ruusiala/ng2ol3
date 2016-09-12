@@ -10,28 +10,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const _index_1 = require('../../models/@index');
-let Ng2ol3LayertreeComponent = class Ng2ol3LayertreeComponent {
+let Ng2ol3LayerComponent = class Ng2ol3LayerComponent {
     ngOnInit() {
-        this.layerGroups = this.map.getNg2ol3LayerGroups();
-        this.layers = this.map.getNg2ol3Layers();
     }
 };
 __decorate([
     core_1.Input(), 
-    __metadata('design:type', _index_1.Ng2ol3Map)
-], Ng2ol3LayertreeComponent.prototype, "map", void 0);
-Ng2ol3LayertreeComponent = __decorate([
+    __metadata('design:type', _index_1.Ng2ol3Layer)
+], Ng2ol3LayerComponent.prototype, "layer", void 0);
+Ng2ol3LayerComponent = __decorate([
     core_1.Component({
-        selector: 'ng2ol3-layertree',
+        selector: 'ng2ol3-layer',
         template: `
-      <ng2ol3-layergroup *ngFor="let lg of layerGroups" [layerGroup]="lg"></ng2ol3-layergroup>
-      <ng2ol3-layer *ngFor="let l of layers"></ng2ol3-layer>
+        <div>
+            <span class="layer-name">{{layer.name}}</span>
+            <span class="layer-properties"><i class="ms ms-processes"></i></span>
+        </div>
     `,
         host: {
-            class: 'ng2ol3-layertree'
+            class: 'ng2ol3-layer'
         }
     }), 
     __metadata('design:paramtypes', [])
-], Ng2ol3LayertreeComponent);
-exports.Ng2ol3LayertreeComponent = Ng2ol3LayertreeComponent;
-//# sourceMappingURL=layertree.component.js.map
+], Ng2ol3LayerComponent);
+exports.Ng2ol3LayerComponent = Ng2ol3LayerComponent;
+//# sourceMappingURL=layer.component.js.map

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'demo-simple',
+    selector: 'demo-map',
     template: `
       <ng2ol3 [config]="config"></ng2ol3> 
     `
 })
-export class DemoSimpleComponent implements OnInit {
+export class DemoMapComponent implements OnInit {
     config: any;
 
     public ngOnInit(): any {

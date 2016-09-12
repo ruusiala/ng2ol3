@@ -10,6 +10,8 @@ export class Ng2ol3Map extends ol.Map {
     constructor(options: any) {
         super(options);
         this.options = options;
+        this.layers = [];
+        this.layerGroups = [];
     }
 
     public addLayersAndLayerGroups(optionLayers: any[]): any {
@@ -24,14 +26,25 @@ export class Ng2ol3Map extends ol.Map {
             let newLayer = new Ng2ol3Layer(element);
             this.addLayer(element.layer);
             if (layerGroup !== null) {
-                layerGroup.getLayers().push(newLayer);
+                layerGroup.getChildren().push(newLayer);
+            } else {
+                this.layers.push(newLayer);
             }
         } else if (element.type == "layergroup") {
             let newLayerGroup = new Ng2ol3LayerGroup(element);
+            this.layerGroups.push(newLayerGroup);
             for (let i = 0; i < element.children.length; i++) {
                 this.handleLayerOrLayerGroup(element.children[i], newLayerGroup);
             }
         }
+    }
+
+    public getNg2ol3Layers(): Ng2ol3Layer[] {
+        return this.layers;
+    }
+
+    public getNg2ol3LayerGroups(): Ng2ol3LayerGroup[] {
+        return this.layerGroups;
     }
 
 

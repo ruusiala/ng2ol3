@@ -6,10 +6,13 @@ import {Ng2ol3Module} from './src/components/@index';
 import {AppComponent} from './app.component';
 
 import {routing, appRoutingProviders} from './app.routing';
-import {DemoSimpleComponent} from './demo/demo-simple';
-import {DemoSidebarComponent} from './demo/demo-sidebar';
-import {DemoToolbarComponent} from './demo/demo-toolbar';
-import {DemoLayertreeComponent} from './demo/demo-layertree';
+
+import {
+    DemoMapComponent, 
+    DemoSidebarComponent, 
+    DemoToolbarComponent, 
+    DemoLayertreeComponent
+} from './demo/@index';
 
 @NgModule({
     imports: [
@@ -19,7 +22,7 @@ import {DemoLayertreeComponent} from './demo/demo-layertree';
     ],
     declarations: [
         AppComponent, 
-        DemoSimpleComponent,
+        DemoMapComponent,
         DemoSidebarComponent,
         DemoToolbarComponent,
         DemoLayertreeComponent

@@ -1,5 +1,5 @@
 import { OnInit } from '@angular/core';
-export declare class DemoSimpleComponent implements OnInit {
+export declare class DemoMapComponent implements OnInit {
     config: any;
     ngOnInit(): any;
 }

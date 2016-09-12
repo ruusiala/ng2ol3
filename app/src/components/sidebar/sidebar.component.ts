@@ -1,5 +1,5 @@
 import {
-    Component, Input, OnInit, 
+    Component, Input, OnInit,
     trigger,
     state,
     style,
@@ -12,17 +12,23 @@ import {Ng2ol3Map} from '../../models/@index';
 @Component({
     selector: 'ng2ol3-sidebar',
     template: `
-      <div class="sidebar-content">
-          <div class="close-button pointer" 
+      <div class="sidebar-main">
+          <!--<div class="close-button pointer" 
                   (click)="toggleSidebar()" 
                   [@sidebarClosed]="sidebarClosed" 
                   *ngIf="false">
               <i class="fa fa-angle-double-left"></i>
-          </div>
+          </div>-->
           <ng2ol3-toolbar 
                   *ngIf="hasToolbar"
                   [options]="options.toolbar">
           </ng2ol3-toolbar>
+          <div class="sidebar-content">
+              <ng2ol3-layertree 
+                      *ngIf="hasLayertree" 
+                      [map]="map">
+              </ng2ol3-layertree>
+          </div>
       </div>
     `,
     host: {
@@ -45,13 +51,15 @@ export class Ng2ol3SidebarComponent implements OnInit {
 
     @Input() options: any;
     @Input() map: Ng2ol3Map;
-    
+
     sidebarClosed: boolean;
     hasToolbar: boolean;
+    hasLayertree: boolean;
 
     public ngOnInit(): any {
         this.sidebarClosed = false;
         this.hasToolbar = this.options.hasOwnProperty("toolbar");
+        this.hasLayertree = this.hasToolbar && this.options.toolbar.hasOwnProperty("layertree");
 
         this.map.updateSize();
     }

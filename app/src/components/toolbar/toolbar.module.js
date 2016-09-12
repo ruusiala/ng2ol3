@@ -18,7 +18,7 @@ Ng2ol3ToolbarModule = __decorate([
     core_1.NgModule({
         imports: [
             common_1.CommonModule,
-            layertree_module_1.Ng2ol3LayertreeModule
+            layertree_module_1.Ng2ol3LayertreeModule,
         ],
         declarations: [toolbar_component_1.Ng2ol3ToolbarComponent],
         exports: [toolbar_component_1.Ng2ol3ToolbarComponent]

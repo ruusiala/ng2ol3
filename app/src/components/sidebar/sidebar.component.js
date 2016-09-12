@@ -14,6 +14,7 @@ let Ng2ol3SidebarComponent = class Ng2ol3SidebarComponent {
     ngOnInit() {
         this.sidebarClosed = false;
         this.hasToolbar = this.options.hasOwnProperty("toolbar");
+        this.hasLayertree = this.hasToolbar && this.options.toolbar.hasOwnProperty("layertree");
         this.map.updateSize();
     }
     toggleSidebar() {
@@ -33,17 +34,23 @@ Ng2ol3SidebarComponent = __decorate([
     core_1.Component({
         selector: 'ng2ol3-sidebar',
         template: `
-      <div class="sidebar-content">
-          <div class="close-button pointer" 
+      <div class="sidebar-main">
+          <!--<div class="close-button pointer" 
                   (click)="toggleSidebar()" 
                   [@sidebarClosed]="sidebarClosed" 
                   *ngIf="false">
               <i class="fa fa-angle-double-left"></i>
-          </div>
+          </div>-->
           <ng2ol3-toolbar 
                   *ngIf="hasToolbar"
                   [options]="options.toolbar">
           </ng2ol3-toolbar>
+          <div class="sidebar-content">
+              <ng2ol3-layertree 
+                      *ngIf="hasLayertree" 
+                      [map]="map">
+              </ng2ol3-layertree>
+          </div>
       </div>
     `,
         host: {

@@ -10,22 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const common_1 = require('@angular/common');
 const core_1 = require('@angular/core');
-const sidebar_component_1 = require('./sidebar.component');
-const toolbar_module_1 = require('../toolbar/toolbar.module');
-const layertree_module_1 = require('../layertree/layertree.module');
-let Ng2ol3SidebarModule = class Ng2ol3SidebarModule {
+const layergroup_component_1 = require('./layergroup.component');
+const layer_module_1 = require('./layer.module');
+let Ng2ol3LayergroupModule = class Ng2ol3LayergroupModule {
 };
-Ng2ol3SidebarModule = __decorate([
+Ng2ol3LayergroupModule = __decorate([
     core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            toolbar_module_1.Ng2ol3ToolbarModule,
-            layertree_module_1.Ng2ol3LayertreeModule
-        ],
-        declarations: [sidebar_component_1.Ng2ol3SidebarComponent],
-        exports: [sidebar_component_1.Ng2ol3SidebarComponent]
+        imports: [common_1.CommonModule, layer_module_1.Ng2ol3LayerModule],
+        declarations: [layergroup_component_1.Ng2ol3LayergroupComponent],
+        exports: [layergroup_component_1.Ng2ol3LayergroupComponent]
     }), 
     __metadata('design:paramtypes', [])
-], Ng2ol3SidebarModule);
-exports.Ng2ol3SidebarModule = Ng2ol3SidebarModule;
-//# sourceMappingURL=sidebar.module.js.map
+], Ng2ol3LayergroupModule);
+exports.Ng2ol3LayergroupModule = Ng2ol3LayergroupModule;
+//# sourceMappingURL=layergroup.module.js.map

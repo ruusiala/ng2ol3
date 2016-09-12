@@ -8,7 +8,7 @@ import { Ng2ol3LayertreeModule } from '../layertree/layertree.module';
 @NgModule({
   imports: [
     CommonModule,
-    Ng2ol3LayertreeModule
+    Ng2ol3LayertreeModule,
   ],
   declarations: [Ng2ol3ToolbarComponent],
   exports: [Ng2ol3ToolbarComponent]

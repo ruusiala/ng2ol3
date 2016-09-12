@@ -2,13 +2,13 @@
 class Ng2ol3LayerGroup {
     constructor(options) {
         this.name = options.name;
-        this.layers = [];
+        this.children = [];
     }
     getName() {
         return this.name;
     }
-    getLayers() {
-        return this.layers;
+    getChildren() {
+        return this.children;
     }
 }
 exports.Ng2ol3LayerGroup = Ng2ol3LayerGroup;

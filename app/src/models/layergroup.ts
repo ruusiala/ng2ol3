@@ -3,18 +3,18 @@ import {Ng2ol3Layer} from './@index';
 export class Ng2ol3LayerGroup {
 
     name: string;
-    layers: Ng2ol3Layer[];
+    children: any[];
 
     constructor(options: any) {
         this.name = options.name;
-        this.layers = [];
+        this.children = [];
     }
 
     public getName(): string {
         return this.name;
     }
 
-    public getLayers(): Ng2ol3Layer[] {
-        return this.layers;
+    public getChildren(): any[] {
+        return this.children;
     }
 }

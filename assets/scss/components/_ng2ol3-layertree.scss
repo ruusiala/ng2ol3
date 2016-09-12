@@ -1,3 +1,51 @@
 .ng2ol3-layertree {
+    color: $base-font-color;
+    $icon-padding: 2px;
+    $hoverColor: darken($base-font-color, 50%);;
     
+    & .ng2ol3-layergroup {
+        & .layergroup-header {
+            text-transform: uppercase;
+            // border-bottom: 1px solid rgba($hoverColor, 0.1);
+            padding-top: 2px;
+            padding-bottom: 2px;
+        
+            & i {
+                padding-right: $icon-padding;
+            }
+
+            &:hover {
+                color: $hoverColor;
+                cursor: pointer;
+                // border-bottom: 1px solid rgba($hoverColor, 0.3);
+            }
+        }
+
+        & .layergroup-children {
+            padding-left: 15px;
+        }
+    }
+    
+    & .ng2ol3-layer {
+        & .layer-name {
+            & i {
+                padding-right: $icon-padding;
+            }
+
+            &:hover {
+                color: $hoverColor;
+                cursor: pointer;
+            }
+        }
+
+        & .layer-properties {
+            float: right;
+
+            &:hover {
+                color: $hoverColor;
+                cursor: pointer;
+            }
+        }
+    }
+
 }

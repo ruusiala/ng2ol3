@@ -6,4 +6,6 @@ export declare class Ng2ol3Map extends ol.Map {
     constructor(options: any);
     addLayersAndLayerGroups(optionLayers: any[]): any;
     private handleLayerOrLayerGroup(element, layerGroup);
+    getNg2ol3Layers(): Ng2ol3Layer[];
+    getNg2ol3LayerGroups(): Ng2ol3LayerGroup[];
 }
