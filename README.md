@@ -1,4 +1,4 @@
-# ng2ol3 [![npm version](https://badge.fury.io/js/ng2ol3.png)](https://badge.fury.io/js/ng2ol3)
+# ng2ol3 [![npm version](https://badge.fury.io/js/ng2ol3.svg)](https://badge.fury.io/js/ng2ol3)
 > A combination of <b>Angular2 & OpenLayers3</b> using <i>TypeScript, RxJS & SCSS (Bourbon) </i> for creating customizable, modern web maps
 
 [![Dependency Status](https://david-dm.org/fegyi001/ng2ol3.svg)](https://david-dm.org/fegyi001/ng2ol3)
