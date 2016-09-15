@@ -1,1 +1,1 @@
-{"version":3,"file":"sidebar.js","sourceRoot":"","sources":["sidebar.ts"],"names":[],"mappings":";AAAA;IAII,YAAY,OAAY;QACpB,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;IAC3B,CAAC;AACL,CAAC;AAPY,qBAAa,gBAOzB,CAAA"}
+{"version":3,"file":"sidebar.js","sourceRoot":"","sources":["sidebar.ts"],"names":[],"mappings":";AAAA;IAII,uBAAY,OAAY;QACpB,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;IAC3B,CAAC;IACL,oBAAC;AAAD,CAAC,AAPD,IAOC;AAPY,qBAAa,gBAOzB,CAAA"}

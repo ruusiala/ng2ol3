@@ -8,34 +8,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const platform_browser_1 = require('@angular/platform-browser');
-const _index_1 = require('./src/components/@index');
-const app_component_1 = require('./app.component');
-const app_routing_1 = require('./app.routing');
-const _index_2 = require('./demo/@index');
-let AppModule = class AppModule {
-};
-AppModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            platform_browser_1.BrowserModule,
-            _index_1.Ng2ol3Module,
-            app_routing_1.routing
-        ],
-        declarations: [
-            app_component_1.AppComponent,
-            _index_2.DemoMapComponent,
-            _index_2.DemoSidebarComponent,
-            _index_2.DemoToolbarComponent,
-            _index_2.DemoLayertreeComponent
-        ],
-        providers: [
-            app_routing_1.appRoutingProviders
-        ],
-        bootstrap: [app_component_1.AppComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], AppModule);
+var core_1 = require('@angular/core');
+var platform_browser_1 = require('@angular/platform-browser');
+var _index_1 = require('./src/components/@index');
+var app_component_1 = require('./app.component');
+var app_routing_1 = require('./app.routing');
+var _index_2 = require('./demo/@index');
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                platform_browser_1.BrowserModule,
+                _index_1.Ng2ol3Module,
+                app_routing_1.routing
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                _index_2.DemoMapComponent,
+                _index_2.DemoSidebarComponent,
+                _index_2.DemoToolbarComponent,
+                _index_2.DemoLayertreeComponent
+            ],
+            providers: [
+                app_routing_1.appRoutingProviders
+            ],
+            bootstrap: [app_component_1.AppComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppModule);
+    return AppModule;
+}());
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

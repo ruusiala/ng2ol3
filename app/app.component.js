@@ -8,45 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-let AppComponent = class AppComponent {
-};
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'demo-app',
-        template: `
-    <div>
-    <div class="ribbon-box">
-        <div class="ribbon-wrapper">
-            <a href="https://github.com/fegyi001/ng2ol3" target="_blank" title="GitHub repository">
-                <div class="ribbon">
-                    <i class="fa fa-github"></i>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="demo">
-        <div class="demo-header">
-            <h1 class="title">ng2ol3 components</h1>
-            <nav>
-                <button routerLink="/demo-map" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">map</button>
-                <button routerLink="/demo-sidebar" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">sidebar</button>
-                <button routerLink="/demo-toolbar" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">toolbar</button>
-                <button routerLink="/demo-layertree" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">layertree</button>
-            </nav>
-        </div>
-        <div class="demo-content">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-        
-    `
-    }), 
-    __metadata('design:paramtypes', [])
-], AppComponent);
+var core_1 = require('@angular/core');
+var AppComponent = (function () {
+    function AppComponent() {
+    }
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'demo-app',
+            template: "\n    <div>\n    <div class=\"ribbon-box\">\n        <div class=\"ribbon-wrapper\">\n            <a href=\"https://github.com/fegyi001/ng2ol3\" target=\"_blank\" title=\"GitHub repository\">\n                <div class=\"ribbon\">\n                    <i class=\"fa fa-github\"></i>\n                </div>\n            </a>\n        </div>\n    </div>\n    <div class=\"demo\">\n        <div class=\"demo-header\">\n            <h1 class=\"title\">ng2ol3 components</h1>\n            <nav>\n                <button routerLink=\"/demo-map\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">map</button>\n                <button routerLink=\"/demo-sidebar\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">sidebar</button>\n                <button routerLink=\"/demo-toolbar\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">toolbar</button>\n                <button routerLink=\"/demo-layertree\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">layertree</button>\n            </nav>\n        </div>\n        <div class=\"demo-content\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n        \n    "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AppComponent);
+    return AppComponent;
+}());
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

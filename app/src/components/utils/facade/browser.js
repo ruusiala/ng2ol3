@@ -14,7 +14,7 @@ var win = typeof window !== 'undefined' && window || {};
 exports.window = win;
 exports.document = win.document;
 exports.location = win.location;
-exports.gc = win['gc'] ? () => win['gc']() : () => null;
+exports.gc = win['gc'] ? function () { return win['gc'](); } : function () { return null; };
 exports.performance = win['performance'] ? win['performance'] : null;
 exports.Event = win['Event'];
 exports.MouseEvent = win['MouseEvent'];

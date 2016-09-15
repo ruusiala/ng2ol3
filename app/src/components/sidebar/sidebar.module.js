@@ -8,24 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const sidebar_component_1 = require('./sidebar.component');
-const toolbar_module_1 = require('../toolbar/toolbar.module');
-const layertree_module_1 = require('../layertree/layertree.module');
-let Ng2ol3SidebarModule = class Ng2ol3SidebarModule {
-};
-Ng2ol3SidebarModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            toolbar_module_1.Ng2ol3ToolbarModule,
-            layertree_module_1.Ng2ol3LayertreeModule
-        ],
-        declarations: [sidebar_component_1.Ng2ol3SidebarComponent],
-        exports: [sidebar_component_1.Ng2ol3SidebarComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3SidebarModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var sidebar_component_1 = require('./sidebar.component');
+var toolbar_module_1 = require('../toolbar/toolbar.module');
+var layertree_module_1 = require('../layertree/layertree.module');
+var Ng2ol3SidebarModule = (function () {
+    function Ng2ol3SidebarModule() {
+    }
+    Ng2ol3SidebarModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                common_1.CommonModule,
+                toolbar_module_1.Ng2ol3ToolbarModule,
+                layertree_module_1.Ng2ol3LayertreeModule
+            ],
+            declarations: [sidebar_component_1.Ng2ol3SidebarComponent],
+            exports: [sidebar_component_1.Ng2ol3SidebarComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3SidebarModule);
+    return Ng2ol3SidebarModule;
+}());
 exports.Ng2ol3SidebarModule = Ng2ol3SidebarModule;
 //# sourceMappingURL=sidebar.module.js.map

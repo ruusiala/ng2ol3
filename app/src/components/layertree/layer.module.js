@@ -8,18 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const layer_component_1 = require('./layer.component');
-let Ng2ol3LayerModule = class Ng2ol3LayerModule {
-};
-Ng2ol3LayerModule = __decorate([
-    core_1.NgModule({
-        imports: [common_1.CommonModule],
-        declarations: [layer_component_1.Ng2ol3LayerComponent],
-        exports: [layer_component_1.Ng2ol3LayerComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3LayerModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var layer_component_1 = require('./layer.component');
+var Ng2ol3LayerModule = (function () {
+    function Ng2ol3LayerModule() {
+    }
+    Ng2ol3LayerModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [layer_component_1.Ng2ol3LayerComponent],
+            exports: [layer_component_1.Ng2ol3LayerComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3LayerModule);
+    return Ng2ol3LayerModule;
+}());
 exports.Ng2ol3LayerModule = Ng2ol3LayerModule;
 //# sourceMappingURL=layer.module.js.map

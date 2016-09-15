@@ -1,12 +1,12 @@
 /***********************************************************************************************
  * User Configuration.
  **********************************************************************************************/
-const paths = {
+var paths = {
     'npm': 'node_modules/',
     'vendor': 'dist/vendor'
 };
 /** Map relative paths to URLs. */
-const map = {
+var map = {
     'app': 'app',
     // angular bundles
     '@angular/core': paths.npm + '@angular/core/bundles/core.umd.js',
@@ -23,7 +23,7 @@ const map = {
     'angular2-in-memory-web-api': paths.npm + 'angular2-in-memory-web-api',
 };
 /** User packages configuration. */
-const packages = {
+var packages = {
     'app': {
         main: './main.js',
         defaultExtension: 'js'
@@ -42,5 +42,5 @@ System.config({
     packages: packages
 });
 // Apply the user's configuration.
-System.config({ map, packages });
+System.config({ map: map, packages: packages });
 //# sourceMappingURL=system.config.js.map

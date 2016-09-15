@@ -8,20 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const layertree_component_1 = require('./layertree.component');
-const layergroup_module_1 = require('./layergroup.module');
-const layer_module_1 = require('./layer.module');
-let Ng2ol3LayertreeModule = class Ng2ol3LayertreeModule {
-};
-Ng2ol3LayertreeModule = __decorate([
-    core_1.NgModule({
-        imports: [common_1.CommonModule, layergroup_module_1.Ng2ol3LayergroupModule, layer_module_1.Ng2ol3LayerModule],
-        declarations: [layertree_component_1.Ng2ol3LayertreeComponent],
-        exports: [layertree_component_1.Ng2ol3LayertreeComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3LayertreeModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var layertree_component_1 = require('./layertree.component');
+var layergroup_module_1 = require('./layergroup.module');
+var layer_module_1 = require('./layer.module');
+var Ng2ol3LayertreeModule = (function () {
+    function Ng2ol3LayertreeModule() {
+    }
+    Ng2ol3LayertreeModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule, layergroup_module_1.Ng2ol3LayergroupModule, layer_module_1.Ng2ol3LayerModule],
+            declarations: [layertree_component_1.Ng2ol3LayertreeComponent],
+            exports: [layertree_component_1.Ng2ol3LayertreeComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3LayertreeModule);
+    return Ng2ol3LayertreeModule;
+}());
 exports.Ng2ol3LayertreeModule = Ng2ol3LayertreeModule;
 //# sourceMappingURL=layertree.module.js.map

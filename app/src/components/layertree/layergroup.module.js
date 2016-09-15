@@ -8,19 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const layergroup_component_1 = require('./layergroup.component');
-const layer_module_1 = require('./layer.module');
-let Ng2ol3LayergroupModule = class Ng2ol3LayergroupModule {
-};
-Ng2ol3LayergroupModule = __decorate([
-    core_1.NgModule({
-        imports: [common_1.CommonModule, layer_module_1.Ng2ol3LayerModule],
-        declarations: [layergroup_component_1.Ng2ol3LayergroupComponent],
-        exports: [layergroup_component_1.Ng2ol3LayergroupComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3LayergroupModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var layergroup_component_1 = require('./layergroup.component');
+var layer_module_1 = require('./layer.module');
+var Ng2ol3LayergroupModule = (function () {
+    function Ng2ol3LayergroupModule() {
+    }
+    Ng2ol3LayergroupModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule, layer_module_1.Ng2ol3LayerModule],
+            declarations: [layergroup_component_1.Ng2ol3LayergroupComponent],
+            exports: [layergroup_component_1.Ng2ol3LayergroupComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3LayergroupModule);
+    return Ng2ol3LayergroupModule;
+}());
 exports.Ng2ol3LayergroupModule = Ng2ol3LayergroupModule;
 //# sourceMappingURL=layergroup.module.js.map

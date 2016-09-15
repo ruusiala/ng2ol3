@@ -8,22 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const toolbar_component_1 = require('./toolbar.component');
-const layertree_module_1 = require('../layertree/layertree.module');
-let Ng2ol3ToolbarModule = class Ng2ol3ToolbarModule {
-};
-Ng2ol3ToolbarModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            layertree_module_1.Ng2ol3LayertreeModule,
-        ],
-        declarations: [toolbar_component_1.Ng2ol3ToolbarComponent],
-        exports: [toolbar_component_1.Ng2ol3ToolbarComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3ToolbarModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var toolbar_component_1 = require('./toolbar.component');
+var layertree_module_1 = require('../layertree/layertree.module');
+var Ng2ol3ToolbarModule = (function () {
+    function Ng2ol3ToolbarModule() {
+    }
+    Ng2ol3ToolbarModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                common_1.CommonModule,
+                layertree_module_1.Ng2ol3LayertreeModule,
+            ],
+            declarations: [toolbar_component_1.Ng2ol3ToolbarComponent],
+            exports: [toolbar_component_1.Ng2ol3ToolbarComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3ToolbarModule);
+    return Ng2ol3ToolbarModule;
+}());
 exports.Ng2ol3ToolbarModule = Ng2ol3ToolbarModule;
 //# sourceMappingURL=toolbar.module.js.map

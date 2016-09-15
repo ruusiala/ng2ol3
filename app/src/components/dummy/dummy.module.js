@@ -8,18 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const dummy_component_1 = require('./dummy.component');
-let Ng2ol3DummyModule = class Ng2ol3DummyModule {
-};
-Ng2ol3DummyModule = __decorate([
-    core_1.NgModule({
-        imports: [common_1.CommonModule],
-        declarations: [dummy_component_1.Ng2ol3DummyComponent],
-        exports: [dummy_component_1.Ng2ol3DummyComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3DummyModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var dummy_component_1 = require('./dummy.component');
+var Ng2ol3DummyModule = (function () {
+    function Ng2ol3DummyModule() {
+    }
+    Ng2ol3DummyModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [dummy_component_1.Ng2ol3DummyComponent],
+            exports: [dummy_component_1.Ng2ol3DummyComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3DummyModule);
+    return Ng2ol3DummyModule;
+}());
 exports.Ng2ol3DummyModule = Ng2ol3DummyModule;
 //# sourceMappingURL=dummy.module.js.map

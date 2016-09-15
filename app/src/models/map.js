@@ -1,21 +1,27 @@
 "use strict";
-const _index_1 = require('./@index');
-class Ng2ol3Map extends ol.Map {
-    constructor(options) {
-        super(options);
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var _index_1 = require('./@index');
+var Ng2ol3Map = (function (_super) {
+    __extends(Ng2ol3Map, _super);
+    function Ng2ol3Map(options) {
+        _super.call(this, options);
         this.options = options;
         this.layers = [];
         this.layerGroups = [];
     }
-    addLayersAndLayerGroups(optionLayers) {
-        for (let i = 0; i < optionLayers.length; i++) {
-            let element = optionLayers[i];
+    Ng2ol3Map.prototype.addLayersAndLayerGroups = function (optionLayers) {
+        for (var i = 0; i < optionLayers.length; i++) {
+            var element = optionLayers[i];
             this.handleLayerOrLayerGroup(element, null);
         }
-    }
-    handleLayerOrLayerGroup(element, layerGroup) {
+    };
+    Ng2ol3Map.prototype.handleLayerOrLayerGroup = function (element, layerGroup) {
         if (element.type == "layer") {
-            let newLayer = new _index_1.Ng2ol3Layer(element);
+            var newLayer = new _index_1.Ng2ol3Layer(element);
             this.addLayer(element.layer);
             if (layerGroup !== null) {
                 layerGroup.getChildren().push(newLayer);
@@ -25,19 +31,20 @@ class Ng2ol3Map extends ol.Map {
             }
         }
         else if (element.type == "layergroup") {
-            let newLayerGroup = new _index_1.Ng2ol3LayerGroup(element);
+            var newLayerGroup = new _index_1.Ng2ol3LayerGroup(element);
             this.layerGroups.push(newLayerGroup);
-            for (let i = 0; i < element.children.length; i++) {
+            for (var i = 0; i < element.children.length; i++) {
                 this.handleLayerOrLayerGroup(element.children[i], newLayerGroup);
             }
         }
-    }
-    getNg2ol3Layers() {
+    };
+    Ng2ol3Map.prototype.getNg2ol3Layers = function () {
         return this.layers;
-    }
-    getNg2ol3LayerGroups() {
+    };
+    Ng2ol3Map.prototype.getNg2ol3LayerGroups = function () {
         return this.layerGroups;
-    }
-}
+    };
+    return Ng2ol3Map;
+}(ol.Map));
 exports.Ng2ol3Map = Ng2ol3Map;
 //# sourceMappingURL=map.js.map

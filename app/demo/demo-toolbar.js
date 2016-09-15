@@ -8,9 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-let DemoToolbarComponent = class DemoToolbarComponent {
-    ngOnInit() {
+var core_1 = require('@angular/core');
+var DemoToolbarComponent = (function () {
+    function DemoToolbarComponent() {
+    }
+    DemoToolbarComponent.prototype.ngOnInit = function () {
         this.config = {
             map: {
                 renderer: 'canvas',
@@ -41,16 +43,15 @@ let DemoToolbarComponent = class DemoToolbarComponent {
                 toolbar: {}
             }
         };
-    }
-};
-DemoToolbarComponent = __decorate([
-    core_1.Component({
-        selector: 'demo-toolbar',
-        template: `
-      <ng2ol3 [config]="config"></ng2ol3> 
-    `
-    }), 
-    __metadata('design:paramtypes', [])
-], DemoToolbarComponent);
+    };
+    DemoToolbarComponent = __decorate([
+        core_1.Component({
+            selector: 'demo-toolbar',
+            template: "\n      <ng2ol3 [config]=\"config\"></ng2ol3> \n    "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], DemoToolbarComponent);
+    return DemoToolbarComponent;
+}());
 exports.DemoToolbarComponent = DemoToolbarComponent;
 //# sourceMappingURL=demo-toolbar.js.map

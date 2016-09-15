@@ -8,18 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const map_component_1 = require('./map.component');
-let Ng2ol3MapModule = class Ng2ol3MapModule {
-};
-Ng2ol3MapModule = __decorate([
-    core_1.NgModule({
-        imports: [common_1.CommonModule],
-        declarations: [map_component_1.Ng2ol3MapComponent],
-        exports: [map_component_1.Ng2ol3MapComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3MapModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var map_component_1 = require('./map.component');
+var Ng2ol3MapModule = (function () {
+    function Ng2ol3MapModule() {
+    }
+    Ng2ol3MapModule = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [map_component_1.Ng2ol3MapComponent],
+            exports: [map_component_1.Ng2ol3MapComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3MapModule);
+    return Ng2ol3MapModule;
+}());
 exports.Ng2ol3MapModule = Ng2ol3MapModule;
 //# sourceMappingURL=map.module.js.map

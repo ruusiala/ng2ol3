@@ -8,9 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-let DemoMapComponent = class DemoMapComponent {
-    ngOnInit() {
+var core_1 = require('@angular/core');
+var DemoMapComponent = (function () {
+    function DemoMapComponent() {
+    }
+    DemoMapComponent.prototype.ngOnInit = function () {
         this.config = {
             map: {
                 renderer: 'canvas',
@@ -31,16 +33,15 @@ let DemoMapComponent = class DemoMapComponent {
                 ]
             }
         };
-    }
-};
-DemoMapComponent = __decorate([
-    core_1.Component({
-        selector: 'demo-map',
-        template: `
-      <ng2ol3 [config]="config"></ng2ol3> 
-    `
-    }), 
-    __metadata('design:paramtypes', [])
-], DemoMapComponent);
+    };
+    DemoMapComponent = __decorate([
+        core_1.Component({
+            selector: 'demo-map',
+            template: "\n      <ng2ol3 [config]=\"config\"></ng2ol3> \n    "
+        }), 
+        __metadata('design:paramtypes', [])
+    ], DemoMapComponent);
+    return DemoMapComponent;
+}());
 exports.DemoMapComponent = DemoMapComponent;
 //# sourceMappingURL=demo-map.js.map

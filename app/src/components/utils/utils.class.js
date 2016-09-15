@@ -1,20 +1,23 @@
 "use strict";
-const browser_1 = require('./facade/browser');
-class Utils {
-    static reflow(element) {
-        new Function('bs', 'return bs')(element.offsetHeight);
+var browser_1 = require('./facade/browser');
+var Utils = (function () {
+    function Utils() {
     }
+    Utils.reflow = function (element) {
+        new Function('bs', 'return bs')(element.offsetHeight);
+    };
     // source: https://github.com/jquery/jquery/blob/master/src/css/var/getStyles.js
-    static getStyles(elem) {
+    Utils.getStyles = function (elem) {
         // Support: IE <=11 only, Firefox <=30 (#15098, #14150)
         // IE throws on elements created in popups
         // FF meanwhile throws on frame elements through "defaultView.getComputedStyle"
-        let view = elem.ownerDocument.defaultView;
+        var view = elem.ownerDocument.defaultView;
         if (!view || !view.opener) {
             view = browser_1.window;
         }
         return view.getComputedStyle(elem);
-    }
-}
+    };
+    return Utils;
+}());
 exports.Utils = Utils;
 //# sourceMappingURL=utils.class.js.map

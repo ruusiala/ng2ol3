@@ -8,24 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const common_1 = require('@angular/common');
-const core_1 = require('@angular/core');
-const map_module_1 = require('../map/map.module');
-const sidebar_module_1 = require('../sidebar/sidebar.module');
-const container_component_1 = require('./container.component');
-let Ng2ol3ContainerModule = class Ng2ol3ContainerModule {
-};
-Ng2ol3ContainerModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            common_1.CommonModule,
-            map_module_1.Ng2ol3MapModule,
-            sidebar_module_1.Ng2ol3SidebarModule
-        ],
-        declarations: [container_component_1.Ng2ol3ContainerComponent],
-        exports: [container_component_1.Ng2ol3ContainerComponent]
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3ContainerModule);
+var common_1 = require('@angular/common');
+var core_1 = require('@angular/core');
+var map_module_1 = require('../map/map.module');
+var sidebar_module_1 = require('../sidebar/sidebar.module');
+var container_component_1 = require('./container.component');
+var Ng2ol3ContainerModule = (function () {
+    function Ng2ol3ContainerModule() {
+    }
+    Ng2ol3ContainerModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                common_1.CommonModule,
+                map_module_1.Ng2ol3MapModule,
+                sidebar_module_1.Ng2ol3SidebarModule
+            ],
+            declarations: [container_component_1.Ng2ol3ContainerComponent],
+            exports: [container_component_1.Ng2ol3ContainerComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3ContainerModule);
+    return Ng2ol3ContainerModule;
+}());
 exports.Ng2ol3ContainerModule = Ng2ol3ContainerModule;
 //# sourceMappingURL=container.module.js.map

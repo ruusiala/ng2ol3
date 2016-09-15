@@ -8,20 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const _index_1 = require('../../models/@index');
-let Ng2ol3LayergroupComponent = class Ng2ol3LayergroupComponent {
-    constructor() {
+var core_1 = require('@angular/core');
+var _index_1 = require('../../models/@index');
+var Ng2ol3LayergroupComponent = (function () {
+    function Ng2ol3LayergroupComponent() {
         this.expanded = true;
         this.children = [];
         this.nestedLayers = [];
         this.nestedLayerGroups = [];
     }
-    ngOnInit() {
+    Ng2ol3LayergroupComponent.prototype.ngOnInit = function () {
         this.expanded = this.layerGroup.getExpanded();
         this.children = this.layerGroup.getChildren();
-        for (let i = 0; i < this.children.length; i++) {
-            let children = this.children[i];
+        for (var i = 0; i < this.children.length; i++) {
+            var children = this.children[i];
             if (children instanceof _index_1.Ng2ol3Layer) {
                 this.nestedLayers.push(children);
             }
@@ -29,41 +29,25 @@ let Ng2ol3LayergroupComponent = class Ng2ol3LayergroupComponent {
                 this.nestedLayerGroups.push(children);
             }
         }
-    }
-    toggleExpanded() {
+    };
+    Ng2ol3LayergroupComponent.prototype.toggleExpanded = function () {
         this.expanded = !this.expanded;
-    }
-};
-__decorate([
-    core_1.Input(), 
-    __metadata('design:type', _index_1.Ng2ol3LayerGroup)
-], Ng2ol3LayergroupComponent.prototype, "layerGroup", void 0);
-Ng2ol3LayergroupComponent = __decorate([
-    core_1.Component({
-        selector: 'ng2ol3-layergroup',
-        template: `
-      <div class="layergroup-header">
-          <i class="ms" 
-                [ngClass]="{'ms-directory': !expanded, 'ms-directory-open': expanded}"
-                (click)="toggleExpanded()"></i>
-          <span>{{layerGroup.name}}</span>
-      </div>
-      <div class="layergroup-children" *ngIf="expanded">
-          <ng2ol3-layer 
-                  *ngFor="let l of nestedLayers" 
-                  [layer]="l">
-          </ng2ol3-layer>
-          <ng2ol3-layergroup 
-                  *ngFor="let lg of nestedLayerGroups" 
-                  [layerGroup]="lg">
-          </ng2ol3-layergroup>
-      </div>
-    `,
-        host: {
-            class: 'ng2ol3-layergroup'
-        }
-    }), 
-    __metadata('design:paramtypes', [])
-], Ng2ol3LayergroupComponent);
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', _index_1.Ng2ol3LayerGroup)
+    ], Ng2ol3LayergroupComponent.prototype, "layerGroup", void 0);
+    Ng2ol3LayergroupComponent = __decorate([
+        core_1.Component({
+            selector: 'ng2ol3-layergroup',
+            template: "\n      <div class=\"layergroup-header\">\n          <i class=\"ms\" \n                [ngClass]=\"{'ms-directory': !expanded, 'ms-directory-open': expanded}\"\n                (click)=\"toggleExpanded()\"></i>\n          <span>{{layerGroup.name}}</span>\n      </div>\n      <div class=\"layergroup-children\" *ngIf=\"expanded\">\n          <ng2ol3-layer \n                  *ngFor=\"let l of nestedLayers\" \n                  [layer]=\"l\">\n          </ng2ol3-layer>\n          <ng2ol3-layergroup \n                  *ngFor=\"let lg of nestedLayerGroups\" \n                  [layerGroup]=\"lg\">\n          </ng2ol3-layergroup>\n      </div>\n    ",
+            host: {
+                class: 'ng2ol3-layergroup'
+            }
+        }), 
+        __metadata('design:paramtypes', [])
+    ], Ng2ol3LayergroupComponent);
+    return Ng2ol3LayergroupComponent;
+}());
 exports.Ng2ol3LayergroupComponent = Ng2ol3LayergroupComponent;
 //# sourceMappingURL=layergroup.component.js.map

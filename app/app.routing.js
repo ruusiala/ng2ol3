@@ -1,8 +1,8 @@
 "use strict";
-const router_1 = require('@angular/router');
-const demo_map_1 = require('./demo/demo-map');
-const _index_1 = require('./demo/@index');
-const appRoutes = [
+var router_1 = require('@angular/router');
+var demo_map_1 = require('./demo/demo-map');
+var _index_1 = require('./demo/@index');
+var appRoutes = [
     {
         path: '',
         // redirectTo: '/demo-sidebar',
