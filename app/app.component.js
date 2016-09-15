@@ -8,16 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
-    function AppComponent() {
+    //this is how you use a window
+    function AppComponent(window) {
+        // window.open("https://github.com/fegyi001/ng2ol3");
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'demo-app',
             template: "\n    <div>\n    <div class=\"ribbon-box\">\n        <div class=\"ribbon-wrapper\">\n            <a href=\"https://github.com/fegyi001/ng2ol3\" target=\"_blank\" title=\"GitHub repository\">\n                <div class=\"ribbon\">\n                    <i class=\"fa fa-github\"></i>\n                </div>\n            </a>\n        </div>\n    </div>\n    <div class=\"demo\">\n        <div class=\"demo-header\">\n            <h1 class=\"title\">ng2ol3 components</h1>\n            <nav>\n                <button routerLink=\"/demo-map\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">map</button>\n                <button routerLink=\"/demo-sidebar\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">sidebar</button>\n                <button routerLink=\"/demo-toolbar\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">toolbar</button>\n                <button routerLink=\"/demo-layertree\" routerLinkActive=\"active\"\n                    [routerLinkActiveOptions]=\"{ exact: true }\">layertree</button>\n            </nav>\n        </div>\n        <div class=\"demo-content\">\n            <router-outlet></router-outlet>\n        </div>\n    </div>\n        \n    "
-        }), 
-        __metadata('design:paramtypes', [])
+        }),
+        __param(0, core_1.Inject(Window)), 
+        __metadata('design:paramtypes', [Window])
     ], AppComponent);
     return AppComponent;
 }());

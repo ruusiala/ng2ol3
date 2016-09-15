@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var common_1 = require('@angular/common');
 var _index_1 = require('./src/components/@index');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
@@ -32,7 +33,9 @@ var AppModule = (function () {
                 _index_2.DemoLayertreeComponent
             ],
             providers: [
-                app_routing_1.appRoutingProviders
+                app_routing_1.appRoutingProviders,
+                { provide: Window, useValue: window },
+                { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

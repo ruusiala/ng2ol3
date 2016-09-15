@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Inject} from '@angular/core';
 
 @Component({
     selector: 'demo-app',
@@ -35,5 +35,8 @@ import {Component} from '@angular/core';
     `
 })
 export class AppComponent {
-
+    //this is how you use a window
+    constructor(@Inject(Window) window: Window) {
+        // window.open("https://github.com/fegyi001/ng2ol3");
+    }
 }
