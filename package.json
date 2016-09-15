@@ -1,7 +1,7 @@
 {
   "name": "ng2ol3",
   "description": "A combination of Angular2 & OpenLayers3 using TypeScript, RxJS, SCSS & Bootstrap for creating customizable, modern web maps",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "start": "tsc && concurrently \"npm run watch-scss\" \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server -c ./bs-config.js",
@@ -42,7 +42,6 @@
     "@angular/upgrade": "2.0.0",
     "@angular/router": "3.0.0",
     "@angular/compiler-cli": "^0.6.0",
-
     "es6-promise": "3.2.1",
     "es6-shim": "0.35.1",
     "require-dir": "0.3.0",
@@ -52,7 +51,6 @@
     "rxjs": "5.0.0-beta.12",
     "systemjs-builder": "0.15.30",
     "typedoc": "0.4.5",
-    
     "openlayers": "^3.18.2",
     "proj4": "2.3.15"
   },
