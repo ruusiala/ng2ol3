@@ -1,5 +1,6 @@
 import { Component, Input, Output, OnInit, EventEmitter, AfterViewInit, AfterContentInit } from '@angular/core';
 
+import { Ng2ol3MapService } from '../../services/@index';
 import { Ng2ol3Map, Ng2ol3Config, Ng2ol3View } from '../../models/@index';
 
 @Component({
@@ -9,7 +10,8 @@ import { Ng2ol3Map, Ng2ol3Config, Ng2ol3View } from '../../models/@index';
     `,
     host: {
         class: 'ng2ol3-map'
-    }
+    },
+    providers: [Ng2ol3MapService]
 })
 export class Ng2ol3MapComponent implements AfterViewInit, OnInit {
 
@@ -20,6 +22,10 @@ export class Ng2ol3MapComponent implements AfterViewInit, OnInit {
     map: Ng2ol3Map;
     view: ol.View;
     target: string;
+
+    constructor(private mapService: Ng2ol3MapService) {
+
+    }
 
     public ngOnInit(): any {
         this.target = this.options.target;
@@ -36,6 +42,10 @@ export class Ng2ol3MapComponent implements AfterViewInit, OnInit {
             target: this.target,
             view: this.view
         });
+
+        //register the map in the injectable mapService
+        this.mapService.addMap(this.map);
+
         this.map.addLayersAndLayerGroups(this.options.layers);
         this.mapCreated.emit(this.map);
         this.map.updateSize();

@@ -6,10 +6,10 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 @Component({
     selector: 'ng2ol3-layergroup',
     template: `
-      <div class="layergroup-header">
+      <div class="layergroup-header"
+              (click)="toggleExpanded()">
           <i class="ms" 
-                [ngClass]="{'ms-directory': !expanded, 'ms-directory-open': expanded}"
-                (click)="toggleExpanded()"></i>
+                [ngClass]="{'ms-directory': !expanded, 'ms-directory-open': expanded}"></i>
           <span>{{layerGroup.name}}</span>
       </div>
       <div class="layergroup-children" *ngIf="expanded">
@@ -56,6 +56,7 @@ export class Ng2ol3LayergroupComponent implements OnInit {
         }
     }
 
+    /**Expands or closes the layergroup */
     public toggleExpanded(): void {
         this.expanded = !this.expanded;
     }

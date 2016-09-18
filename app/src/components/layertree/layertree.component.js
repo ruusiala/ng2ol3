@@ -24,7 +24,7 @@ var Ng2ol3LayertreeComponent = (function () {
     Ng2ol3LayertreeComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layertree',
-            template: "\n      <ng2ol3-layergroup \n              *ngFor=\"let lg of layerGroups\" \n              [layerGroup]=\"lg\">\n      </ng2ol3-layergroup>\n      <ng2ol3-layer *ngFor=\"let l of layers\"></ng2ol3-layer>\n    ",
+            template: "\n      <ng2ol3-layer *ngFor=\"let l of layers\"></ng2ol3-layer>\n      <ng2ol3-layergroup \n              *ngFor=\"let lg of layerGroups\" \n              [layerGroup]=\"lg\">\n      </ng2ol3-layergroup>\n    ",
             host: {
                 class: 'ng2ol3-layertree'
             }
