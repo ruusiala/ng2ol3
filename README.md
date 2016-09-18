@@ -21,7 +21,7 @@ This project is still very new and therefore it contains only a couple of compon
 
 Ng2ol3 has been updated to work with the latest Angular 2.0 Final Release (2.0.0) and TypeScript2 (2.0.2).
 
-<img src="assets/img/screenshots/demo_20160912.png" width="100%">
+<img src="assets/img/screenshots/demo_20160918.png" width="100%">
 
 ## Author
 ```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://www.gpadanyig.com)

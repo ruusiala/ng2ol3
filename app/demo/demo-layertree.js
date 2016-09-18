@@ -33,9 +33,70 @@ var DemoLayertreeComponent = (function () {
                                 type: 'layer',
                                 name: 'OpenStreetMap layer',
                                 visible: true,
-                                opacity: 1.0,
+                                opacity: 0.5,
                                 layer: new ol.layer.Tile({
                                     source: new ol.source.OSM()
+                                })
+                            }
+                        ]
+                    },
+                    {
+                        type: 'layergroup',
+                        name: 'Hungary',
+                        expanded: true,
+                        visible: true,
+                        children: [
+                            {
+                                type: 'layer',
+                                name: 'main roads',
+                                visible: true,
+                                opacity: 1.0,
+                                layer: new ol.layer.Tile({
+                                    source: new ol.source.TileWMS({
+                                        url: "http://188.166.116.137:8080/geoserver/gwc/service/wms",
+                                        params: {
+                                            LAYERS: "osmWsp:v_trunk_primary",
+                                            SRS: "EPSG:900913",
+                                            FORMAT: "image/png",
+                                            TILED: true
+                                        },
+                                        serverType: "geoserver"
+                                    })
+                                })
+                            }, {
+                                type: 'layer',
+                                name: 'highways',
+                                visible: true,
+                                opacity: 1.0,
+                                layer: new ol.layer.Tile({
+                                    source: new ol.source.TileWMS({
+                                        url: "http://188.166.116.137:8080/geoserver/gwc/service/wms",
+                                        params: {
+                                            LAYERS: "osmWsp:v_motorway",
+                                            SRS: "EPSG:900913",
+                                            FORMAT: "image/png",
+                                            TILED: true
+                                        },
+                                        serverType: "geoserver"
+                                    })
+                                })
+                            },
+                            {
+                                type: 'layer',
+                                name: 'border',
+                                visible: true,
+                                opacity: 1.0,
+                                layer: new ol.layer.Tile({
+                                    source: new ol.source.TileWMS({
+                                        url: "http://188.166.116.137:8080/geoserver/gwc/service/wms",
+                                        params: {
+                                            LAYERS: "osmWsp:v_country",
+                                            SRS: "EPSG:900913",
+                                            FORMAT: "image/png",
+                                            TILED: true
+                                        },
+                                        serverType: "geoserver"
+                                    })
                                 })
                             }
                         ]
