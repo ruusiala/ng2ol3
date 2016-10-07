@@ -24,12 +24,12 @@ import {Component, Input} from '@angular/core';
 })
 
 export class Ng2ol3ContainerComponent {
-    
+
     @Input() config: any;
-    
+
     map: ol.Map;
 
-    public mapCreated(map):void {
+    public mapCreated(map): void {
         this.map = map;
     }
 
