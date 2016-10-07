@@ -55,7 +55,8 @@
     "systemjs": "0.19.39",
     "systemjs-builder": "0.15.32",
     "zone.js": "^0.6.25",
-    "typedoc": "0.4.5"
+    "typedoc": "0.4.5",
+    "hammerjs": "~2.0.8"
   },
   "devDependencies": {
     "typescript": "^2.0.3",

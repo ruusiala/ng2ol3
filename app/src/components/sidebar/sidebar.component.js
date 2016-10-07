@@ -34,22 +34,11 @@ var Ng2ol3SidebarComponent = (function () {
     Ng2ol3SidebarComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-sidebar',
-            template: "\n      <div class=\"sidebar-main\">\n          <!--<div class=\"close-button pointer\" \n                  (click)=\"toggleSidebar()\" \n                  [@sidebarClosed]=\"sidebarClosed\" \n                  *ngIf=\"false\">\n              <i class=\"fa fa-angle-double-left\"></i>\n          </div>-->\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-content\">\n              <ng2ol3-layertree \n                      *ngIf=\"hasLayertree\" \n                      [map]=\"map\">\n              </ng2ol3-layertree>\n          </div>\n      </div>\n    ",
+            template: "\n      <div class=\"sidebar-main\">\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-content\">\n              <ng2ol3-layertree \n                      *ngIf=\"hasLayertree\" \n                      [map]=\"map\">\n              </ng2ol3-layertree>\n          </div>\n      </div>\n    ",
             host: {
                 class: 'ng2ol3-sidebar'
             },
-            animations: [
-                core_1.trigger('sidebarClosed', [
-                    core_1.state('true', core_1.style({
-                        transform: 'scale(1.0)'
-                    })),
-                    core_1.state('false', core_1.style({
-                        transform: 'scale(1.0)'
-                    })),
-                    core_1.transition('true => false', core_1.animate('100ms ease-in')),
-                    core_1.transition('false => true', core_1.animate('100ms ease-out'))
-                ])
-            ]
+            animations: []
         }), 
         __metadata('design:paramtypes', [])
     ], Ng2ol3SidebarComponent);

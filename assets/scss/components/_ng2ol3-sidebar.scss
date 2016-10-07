@@ -1,10 +1,8 @@
 .ng2ol3-sidebar {
     z-index: 200;
-    @include span-columns(3);
     vertical-align: top;
     background-color: $base-background-color;
     box-shadow: 4px 0 5px -4px #888;
-    position: absolute;
     height: 100%;
     
     & .sidebar-main {

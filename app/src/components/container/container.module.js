@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
+var material_1 = require('@angular/material');
 var map_module_1 = require('../map/map.module');
 var sidebar_module_1 = require('../sidebar/sidebar.module');
 var container_component_1 = require('./container.component');
@@ -20,6 +21,7 @@ var Ng2ol3ContainerModule = (function () {
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
+                material_1.MaterialModule.forRoot(),
                 map_module_1.Ng2ol3MapModule,
                 sidebar_module_1.Ng2ol3SidebarModule
             ],

@@ -19,7 +19,7 @@ const map: any = {
     '@angular/http': paths.npm + '@angular/http/bundles/http.umd.js',
     '@angular/router': paths.npm + '@angular/router/bundles/router.umd.js',
     '@angular/forms': paths.npm + '@angular/forms/bundles/forms.umd.js',
-    // '@angular2-material': paths.vendor + '@angular2-material',
+    '@angular/material': paths.npm + "@angular/material/material.umd.js",
     // other libraries
     'rxjs': paths.npm + 'rxjs',
     'angular2-in-memory-web-api': paths.npm + 'angular2-in-memory-web-api',

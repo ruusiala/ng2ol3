@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { MaterialModule } from '@angular/material';
 
 import { Ng2ol3Module } from './src/components/@index';
 
@@ -18,6 +19,7 @@ import {
 @NgModule({
     imports: [
         BrowserModule,
+        MaterialModule.forRoot(),
         Ng2ol3Module,
         routing
     ],

@@ -3,7 +3,6 @@ import {Component, Inject} from '@angular/core';
 @Component({
     selector: 'demo-app',
     template: `
-    <div>
     <div class="ribbon-box">
         <div class="ribbon-wrapper">
             <a href="https://github.com/fegyi001/ng2ol3" target="_blank" title="GitHub repository">
@@ -31,12 +30,11 @@ import {Component, Inject} from '@angular/core';
             <router-outlet></router-outlet>
         </div>
     </div>
-        
-    `
+   `
 })
 export class AppComponent {
     //this is how you use a window
-    constructor(@Inject(Window) window: Window) {
+    constructor( @Inject(Window) window: Window) {
         // window.open("https://github.com/fegyi001/ng2ol3");
     }
 }

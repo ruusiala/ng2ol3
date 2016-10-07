@@ -3,20 +3,20 @@ import {Component, Input} from '@angular/core';
 @Component({
     selector: 'ng2ol3',
     template: `
-        <div class="outer-container">
-            <div class="inner-container">
+        <md-sidenav-layout>
+            <md-sidenav #start *ngIf="config.sidebar && map" align="start" (open)="updateMap()" (close)="updateMap()" opened="true" mode="side">
                 <ng2ol3-sidebar 
-                    *ngIf="config.sidebar && map" 
                     [options]="config.sidebar" 
                     [map]="map">
                 </ng2ol3-sidebar>
-                <ng2ol3-map 
-                    *ngIf="config.map" 
-                    [options]="config.map"
-                    (mapCreated)="mapCreated($event)">
-                </ng2ol3-map>
-            </div>
-        </div>
+                <button md-button #mybutton (click)="start.close()">Close</button>
+            </md-sidenav>
+            <ng2ol3-map 
+                *ngIf="config.map" 
+                [options]="config.map"
+                (mapCreated)="mapCreated($event)">
+            </ng2ol3-map>
+        </md-sidenav-layout>
     `,
     host: {
         class: 'ng2ol3-container'
@@ -29,8 +29,16 @@ export class Ng2ol3ContainerComponent {
 
     map: ol.Map;
 
+    isOpened: boolean = true;
+
     public mapCreated(map): void {
         this.map = map;
+        this.map.updateSize();
     }
 
+    updateMap(): void {
+        this.map.updateSize();
+    }
+
+    
 }
