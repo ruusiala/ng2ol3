@@ -4,12 +4,12 @@ import {Component, Input, OnInit} from '@angular/core';
     selector: 'ng2ol3',
     template: `
         <md-sidenav-layout>
-            <md-sidenav #start *ngIf="config.sidebar && map" align="start" (open)="updateMap()" (close)="updateMap()" opened="isOpened" mode="side">
+            <md-sidenav #start *ngIf="config.sidebar && map" align="start" (open)="updateMap()" (close)="isOpened=false" opened="{{isOpened}}" mode="push">
                 <ng2ol3-sidebar 
                     [options]="config.sidebar" 
                     [map]="map">
                 </ng2ol3-sidebar>
-                <button md-button #mybutton (click)="start.close()">Close</button>
+                <!--<button md-button (click)="start.close()">Close</button>-->
             </md-sidenav>
             <ng2ol3-map 
                 *ngIf="config.map" 
@@ -31,7 +31,11 @@ export class Ng2ol3ContainerComponent implements OnInit {
     isOpened: boolean;
 
     public ngOnInit(): any {
-        this.isOpened = true;
+        try {
+            this.isOpened = this.config.sidebar.opened;
+        } catch(error) {
+            this.isOpened = true;
+        }
     }
 
     public mapCreated(map): void {
@@ -41,7 +45,6 @@ export class Ng2ol3ContainerComponent implements OnInit {
 
     public sidebarToggled(): void {
         this.isOpened = !this.isOpened;
-        console.log(this.isOpened);
     }
 
     public updateMap(): void {

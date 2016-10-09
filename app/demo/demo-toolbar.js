@@ -40,6 +40,7 @@ var DemoToolbarComponent = (function () {
             },
             sidebar: {
                 collapsible: true,
+                opened: true,
                 toolbar: {}
             }
         };

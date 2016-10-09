@@ -103,6 +103,7 @@ export class DemoLayertreeComponent implements OnInit {
             },
             sidebar: {
                 collapsible: true,
+                opened: true,
                 toolbar: {
                     layertree: {
                         active: true,

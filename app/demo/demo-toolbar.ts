@@ -38,6 +38,7 @@ export class DemoToolbarComponent implements OnInit {
             },
             sidebar: {
                 collapsible: true,
+                opened: true,
                 toolbar: {}
             }
         }

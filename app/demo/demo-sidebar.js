@@ -32,7 +32,10 @@ var DemoSidebarComponent = (function () {
                     }
                 ]
             },
-            sidebar: {}
+            sidebar: {
+                collapsible: true,
+                opened: true
+            }
         };
     };
     DemoSidebarComponent = __decorate([

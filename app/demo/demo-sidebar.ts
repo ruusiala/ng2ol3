@@ -30,7 +30,10 @@ export class DemoSidebarComponent implements OnInit {
                     }
                 ]
             },
-            sidebar: {}
+            sidebar: {
+                collapsible: true,
+                opened: true
+            }
         }
 
     }

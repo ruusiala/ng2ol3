@@ -105,6 +105,7 @@ var DemoLayertreeComponent = (function () {
             },
             sidebar: {
                 collapsible: true,
+                opened: true,
                 toolbar: {
                     layertree: {
                         active: true,
