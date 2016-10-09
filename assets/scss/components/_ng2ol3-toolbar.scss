@@ -1,18 +1,15 @@
 .ng2ol3-toolbar {
     $background-color: lighten($light-gray, 10%);
     color: $base-font-color;
-
-    & div {
+    & .toolbar-div {
         background-color: $background-color;
         padding: $base-padding;
+        padding-left: 10px;
+        padding-right: 10px;
         border-bottom: 1px solid rgba($action-color, 0.5);
         min-height: 2em;
-
-        & i {
-            &:hover {
-                color: darken($base-font-color, 50%);
-            }
+        & md-toolbar {
+            padding: 0 !important;
         }
     }
-    
 }
