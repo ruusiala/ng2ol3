@@ -8,22 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
-var material_1 = require('@angular/material');
-var map_component_1 = require('./map.component');
-var Ng2ol3MapModule = (function () {
-    function Ng2ol3MapModule() {
+var Ng2ol3SidebarService = (function () {
+    function Ng2ol3SidebarService() {
     }
-    Ng2ol3MapModule = __decorate([
-        core_1.NgModule({
-            imports: [common_1.CommonModule, material_1.MaterialModule.forRoot()],
-            declarations: [map_component_1.Ng2ol3MapComponent],
-            exports: [map_component_1.Ng2ol3MapComponent]
-        }), 
+    Ng2ol3SidebarService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], Ng2ol3MapModule);
-    return Ng2ol3MapModule;
+    ], Ng2ol3SidebarService);
+    return Ng2ol3SidebarService;
 }());
-exports.Ng2ol3MapModule = Ng2ol3MapModule;
-//# sourceMappingURL=map.module.js.map
+exports.Ng2ol3SidebarService = Ng2ol3SidebarService;
+//# sourceMappingURL=sidebar.service.js.map

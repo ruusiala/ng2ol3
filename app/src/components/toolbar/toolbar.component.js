@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var Ng2ol3ToolbarComponent = (function () {
     function Ng2ol3ToolbarComponent() {
+        this.myColor = "primary";
     }
     Ng2ol3ToolbarComponent.prototype.ngOnInit = function () {
         this.hasLayertree = this.options.hasOwnProperty("layertree");

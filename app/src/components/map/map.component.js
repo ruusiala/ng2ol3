@@ -15,13 +15,16 @@ var Ng2ol3MapComponent = (function () {
     function Ng2ol3MapComponent(mapService) {
         this.mapService = mapService;
         this.mapCreated = new core_1.EventEmitter();
+        this.sidebarToggled = new core_1.EventEmitter();
+        this.zoomDuration = 500;
     }
     Ng2ol3MapComponent.prototype.ngOnInit = function () {
-        this.target = this.options.target;
+        this.hasSidebar = this.options.hasOwnProperty("sidebar");
+        this.target = this.options.map.target;
         this.view = new ol.View({
-            projection: this.options.view.projection || 'EPSG:900913',
-            center: this.options.view.center || ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
-            zoom: this.options.view.zoom || 7
+            projection: this.options.map.view.projection || 'EPSG:900913',
+            center: this.options.map.view.center || ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
+            zoom: this.options.map.view.zoom || 7
         });
     };
     Ng2ol3MapComponent.prototype.ngAfterViewInit = function () {
@@ -32,9 +35,28 @@ var Ng2ol3MapComponent = (function () {
         });
         //register the map in the injectable mapService
         this.mapService.addMap(this.map);
-        this.map.addLayersAndLayerGroups(this.options.layers);
+        this.map.addLayersAndLayerGroups(this.options.map.layers);
         this.mapCreated.emit(this.map);
         this.map.updateSize();
+    };
+    Ng2ol3MapComponent.prototype.zoomIn = function () {
+        var zoom = ol.animation.zoom({
+            duration: this.zoomDuration,
+            resolution: this.map.getView().getResolution()
+        });
+        this.map.beforeRender(zoom);
+        this.map.getView().setResolution(this.map.getView().getResolution() * 0.5);
+    };
+    Ng2ol3MapComponent.prototype.zoomOut = function () {
+        var zoom = ol.animation.zoom({
+            duration: this.zoomDuration,
+            resolution: this.map.getView().getResolution()
+        });
+        this.map.beforeRender(zoom);
+        this.map.getView().setResolution(this.map.getView().getResolution() * 2);
+    };
+    Ng2ol3MapComponent.prototype.toggleSidebar = function () {
+        this.sidebarToggled.emit();
     };
     __decorate([
         core_1.Input(), 
@@ -44,10 +66,14 @@ var Ng2ol3MapComponent = (function () {
         core_1.Output(), 
         __metadata('design:type', Object)
     ], Ng2ol3MapComponent.prototype, "mapCreated", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], Ng2ol3MapComponent.prototype, "sidebarToggled", void 0);
     Ng2ol3MapComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-map',
-            template: "\n      <div [attr.id]=\"target\" class=\"ng2ol3-map-div\"></div>\n    ",
+            template: "\n        <div>\n            <div class=\"custom-buttons\">\n                <div class=\"zoom-in\" (click)=\"zoomIn()\">\n                    <button md-fab>\n                        <md-icon class=\"md-24\">add</md-icon>\n                    </button>\n                </div>\n                <div class=\"zoom-out\" (click)=\"zoomOut()\">\n                    <button md-fab>\n                        <md-icon class=\"md-24\">remove</md-icon>\n                    </button>\n                </div>\n                <div class=\"sidebar\" *ngIf=\"hasSidebar\" (click)=\"toggleSidebar()\">\n                    <button md-fab>\n                        <md-icon class=\"md-24\">reorder</md-icon>\n                    </button>\n                </div>\n            </div>\n            <div [attr.id]=\"target\" class=\"ng2ol3-map-div\"></div>\n        </div>\n    ",
             host: {
                 class: 'ng2ol3-map'
             },

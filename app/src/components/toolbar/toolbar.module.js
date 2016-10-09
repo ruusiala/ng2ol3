@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
+var material_1 = require('@angular/material');
 var toolbar_component_1 = require('./toolbar.component');
 var layertree_module_1 = require('../layertree/layertree.module');
 var Ng2ol3ToolbarModule = (function () {
@@ -19,6 +20,7 @@ var Ng2ol3ToolbarModule = (function () {
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
+                material_1.MaterialModule.forRoot(),
                 layertree_module_1.Ng2ol3LayertreeModule,
             ],
             declarations: [toolbar_component_1.Ng2ol3ToolbarComponent],

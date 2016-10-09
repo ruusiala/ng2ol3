@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
+var material_1 = require('@angular/material');
 var layertree_component_1 = require('./layertree.component');
 var layergroup_module_1 = require('./layergroup.module');
 var layer_module_1 = require('./layer.module');
@@ -18,7 +19,11 @@ var Ng2ol3LayertreeModule = (function () {
     }
     Ng2ol3LayertreeModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule, layergroup_module_1.Ng2ol3LayergroupModule, layer_module_1.Ng2ol3LayerModule],
+            imports: [
+                common_1.CommonModule,
+                material_1.MaterialModule.forRoot(),
+                layergroup_module_1.Ng2ol3LayergroupModule,
+                layer_module_1.Ng2ol3LayerModule],
             declarations: [layertree_component_1.Ng2ol3LayertreeComponent],
             exports: [layertree_component_1.Ng2ol3LayertreeComponent]
         }), 

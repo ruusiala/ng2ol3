@@ -15,6 +15,8 @@ export class Ng2ol3ToolbarComponent implements OnInit {
 
     @Input() options: any;
 
+    myColor: string = "primary";
+    
     hasLayertree: boolean;
 
     public ngOnInit(): any {
