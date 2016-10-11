@@ -1,9 +1,15 @@
 .ng2ol3-container {
     @include outer-container(100%);
     height: 100%;
-
-    & md-sidenav {
-        width: 30%;
+    & md-sidenav-layout {
+        & md-sidenav {
+            width: 30%;
+        }
+        & .md-sidenav-backdrop {
+            &.md-sidenav-shown {
+                display: none !important;
+                color: red !important;
+            }
+        }
     }
-    
 }

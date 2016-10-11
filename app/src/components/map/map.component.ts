@@ -9,17 +9,17 @@ import { Ng2ol3Map, Ng2ol3Config, Ng2ol3View } from '../../models/@index';
         <div>
             <div class="custom-buttons">
                 <div class="zoom-in" (click)="zoomIn()">
-                    <button md-fab>
-                        <md-icon class="md-24">add</md-icon>
+                    <button md-mini-fab>
+                        <md-icon class="md-12">add</md-icon>
                     </button>
                 </div>
                 <div class="zoom-out" (click)="zoomOut()">
-                    <button md-fab>
+                    <button md-mini-fab>
                         <md-icon class="md-24">remove</md-icon>
                     </button>
                 </div>
                 <div class="sidebar" *ngIf="hasSidebar" (click)="toggleSidebar()">
-                    <button md-fab>
+                    <button md-mini-fab>
                         <md-icon class="md-24">reorder</md-icon>
                     </button>
                 </div>
