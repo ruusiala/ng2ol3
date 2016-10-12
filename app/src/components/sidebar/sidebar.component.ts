@@ -18,6 +18,9 @@ import {Ng2ol3Map} from '../../models/@index';
                   [options]="options.toolbar">
           </ng2ol3-toolbar>
           <div class="sidebar-content">
+              <md-toolbar>
+                <span>Toolbar is here</span>    
+              </md-toolbar>
               <ng2ol3-layertree 
                       *ngIf="hasLayertree" 
                       [map]="map">

@@ -3,12 +3,11 @@
     height: 100%;
     & md-sidenav-layout {
         & md-sidenav {
-            width: 30%;
+            width: 40%;
         }
         & .md-sidenav-backdrop {
             &.md-sidenav-shown {
                 display: none !important;
-                color: red !important;
             }
         }
     }

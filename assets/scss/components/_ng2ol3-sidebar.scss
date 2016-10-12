@@ -6,7 +6,11 @@
     height: 100%;
     
     & .sidebar-main {
+        @include outer-container;
+        @include fill-parent;
+        @include row(table);
         padding: 0;
+        height: 100%;
 
         & .close-button {
             float: right;
@@ -14,8 +18,13 @@
         }
 
         & .sidebar-content {
-            padding: $base-padding;
+            @include span-columns(10);
+            vertical-align: top;
+            padding: 0;
             font-size: 0.8em;
+            background-color: white;
+            padding-left: 5px;
+            padding-right: 5px;
         }
     }
 }

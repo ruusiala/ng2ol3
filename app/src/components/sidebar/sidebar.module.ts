@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MaterialModule } from '@angular/material';
 
 import { Ng2ol3SidebarComponent } from './sidebar.component';
 
@@ -9,6 +10,7 @@ import {Ng2ol3LayertreeModule} from '../layertree/layertree.module';
 @NgModule({
   imports: [
     CommonModule,
+    MaterialModule.forRoot(),
     Ng2ol3ToolbarModule,
     Ng2ol3LayertreeModule
   ],

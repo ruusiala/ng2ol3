@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
+var material_1 = require('@angular/material');
 var sidebar_component_1 = require('./sidebar.component');
 var toolbar_module_1 = require('../toolbar/toolbar.module');
 var layertree_module_1 = require('../layertree/layertree.module');
@@ -20,6 +21,7 @@ var Ng2ol3SidebarModule = (function () {
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
+                material_1.MaterialModule.forRoot(),
                 toolbar_module_1.Ng2ol3ToolbarModule,
                 layertree_module_1.Ng2ol3LayertreeModule
             ],

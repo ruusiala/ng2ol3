@@ -1,12 +1,14 @@
 .ng2ol3-toolbar {
-    $background-color: lighten($light-gray, 10%);
-    color: $base-font-color;
+    
+    @include span-columns(2);
+    height: 100%;
+    background-color: white;
+    color: $action-color;
     & .toolbar-div {
-        background-color: $background-color;
+        // background-color: $action-color;
         padding: $base-padding;
         padding-left: 10px;
         padding-right: 10px;
-        border-bottom: 1px solid rgba($action-color, 0.5);
         min-height: 2em;
         & md-toolbar {
             padding: 0 !important;
