@@ -47,11 +47,11 @@ export class DemoLayertreeComponent implements OnInit {
                             {
                                 type: 'layer',
                                 name: 'main roads',
-                                visible: true,
+                                visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({
                                     source: new ol.source.TileWMS({
-                                        url: "http://188.166.116.137:8080/geoserver/gwc/service/wms",
+                                        url: "http://188.166.116.137:8080/geoserver/wms",
                                         params: {
                                             LAYERS: "osmWsp:v_trunk_primary",
                                             SRS: "EPSG:900913",
@@ -64,11 +64,11 @@ export class DemoLayertreeComponent implements OnInit {
                             }, {
                                 type: 'layer',
                                 name: 'highways',
-                                visible: true,
+                                visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({
                                     source: new ol.source.TileWMS({
-                                        url: "http://188.166.116.137:8080/geoserver/gwc/service/wms",
+                                        url: "http://188.166.116.137:8080/geoserver/wms",
                                         params: {
                                             LAYERS: "osmWsp:v_motorway",
                                             SRS: "EPSG:900913",
@@ -82,11 +82,11 @@ export class DemoLayertreeComponent implements OnInit {
                             {
                                 type: 'layer',
                                 name: 'border',
-                                visible: true,
+                                visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({
                                     source: new ol.source.TileWMS({
-                                        url: "http://188.166.116.137:8080/geoserver/gwc/service/wms",
+                                        url: "http://188.166.116.137:8080/geoserver/wms",
                                         params: {
                                             LAYERS: "osmWsp:v_country",
                                             SRS: "EPSG:900913",

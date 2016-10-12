@@ -4,21 +4,24 @@
     $hoverColor: darken($base-font-color, 50%);;
 
     & .ng2ol3-layergroup {
-        & .layergroup-header {
-            text-transform: uppercase;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            & i {
-                padding-right: $icon-padding;
-            }
-            &:hover {
-                color: $hoverColor;
-                cursor: pointer;
-            }
+        & .header-icon {
+            font-size: 1.5em;
         }
-        & .layergroup-children {
-            padding-left: 15px;
-        }
+        // & .layergroup-header {
+        //     text-transform: uppercase;
+        //     padding-top: 2px;
+        //     padding-bottom: 2px;
+        //     & i {
+        //         padding-right: $icon-padding;
+        //     }
+        //     &:hover {
+        //         color: $hoverColor;
+        //         cursor: pointer;
+        //     }
+        // }
+        // & .layergroup-children {
+        //     padding-left: 15px;
+        // }
     }
     
     & .ng2ol3-layer {

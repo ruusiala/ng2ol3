@@ -6,7 +6,18 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 @Component({
     selector: 'ng2ol3-layergroup',
     template: `
-      <div class="layergroup-header"
+        <md-list dense>
+          <md-list-item>
+              <md-icon md-list-avatar fontSet="ms" fontIcon="ms-directory" class="header-icon pointer md-24"></md-icon>
+              
+              <h3 md-line>{{layerGroup.name | uppercase}}</h3>
+              <!--<p>{{nestedLayerGroups.length}}</p> 
+              <p>{{nestedLayers.length}}</p>-->
+              
+              
+          </md-list-item>
+      </md-list>
+      <!--<div class="layergroup-header"
               (click)="toggleExpanded()">
           <i class="ms" 
                 [ngClass]="{'ms-directory': !expanded, 'ms-directory-open': expanded}"></i>
@@ -21,7 +32,7 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
                   *ngFor="let lg of nestedLayerGroups" 
                   [layerGroup]="lg">
           </ng2ol3-layergroup>
-      </div>
+      </div>-->
     `,
     host: {
         class: 'ng2ol3-layergroup'
