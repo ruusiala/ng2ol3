@@ -1,32 +1,33 @@
 .ng2ol3-layertree {
     color: $base-font-color;
     $icon-padding: 2px;
-    $hoverColor: darken($base-font-color, 50%);;
-
-    & .ng2ol3-layergroup {
-        & .header-icon {
-            font-size: 1.5em;
-        }
-        // & .layergroup-header {
-        //     text-transform: uppercase;
-        //     padding-top: 2px;
-        //     padding-bottom: 2px;
-        //     & i {
-        //         padding-right: $icon-padding;
-        //     }
-        //     &:hover {
-        //         color: $hoverColor;
-        //         cursor: pointer;
-        //     }
-        // }
-        // & .layergroup-children {
-        //     padding-left: 15px;
-        // }
-    }
+    $hoverColor: darken($base-font-color, 50%);
     
+    & .ng2ol3-layergroup {
+        & md-list {
+            & md-list-item {
+                & .md-list-item {
+                    background-color: tint($action-color, 80%) !important;
+                }
+                & md-icon {
+                    font-size: 1.5em;
+                    text-align: center !important;
+                }
+                & h3 {
+                    font-size: 1.2em;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                & .plus-info {
+                    color: $medium-gray;
+                }
+            }
+        }
+    }
     & .ng2ol3-layer {
         & .layer-header {
-           & .layer-name {
+            & .layer-name {
                 & i {
                     padding-right: $icon-padding;
                 }
@@ -35,7 +36,6 @@
                     cursor: pointer;
                 }
             }
-
             & .layer-properties {
                 float: right;
                 &:hover {
@@ -44,12 +44,9 @@
                 }
             }
         }
-
         & .layer-details {
             font-size: 0.7em;
             padding-left: 10px;
         }
-
     }
-
 }

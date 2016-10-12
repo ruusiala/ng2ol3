@@ -10,13 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
+var material_1 = require('@angular/material');
 var layer_component_1 = require('./layer.component');
 var Ng2ol3LayerModule = (function () {
     function Ng2ol3LayerModule() {
     }
     Ng2ol3LayerModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule],
+            imports: [
+                common_1.CommonModule,
+                material_1.MaterialModule.forRoot()],
             declarations: [layer_component_1.Ng2ol3LayerComponent],
             exports: [layer_component_1.Ng2ol3LayerComponent]
         }), 
