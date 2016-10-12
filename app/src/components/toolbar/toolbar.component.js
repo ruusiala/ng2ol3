@@ -23,7 +23,7 @@ var Ng2ol3ToolbarComponent = (function () {
     Ng2ol3ToolbarComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-toolbar',
-            template: "\n    <div class=\"toolbar-div\">\n        <md-toolbar [color]=\"myColor\">\n            <span *ngIf=\"!hasLayertree\">This is an empty toolbar</span>    \n            \n                <md-icon *ngIf=\"hasLayertree\" fontSet=\"ms\" fontIcon=\"ms-layers\" class=\"pointer md-24\"></md-icon>\n            \n                        \n        </md-toolbar>\n    </div>\n    \n      <!--<div>\n          <i class=\"ms ms-layers pointer\" *ngIf=\"hasLayertree\"></i>\n      </div>-->\n    ",
+            template: "\n        <div class=\"toolbar-div\">\n            <md-toolbar [color]=\"myColor\">\n                <md-icon *ngIf=\"hasLayertree\" fontSet=\"ms\" fontIcon=\"ms-layers\" class=\"pointer md-24\"></md-icon>\n            </md-toolbar>\n        </div>\n    ",
             host: {
                 class: 'ng2ol3-toolbar'
             }
