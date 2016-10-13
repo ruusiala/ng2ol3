@@ -45,7 +45,7 @@ export class DemoFullComponent implements OnInit {
                         children: [
                             {
                                 type: 'layer',
-                                name: 'main roads',
+                                name: 'Main roads',
                                 visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({
@@ -62,7 +62,7 @@ export class DemoFullComponent implements OnInit {
                                 })
                             }, {
                                 type: 'layer',
-                                name: 'highways',
+                                name: 'Highways',
                                 visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({
@@ -80,7 +80,7 @@ export class DemoFullComponent implements OnInit {
                             },
                             {
                                 type: 'layer',
-                                name: 'border',
+                                name: 'Country border',
                                 visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({

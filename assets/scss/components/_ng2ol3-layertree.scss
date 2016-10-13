@@ -7,10 +7,14 @@
             & md-list-item {
                 & .md-list-item {
                     background-color: tint($action-color, 80%) !important;
+                    &:hover {
+                        background-color: tint($action-color, 70%) !important;
+                    }
                 }
                 & md-icon {
                     font-size: 1.5em;
                     text-align: center !important;
+                    line-height: 0;
                 }
                 & h3 {
                     font-size: 1.2em;
@@ -25,7 +29,7 @@
         }
         & .children {
             & md-list {
-                padding-left: 20px;
+                // padding-left: 20px;
             }
         }
     }
@@ -34,9 +38,13 @@
             & md-list-item {
                 & .md-list-item {
                     background-color: tint($action-color, 90%) !important;
+                    &:hover {
+                        background-color: tint($action-color, 80%) !important;
+                    }
                 }
                 & md-icon {
                     font-size: 1.5em;
+                    line-height: 2em;
                     text-align: center !important;
                 }
                 & h3 {

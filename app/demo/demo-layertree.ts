@@ -24,7 +24,7 @@ export class DemoLayertreeComponent implements OnInit {
                     {
                         type: 'layergroup',
                         name: 'Base layers',
-                        expanded: false,
+                        expanded: true,
                         visible: true,
                         children: [
                             {
@@ -40,7 +40,7 @@ export class DemoLayertreeComponent implements OnInit {
                     }, {
                         type: 'layergroup',
                         name: 'Hungary',
-                        expanded: false,
+                        expanded: true,
                         visible: true,
                         children: [
                             {
