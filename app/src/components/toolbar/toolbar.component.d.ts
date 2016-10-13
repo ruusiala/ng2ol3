@@ -1,7 +1,10 @@
-import { OnInit } from '@angular/core';
+import { OnInit, EventEmitter } from '@angular/core';
 export declare class Ng2ol3ToolbarComponent implements OnInit {
     options: any;
+    elementActivated: EventEmitter<{}>;
     myColor: string;
-    hasLayertree: boolean;
+    elements: any[];
+    constructor();
     ngOnInit(): any;
+    activateElement(element: any): any;
 }

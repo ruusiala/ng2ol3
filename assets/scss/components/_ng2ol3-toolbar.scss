@@ -1,13 +1,11 @@
 .ng2ol3-toolbar {
-    
     @include span-columns(2);
     height: 100%;
     background-color: white;
     color: $action-color;
-    border-right: 1px solid $light-gray;
+    border-right: 1px dashed rgba(0, 0, 0, 0.15);
     text-align: center;
     & .toolbar-div {
-        // background-color: $action-color;
         padding: $base-padding;
         padding-left: 10px;
         padding-right: 10px;

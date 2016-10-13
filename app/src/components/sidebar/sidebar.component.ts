@@ -15,11 +15,12 @@ import {Ng2ol3Map} from '../../models/@index';
       <div class="sidebar-main">
           <ng2ol3-toolbar 
                   *ngIf="hasToolbar"
-                  [options]="options.toolbar">
+                  [options]="options.toolbar"
+                  (elementActivated)="onElementActivated($event)">
           </ng2ol3-toolbar>
           <div class="sidebar-content">
               <md-toolbar>
-                <span>Toolbar is here</span>    
+                <span>{{activeElement.title}}</span>    
               </md-toolbar>
               <ng2ol3-layertree 
                       *ngIf="hasLayertree" 
@@ -42,17 +43,23 @@ export class Ng2ol3SidebarComponent implements OnInit {
     hasToolbar: boolean;
     hasLayertree: boolean;
 
+    activeElement: any;
+
     public ngOnInit(): any {
         this.sidebarClosed = false;
         this.hasToolbar = this.options.hasOwnProperty("toolbar");
         this.hasLayertree = this.hasToolbar && this.options.toolbar.hasOwnProperty("layertree");
-
         this.map.updateSize();
     }
 
     public toggleSidebar(): any {
         this.sidebarClosed = !this.sidebarClosed;
         console.log(`sidebar will be closed: ${this.sidebarClosed}`);
+    }
+
+    public onElementActivated(element): any {
+        console.log(element);
+        this.activeElement = element;
     }
 
 }

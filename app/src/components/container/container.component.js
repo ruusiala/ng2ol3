@@ -37,7 +37,7 @@ var Ng2ol3ContainerComponent = (function () {
     Ng2ol3ContainerComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3',
-            template: "\n        <md-sidenav-layout>\n            <md-sidenav #start *ngIf=\"config.sidebar && map\" align=\"start\" (open)=\"updateMap()\" (close)=\"isOpened=false\" opened=\"{{isOpened}}\" mode=\"push\">\n                <ng2ol3-sidebar \n                    [options]=\"config.sidebar\" \n                    [map]=\"map\">\n                </ng2ol3-sidebar>\n                <!--<button md-button (click)=\"start.close()\">Close</button>-->\n            </md-sidenav>\n            <ng2ol3-map \n                *ngIf=\"config.map\" \n                [options]=\"config\"\n                (mapCreated)=\"mapCreated($event)\"\n                (sidebarToggled)=\"sidebarToggled($event)\">\n            </ng2ol3-map>\n        </md-sidenav-layout>\n    ",
+            template: "\n        <md-sidenav-layout>\n            <md-sidenav #start *ngIf=\"config.sidebar && map\" align=\"start\" (open)=\"updateMap()\" (close)=\"isOpened=false\" opened=\"{{isOpened}}\" mode=\"push\">\n                <ng2ol3-sidebar \n                    [options]=\"config.sidebar\" \n                    [map]=\"map\">\n                </ng2ol3-sidebar>\n            </md-sidenav>\n            <ng2ol3-map \n                *ngIf=\"config.map\" \n                [options]=\"config\"\n                (mapCreated)=\"mapCreated($event)\"\n                (sidebarToggled)=\"sidebarToggled($event)\">\n            </ng2ol3-map>\n        </md-sidenav-layout>\n    ",
             host: {
                 class: 'ng2ol3-container'
             }

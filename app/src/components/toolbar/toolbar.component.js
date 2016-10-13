@@ -11,19 +11,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var Ng2ol3ToolbarComponent = (function () {
     function Ng2ol3ToolbarComponent() {
+        this.elementActivated = new core_1.EventEmitter();
         this.myColor = "primary";
+        this.elements = [];
     }
     Ng2ol3ToolbarComponent.prototype.ngOnInit = function () {
-        this.hasLayertree = this.options.hasOwnProperty("layertree");
+        if (this.options.hasOwnProperty("layertree")) {
+            this.elements.push({
+                type: "layertree",
+                title: "Layer manager",
+                fontSet: "ms",
+                fontIcon: "ms-layers",
+                active: this.options.layertree.active || false,
+                disabled: this.options.layertree.disabled || false
+            });
+        }
+        this.elementActivated.emit(this.elements[0]);
+    };
+    Ng2ol3ToolbarComponent.prototype.activateElement = function (element) {
+        this.elementActivated.emit(element);
     };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
     ], Ng2ol3ToolbarComponent.prototype, "options", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], Ng2ol3ToolbarComponent.prototype, "elementActivated", void 0);
     Ng2ol3ToolbarComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-toolbar',
-            template: "\n        <div class=\"toolbar-div\">\n            <md-toolbar [color]=\"myColor\">\n                <md-icon *ngIf=\"hasLayertree\" fontSet=\"ms\" fontIcon=\"ms-layers\" class=\"pointer md-24\"></md-icon>\n            </md-toolbar>\n        </div>\n    ",
+            template: "\n        <div class=\"toolbar-div\">\n            <md-toolbar [color]=\"myColor\">\n                <md-icon *ngFor=\"let element of elements\" fontSet=\"{{element.fontSet}}\" fontIcon=\"{{element.fontIcon}}\" class=\"pointer md-24\" (click)=\"activateElement(element)\"></md-icon>\n            </md-toolbar>\n        </div>\n    ",
             host: {
                 class: 'ng2ol3-toolbar'
             }

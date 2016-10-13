@@ -23,6 +23,10 @@ var Ng2ol3SidebarComponent = (function () {
         this.sidebarClosed = !this.sidebarClosed;
         console.log("sidebar will be closed: " + this.sidebarClosed);
     };
+    Ng2ol3SidebarComponent.prototype.onElementActivated = function (element) {
+        console.log(element);
+        this.activeElement = element;
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
@@ -34,7 +38,7 @@ var Ng2ol3SidebarComponent = (function () {
     Ng2ol3SidebarComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-sidebar',
-            template: "\n      <div class=\"sidebar-main\">\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-content\">\n              <md-toolbar>\n                <span>Toolbar is here</span>    \n              </md-toolbar>\n              <ng2ol3-layertree \n                      *ngIf=\"hasLayertree\" \n                      [map]=\"map\">\n              </ng2ol3-layertree>\n          </div>\n      </div>\n    ",
+            template: "\n      <div class=\"sidebar-main\">\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\"\n                  (elementActivated)=\"onElementActivated($event)\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-content\">\n              <md-toolbar>\n                <span>{{activeElement.title}}</span>    \n              </md-toolbar>\n              <ng2ol3-layertree \n                      *ngIf=\"hasLayertree\" \n                      [map]=\"map\">\n              </ng2ol3-layertree>\n          </div>\n      </div>\n    ",
             host: {
                 class: 'ng2ol3-sidebar'
             },

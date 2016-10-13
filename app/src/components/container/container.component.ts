@@ -9,7 +9,6 @@ import {Component, Input, OnInit} from '@angular/core';
                     [options]="config.sidebar" 
                     [map]="map">
                 </ng2ol3-sidebar>
-                <!--<button md-button (click)="start.close()">Close</button>-->
             </md-sidenav>
             <ng2ol3-map 
                 *ngIf="config.map" 
