@@ -9,14 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var DemoSidebarComponent = (function () {
-    function DemoSidebarComponent() {
+var DemoMeasureComponent = (function () {
+    function DemoMeasureComponent() {
     }
-    DemoSidebarComponent.prototype.ngOnInit = function () {
+    DemoMeasureComponent.prototype.ngOnInit = function () {
         this.config = {
             map: {
                 renderer: 'canvas',
-                target: 'demo-sidebar-map',
+                target: 'demo-measure-map',
                 view: {
                     projection: "EPSG:900913",
                     center: ol.proj.fromLonLat([19.3956393810065, 47.168464955013], "EPSG:900913"),
@@ -26,10 +26,14 @@ var DemoSidebarComponent = (function () {
                     {
                         type: 'layergroup',
                         name: 'Base layers',
+                        expanded: true,
+                        visible: true,
                         children: [
                             {
                                 type: 'layer',
                                 name: 'OpenStreetMap layer',
+                                visible: true,
+                                opacity: 1,
                                 layer: new ol.layer.Tile({
                                     source: new ol.source.OSM()
                                 })
@@ -41,18 +45,23 @@ var DemoSidebarComponent = (function () {
             sidebar: {
                 collapsible: true,
                 opened: true,
-                toolbar: {}
+                toolbar: {
+                    measure: {
+                        active: true,
+                        disabled: false
+                    }
+                }
             }
         };
     };
-    DemoSidebarComponent = __decorate([
+    DemoMeasureComponent = __decorate([
         core_1.Component({
-            selector: 'demo-sidebar',
+            selector: 'demo-measure',
             template: "\n      <ng2ol3 [config]=\"config\"></ng2ol3> \n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], DemoSidebarComponent);
-    return DemoSidebarComponent;
+    ], DemoMeasureComponent);
+    return DemoMeasureComponent;
 }());
-exports.DemoSidebarComponent = DemoSidebarComponent;
-//# sourceMappingURL=demo-sidebar.js.map
+exports.DemoMeasureComponent = DemoMeasureComponent;
+//# sourceMappingURL=demo-measure.js.map

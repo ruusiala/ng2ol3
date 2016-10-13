@@ -1,13 +1,12 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DemoMapComponent } from './demo/demo-map';
-import {DemoSidebarComponent, DemoToolbarComponent, DemoLayertreeComponent} from './demo/@index';
+import { DemoMapComponent, DemoSidebarComponent, DemoLayertreeComponent, DemoMeasureComponent, DemoFullComponent } from './demo/@index';
 
 const appRoutes: Routes = [
     {
         path: '',
-        // redirectTo: '/demo-sidebar',
-        component: DemoMapComponent,
+        redirectTo: '/demo-full',
+        //component: DemoMapComponent,
         pathMatch: 'full'
     }, {
         path: 'demo-map',
@@ -16,11 +15,14 @@ const appRoutes: Routes = [
         path: 'demo-sidebar',
         component: DemoSidebarComponent
     }, {
-        path: 'demo-toolbar',
-        component: DemoToolbarComponent
-    }, {
         path: 'demo-layertree',
         component: DemoLayertreeComponent
+    }, {
+        path: 'demo-measure',
+        component: DemoMeasureComponent
+    }, {
+        path: 'demo-full',
+        component: DemoFullComponent
     }
 ];
 

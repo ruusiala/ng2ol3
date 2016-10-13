@@ -4,6 +4,7 @@ export * from './app/src/components/container';
 export * from './app/src/components/sidebar';
 export * from './app/src/components/layertree';
 export * from './app/src/components/toolbar';
+export * from './app/src/components/measure';
 
 export * from './app/src/components/ng2ol3-config';
 
@@ -13,5 +14,6 @@ export { Ng2ol3ContainerModule } from './app/src/components/container/container.
 export { Ng2ol3SidebarModule } from './app/src/components/sidebar/sidebar.module';
 export { Ng2ol3LayertreeModule } from './app/src/components/layertree/layertree.module';
 export { Ng2ol3ToolbarModule } from './app/src/components/toolbar/toolbar.module';
+export { Ng2ol3MeasureModule } from './app/src/components/measure/measure.module';
 
 export { Ng2ol3Module } from './app/src/components/@index';

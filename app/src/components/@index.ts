@@ -8,6 +8,7 @@ import { Ng2ol3ContainerModule } from './container/container.module';
 import { Ng2ol3SidebarModule } from './sidebar/sidebar.module';
 import { Ng2ol3LayertreeModule } from './layertree/layertree.module';
 import { Ng2ol3ToolbarModule } from './toolbar/toolbar.module';
+import { Ng2ol3MeasureModule } from './measure/measure.module';
 
 @NgModule({
     exports: [
@@ -16,7 +17,8 @@ import { Ng2ol3ToolbarModule } from './toolbar/toolbar.module';
         Ng2ol3ContainerModule,
         Ng2ol3SidebarModule,
         Ng2ol3LayertreeModule,
-        Ng2ol3ToolbarModule
+        Ng2ol3ToolbarModule,
+        Ng2ol3MeasureModule
     ],
     providers: [
         { provide: ComponentsHelper, useClass: ComponentsHelper }

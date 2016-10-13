@@ -16,6 +16,7 @@ var container_module_1 = require('./container/container.module');
 var sidebar_module_1 = require('./sidebar/sidebar.module');
 var layertree_module_1 = require('./layertree/layertree.module');
 var toolbar_module_1 = require('./toolbar/toolbar.module');
+var measure_module_1 = require('./measure/measure.module');
 var Ng2ol3Module = (function () {
     function Ng2ol3Module() {
     }
@@ -27,7 +28,8 @@ var Ng2ol3Module = (function () {
                 container_module_1.Ng2ol3ContainerModule,
                 sidebar_module_1.Ng2ol3SidebarModule,
                 layertree_module_1.Ng2ol3LayertreeModule,
-                toolbar_module_1.Ng2ol3ToolbarModule
+                toolbar_module_1.Ng2ol3ToolbarModule,
+                measure_module_1.Ng2ol3MeasureModule
             ],
             providers: [
                 { provide: components_helper_service_1.ComponentsHelper, useClass: components_helper_service_1.ComponentsHelper }

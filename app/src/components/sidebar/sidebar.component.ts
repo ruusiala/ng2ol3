@@ -7,7 +7,7 @@ import {
     animate
 } from '@angular/core';
 
-import {Ng2ol3Map} from '../../models/@index';
+import { Ng2ol3Map } from '../../models/@index';
 
 @Component({
     selector: 'ng2ol3-sidebar',
@@ -23,9 +23,13 @@ import {Ng2ol3Map} from '../../models/@index';
                 <span>{{activeElement.title}}</span>    
               </md-toolbar>
               <ng2ol3-layertree 
-                      *ngIf="hasLayertree" 
-                      [map]="map">
+                  *ngIf="hasLayertree && activeElement.type=='layertree'" 
+                  [map]="map">
               </ng2ol3-layertree>
+              <ng2ol3-measure
+              	  *ngIf="hasMeasure && activeElement.type=='measure'"
+                  [map]="map">
+              </ng2ol3-measure>
           </div>
       </div>
     `,
@@ -40,25 +44,30 @@ export class Ng2ol3SidebarComponent implements OnInit {
     @Input() map: Ng2ol3Map;
 
     sidebarClosed: boolean;
+
     hasToolbar: boolean;
     hasLayertree: boolean;
+    hasMeasure: boolean;
 
     activeElement: any;
+
+    constructor() {
+        this.activeElement = {type: 'any'};
+    }
 
     public ngOnInit(): any {
         this.sidebarClosed = false;
         this.hasToolbar = this.options.hasOwnProperty("toolbar");
         this.hasLayertree = this.hasToolbar && this.options.toolbar.hasOwnProperty("layertree");
+        this.hasMeasure = this.hasToolbar && this.options.toolbar.hasOwnProperty("measure");
         this.map.updateSize();
     }
 
     public toggleSidebar(): any {
         this.sidebarClosed = !this.sidebarClosed;
-        console.log(`sidebar will be closed: ${this.sidebarClosed}`);
     }
 
     public onElementActivated(element): any {
-        console.log(element);
         this.activeElement = element;
     }
 

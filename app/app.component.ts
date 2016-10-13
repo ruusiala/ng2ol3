@@ -1,4 +1,4 @@
-import {Component, Inject} from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 @Component({
     selector: 'demo-app',
@@ -16,14 +16,16 @@ import {Component, Inject} from '@angular/core';
         <div class="demo-header">
             <h1 class="title">ng2ol3 components</h1>
             <nav>
-                <button routerLink="/demo-map" routerLinkActive="active"
+           	    <button md-raised-button routerLink="/demo-full" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">full functionality</button>
+                <button md-raised-button color="primary" routerLink="/demo-map" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }">map</button>
-                <button routerLink="/demo-sidebar" routerLinkActive="active"
+                <button md-raised-button routerLink="/demo-sidebar" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }">sidebar</button>
-                <button routerLink="/demo-toolbar" routerLinkActive="active"
-                    [routerLinkActiveOptions]="{ exact: true }">toolbar</button>
-                <button routerLink="/demo-layertree" routerLinkActive="active"
+                <button md-raised-button routerLink="/demo-layertree" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }">layertree</button>
+                <button md-raised-button routerLink="/demo-measure" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">measure</button>
             </nav>
         </div>
         <div class="demo-content">

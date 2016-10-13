@@ -1,4 +1,5 @@
-export * from './demo-layertree';
 export * from './demo-map';
 export * from './demo-sidebar';
-export * from './demo-toolbar';
+export * from './demo-layertree';
+export * from './demo-measure';
+export * from './demo-full';

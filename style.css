@@ -50,3 +50,7 @@ button {
 .ribbon i {
     font-size: 2em;
 }
+
+nav button {
+    color: white !important;
+}

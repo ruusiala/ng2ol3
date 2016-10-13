@@ -20,14 +20,15 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #3cb5c0;
 $dark-gray: #484848;
 $medium-gray: #999;
 $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+
+// App's Main Color
+$action-color: #3cb5c0;
 
 // Border
 $base-border-color: $light-gray;
@@ -35,6 +36,7 @@ $base-border: 1px solid $base-border-color;
 
 // Background Colors
 $base-background-color: #fff;
+$light-background-color: #fafafa;
 $secondary-background-color: tint($base-border-color, 75%);
 
 // Forms
@@ -50,3 +52,6 @@ $base-padding: 5px;
 
 // Shadows
 $base-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
+
+// Etc
+// $toolbar-width: 50px;

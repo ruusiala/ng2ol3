@@ -19,6 +19,7 @@
 
         & .sidebar-content {
             @include span-columns(10);
+            max-height: 200px;
             vertical-align: top;
             padding: 0;
             font-size: 0.8em;
@@ -27,7 +28,8 @@
             padding-right: 5px;
 
             & md-toolbar {
-                background-color: tint($light-gray, 50%);
+                background-color: $light-background-color;
+                border: 1px solid shade($light-background-color, 5%);
             }
         }
     }

@@ -22,17 +22,24 @@ export class DemoSidebarComponent implements OnInit {
                 },
                 layers: [
                     {
-                        type: 'layer',
-                        name: 'OpenStreetMap layer',
-                        layer: new ol.layer.Tile({
-                            source: new ol.source.OSM()
-                        })
+                        type: 'layergroup',
+                        name: 'Base layers',
+                        children: [
+                            {
+                                type: 'layer',
+                                name: 'OpenStreetMap layer',
+                                layer: new ol.layer.Tile({
+                                    source: new ol.source.OSM()
+                                })
+                            }
+                        ]
                     }
                 ]
             },
             sidebar: {
                 collapsible: true,
-                opened: true
+                opened: true,
+                toolbar: {}
             }
         }
 

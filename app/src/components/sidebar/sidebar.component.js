@@ -12,19 +12,19 @@ var core_1 = require('@angular/core');
 var _index_1 = require('../../models/@index');
 var Ng2ol3SidebarComponent = (function () {
     function Ng2ol3SidebarComponent() {
+        this.activeElement = { type: 'any' };
     }
     Ng2ol3SidebarComponent.prototype.ngOnInit = function () {
         this.sidebarClosed = false;
         this.hasToolbar = this.options.hasOwnProperty("toolbar");
         this.hasLayertree = this.hasToolbar && this.options.toolbar.hasOwnProperty("layertree");
+        this.hasMeasure = this.hasToolbar && this.options.toolbar.hasOwnProperty("measure");
         this.map.updateSize();
     };
     Ng2ol3SidebarComponent.prototype.toggleSidebar = function () {
         this.sidebarClosed = !this.sidebarClosed;
-        console.log("sidebar will be closed: " + this.sidebarClosed);
     };
     Ng2ol3SidebarComponent.prototype.onElementActivated = function (element) {
-        console.log(element);
         this.activeElement = element;
     };
     __decorate([
@@ -38,7 +38,7 @@ var Ng2ol3SidebarComponent = (function () {
     Ng2ol3SidebarComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-sidebar',
-            template: "\n      <div class=\"sidebar-main\">\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\"\n                  (elementActivated)=\"onElementActivated($event)\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-content\">\n              <md-toolbar>\n                <span>{{activeElement.title}}</span>    \n              </md-toolbar>\n              <ng2ol3-layertree \n                      *ngIf=\"hasLayertree\" \n                      [map]=\"map\">\n              </ng2ol3-layertree>\n          </div>\n      </div>\n    ",
+            template: "\n      <div class=\"sidebar-main\">\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\"\n                  (elementActivated)=\"onElementActivated($event)\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-content\">\n              <md-toolbar>\n                <span>{{activeElement.title}}</span>    \n              </md-toolbar>\n              <ng2ol3-layertree \n                  *ngIf=\"hasLayertree && activeElement.type=='layertree'\" \n                  [map]=\"map\">\n              </ng2ol3-layertree>\n              <ng2ol3-measure\n              \t  *ngIf=\"hasMeasure && activeElement.type=='measure'\"\n                  [map]=\"map\">\n              </ng2ol3-measure>\n          </div>\n      </div>\n    ",
             host: {
                 class: 'ng2ol3-sidebar'
             },

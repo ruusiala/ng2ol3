@@ -11,28 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
 var material_1 = require('@angular/material');
-var sidebar_component_1 = require('./sidebar.component');
-var toolbar_module_1 = require('../toolbar/toolbar.module');
-var layertree_module_1 = require('../layertree/layertree.module');
-var measure_module_1 = require('../measure/measure.module');
-var Ng2ol3SidebarModule = (function () {
-    function Ng2ol3SidebarModule() {
+var measure_component_1 = require('./measure.component');
+var Ng2ol3MeasureModule = (function () {
+    function Ng2ol3MeasureModule() {
     }
-    Ng2ol3SidebarModule = __decorate([
+    Ng2ol3MeasureModule = __decorate([
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
-                material_1.MaterialModule.forRoot(),
-                toolbar_module_1.Ng2ol3ToolbarModule,
-                layertree_module_1.Ng2ol3LayertreeModule,
-                measure_module_1.Ng2ol3MeasureModule
+                material_1.MaterialModule.forRoot()
             ],
-            declarations: [sidebar_component_1.Ng2ol3SidebarComponent],
-            exports: [sidebar_component_1.Ng2ol3SidebarComponent]
+            declarations: [measure_component_1.Ng2ol3MeasureComponent],
+            exports: [measure_component_1.Ng2ol3MeasureComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], Ng2ol3SidebarModule);
-    return Ng2ol3SidebarModule;
+    ], Ng2ol3MeasureModule);
+    return Ng2ol3MeasureModule;
 }());
-exports.Ng2ol3SidebarModule = Ng2ol3SidebarModule;
-//# sourceMappingURL=sidebar.module.js.map
+exports.Ng2ol3MeasureModule = Ng2ol3MeasureModule;
+//# sourceMappingURL=measure.module.js.map

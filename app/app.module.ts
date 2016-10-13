@@ -12,8 +12,9 @@ import { routing, appRoutingProviders } from './app.routing';
 import {
     DemoMapComponent,
     DemoSidebarComponent,
-    DemoToolbarComponent,
-    DemoLayertreeComponent
+    DemoLayertreeComponent,
+    DemoMeasureComponent,
+    DemoFullComponent
 } from './demo/@index';
 
 @NgModule({
@@ -27,8 +28,9 @@ import {
         AppComponent,
         DemoMapComponent,
         DemoSidebarComponent,
-        DemoToolbarComponent,
-        DemoLayertreeComponent
+        DemoLayertreeComponent,
+        DemoMeasureComponent,
+        DemoFullComponent
     ],
     providers: [
         appRoutingProviders,

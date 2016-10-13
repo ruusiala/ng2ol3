@@ -8,6 +8,7 @@ __export(require('./app/src/components/container'));
 __export(require('./app/src/components/sidebar'));
 __export(require('./app/src/components/layertree'));
 __export(require('./app/src/components/toolbar'));
+__export(require('./app/src/components/measure'));
 __export(require('./app/src/components/ng2ol3-config'));
 var dummy_module_1 = require('./app/src/components/dummy/dummy.module');
 exports.Ng2ol3DummyModule = dummy_module_1.Ng2ol3DummyModule;
@@ -21,6 +22,8 @@ var layertree_module_1 = require('./app/src/components/layertree/layertree.modul
 exports.Ng2ol3LayertreeModule = layertree_module_1.Ng2ol3LayertreeModule;
 var toolbar_module_1 = require('./app/src/components/toolbar/toolbar.module');
 exports.Ng2ol3ToolbarModule = toolbar_module_1.Ng2ol3ToolbarModule;
+var measure_module_1 = require('./app/src/components/measure/measure.module');
+exports.Ng2ol3MeasureModule = measure_module_1.Ng2ol3MeasureModule;
 var _index_1 = require('./app/src/components/@index');
 exports.Ng2ol3Module = _index_1.Ng2ol3Module;
 //# sourceMappingURL=ng2ol3.js.map

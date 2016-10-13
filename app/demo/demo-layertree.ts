@@ -31,14 +31,13 @@ export class DemoLayertreeComponent implements OnInit {
                                 type: 'layer',
                                 name: 'OpenStreetMap layer',
                                 visible: true,
-                                opacity: 0.5,
+                                opacity: 1,
                                 layer: new ol.layer.Tile({
                                     source: new ol.source.OSM()
                                 })
                             }
                         ]
-                    },
-                    {
+                    }, {
                         type: 'layergroup',
                         name: 'Hungary',
                         expanded: true,
