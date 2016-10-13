@@ -10,7 +10,7 @@
 Navigate to ng2ol3's main directory and run ```npm install``` to download all dependencies.
 
 ## Live example
-An online example can be opened [here](http://188.166.116.137/ng2ol3) (currently not working, see [this issue](https://stackoverflow.com/questions/39510653/jspm-angular-core-optionalmetadata-is-not-a-constructor/39912797#39912797)).
+An online example can be opened [here](http://188.166.116.137/ng2ol3).
 
 ## Usage
 1. If you wish to see the built-in demos or modify the source files, simply run ```npm start``` to load the demo page on ```localhost:3000```. This starts Node.js and watches for file changes until you shut it down. For example, if you change a .ts, .scss or .html file, Node.js instantly transpiles .ts into .js, .scss into .css, and the page is reloaded by itself.
