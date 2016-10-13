@@ -3,9 +3,9 @@ var Ng2ol3Layer = (function () {
     function Ng2ol3Layer(options) {
         this.name = options.name;
         this.layer = options.layer;
-        var opacity = (typeof options.opacity !== "undefined") ? options.opacity : 1.0;
+        var opacity = options.hasOwnProperty("opacity") ? options.opacity : 1.0;
         this.setOpacity(opacity);
-        var visible = (typeof options.visible !== "undefined") ? options.visible : true;
+        var visible = options.hasOwnProperty("visible") ? options.visible : true;
         this.setVisible(visible);
     }
     Ng2ol3Layer.prototype.getName = function () {

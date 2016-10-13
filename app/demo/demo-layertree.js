@@ -26,7 +26,7 @@ var DemoLayertreeComponent = (function () {
                     {
                         type: 'layergroup',
                         name: 'Base layers',
-                        expanded: true,
+                        expanded: false,
                         visible: true,
                         children: [
                             {
@@ -42,7 +42,7 @@ var DemoLayertreeComponent = (function () {
                     }, {
                         type: 'layergroup',
                         name: 'Hungary',
-                        expanded: true,
+                        expanded: false,
                         visible: true,
                         children: [
                             {
@@ -106,10 +106,7 @@ var DemoLayertreeComponent = (function () {
                 collapsible: true,
                 opened: true,
                 toolbar: {
-                    layertree: {
-                        active: true,
-                        disabled: false
-                    }
+                    layertree: {}
                 }
             }
         };

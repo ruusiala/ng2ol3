@@ -107,12 +107,8 @@ export class DemoFullComponent implements OnInit {
                     layertree: {
                         active: true
                     },
-                    measure: {
-                        
-                    },
-                    print: {
-                        
-                    }
+                    measure: {},
+                    print: {}
                 }
             }
         }

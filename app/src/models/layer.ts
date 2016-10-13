@@ -11,10 +11,10 @@ export class Ng2ol3Layer {
         this.name = options.name;
         this.layer = options.layer;
 
-        let opacity = (typeof options.opacity !== "undefined") ? options.opacity : 1.0;
+        let opacity = options.hasOwnProperty("opacity") ? options.opacity : 1.0;
         this.setOpacity(opacity);
 
-        let visible = (typeof options.visible !== "undefined") ? options.visible : true;
+        let visible = options.hasOwnProperty("visible") ? options.visible : true;
         this.setVisible(visible);
     }
 

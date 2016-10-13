@@ -9,7 +9,7 @@ export class Ng2ol3LayerGroup {
     constructor(options: any) {
         this.name = options.name;
         this.children = [];
-        this.expanded = options.expanded || true;
+        this.expanded = options.hasOwnProperty("expanded") ? options.expanded : true;
     }
 
     public getName(): string {
