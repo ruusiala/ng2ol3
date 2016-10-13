@@ -10,11 +10,12 @@ import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routing';
 
 import {
+    DemoFullComponent,
     DemoMapComponent,
     DemoSidebarComponent,
     DemoLayertreeComponent,
     DemoMeasureComponent,
-    DemoFullComponent
+    DemoPrintComponent
 } from './demo/@index';
 
 @NgModule({
@@ -26,11 +27,12 @@ import {
     ],
     declarations: [
         AppComponent,
+        DemoFullComponent,
         DemoMapComponent,
         DemoSidebarComponent,
         DemoLayertreeComponent,
         DemoMeasureComponent,
-        DemoFullComponent
+        DemoPrintComponent
     ],
     providers: [
         appRoutingProviders,

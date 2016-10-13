@@ -17,6 +17,7 @@ var sidebar_module_1 = require('./sidebar/sidebar.module');
 var layertree_module_1 = require('./layertree/layertree.module');
 var toolbar_module_1 = require('./toolbar/toolbar.module');
 var measure_module_1 = require('./measure/measure.module');
+var print_module_1 = require('./print/print.module');
 var Ng2ol3Module = (function () {
     function Ng2ol3Module() {
     }
@@ -29,7 +30,8 @@ var Ng2ol3Module = (function () {
                 sidebar_module_1.Ng2ol3SidebarModule,
                 layertree_module_1.Ng2ol3LayertreeModule,
                 toolbar_module_1.Ng2ol3ToolbarModule,
-                measure_module_1.Ng2ol3MeasureModule
+                measure_module_1.Ng2ol3MeasureModule,
+                print_module_1.Ng2ol3PrintModule
             ],
             providers: [
                 { provide: components_helper_service_1.ComponentsHelper, useClass: components_helper_service_1.ComponentsHelper }

@@ -19,6 +19,7 @@ var Ng2ol3SidebarComponent = (function () {
         this.hasToolbar = this.options.hasOwnProperty("toolbar");
         this.hasLayertree = this.hasToolbar && this.options.toolbar.hasOwnProperty("layertree");
         this.hasMeasure = this.hasToolbar && this.options.toolbar.hasOwnProperty("measure");
+        this.hasPrint = this.hasToolbar && this.options.toolbar.hasOwnProperty("print");
         this.map.updateSize();
     };
     Ng2ol3SidebarComponent.prototype.toggleSidebar = function () {
@@ -38,7 +39,7 @@ var Ng2ol3SidebarComponent = (function () {
     Ng2ol3SidebarComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-sidebar',
-            template: "\n      <div class=\"sidebar-main\">\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\"\n                  (elementActivated)=\"onElementActivated($event)\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-content\">\n              <md-toolbar>\n                <span>{{activeElement.title}}</span>    \n              </md-toolbar>\n              <ng2ol3-layertree \n                  *ngIf=\"hasLayertree && activeElement.type=='layertree'\" \n                  [map]=\"map\">\n              </ng2ol3-layertree>\n              <ng2ol3-measure\n              \t  *ngIf=\"hasMeasure && activeElement.type=='measure'\"\n                  [map]=\"map\">\n              </ng2ol3-measure>\n          </div>\n      </div>\n    ",
+            template: "\n      <div class=\"sidebar-outer\">\n          <ng2ol3-toolbar \n                  *ngIf=\"hasToolbar\"\n                  [options]=\"options.toolbar\"\n                  (elementActivated)=\"onElementActivated($event)\">\n          </ng2ol3-toolbar>\n          <div class=\"sidebar-main\">\n          \t  <div class=\"sidebar-title\">\n\t              <md-toolbar>\n\t                <span>{{activeElement.title}}</span>    \n\t              </md-toolbar>\n              </div>\n              <div class=\"sidebar-content\">\n\t              <ng2ol3-layertree \n\t                  *ngIf=\"hasLayertree && activeElement.type=='layertree'\" \n\t                  [map]=\"map\">\n\t              </ng2ol3-layertree>\n\t              <ng2ol3-measure\n\t              \t  *ngIf=\"hasMeasure && activeElement.type=='measure'\"\n\t                  [map]=\"map\">\n\t              </ng2ol3-measure>\n\t              <ng2ol3-print \n\t              \t  *ngIf=\"hasPrint && activeElement.type=='print'\"\n\t                  [map]=\"map\"></ng2ol3-print>\n              </div>\t\n          </div>\n      </div>\n    ",
             host: {
                 class: 'ng2ol3-sidebar'
             },

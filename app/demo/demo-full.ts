@@ -109,6 +109,9 @@ export class DemoFullComponent implements OnInit {
                     },
                     measure: {
                         
+                    },
+                    print: {
+                        
                     }
                 }
             }

@@ -9,7 +9,7 @@ import {Ng2ol3Map} from '../../models/@index';
     selector: 'ng2ol3-measure',
     template: `
       <div>
-          Measure will be here
+      	<div class="dev">Measure options will come soon.</div>
       </div>
     `,
     host: {

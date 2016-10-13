@@ -1,6 +1,6 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DemoMapComponent, DemoSidebarComponent, DemoLayertreeComponent, DemoMeasureComponent, DemoFullComponent } from './demo/@index';
+import { DemoFullComponent, DemoMapComponent, DemoSidebarComponent, DemoLayertreeComponent, DemoMeasureComponent, DemoPrintComponent } from './demo/@index';
 
 const appRoutes: Routes = [
     {
@@ -8,6 +8,9 @@ const appRoutes: Routes = [
         redirectTo: '/demo-full',
         //component: DemoMapComponent,
         pathMatch: 'full'
+    }, {
+        path: 'demo-full',
+        component: DemoFullComponent
     }, {
         path: 'demo-map',
         component: DemoMapComponent
@@ -21,8 +24,8 @@ const appRoutes: Routes = [
         path: 'demo-measure',
         component: DemoMeasureComponent
     }, {
-        path: 'demo-full',
-        component: DemoFullComponent
+        path: 'demo-print',
+        component: DemoPrintComponent
     }
 ];
 

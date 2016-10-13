@@ -22,7 +22,7 @@ const map: any = {
     '@angular/material': paths.npm + "@angular/material/material.umd.js",
     // other libraries
     'rxjs': paths.npm + 'rxjs',
-    'angular2-in-memory-web-api': paths.npm + 'angular2-in-memory-web-api',
+    'angular2-in-memory-web-api': paths.npm + 'angular2-in-memory-web-api'
 };
 
 /** User packages configuration. */

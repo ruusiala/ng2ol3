@@ -29,11 +29,12 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                _index_2.DemoFullComponent,
                 _index_2.DemoMapComponent,
                 _index_2.DemoSidebarComponent,
                 _index_2.DemoLayertreeComponent,
                 _index_2.DemoMeasureComponent,
-                _index_2.DemoFullComponent
+                _index_2.DemoPrintComponent
             ],
             providers: [
                 app_routing_1.appRoutingProviders,

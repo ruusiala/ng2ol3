@@ -8,6 +8,9 @@ var appRoutes = [
         //component: DemoMapComponent,
         pathMatch: 'full'
     }, {
+        path: 'demo-full',
+        component: _index_1.DemoFullComponent
+    }, {
         path: 'demo-map',
         component: _index_1.DemoMapComponent
     }, {
@@ -20,8 +23,8 @@ var appRoutes = [
         path: 'demo-measure',
         component: _index_1.DemoMeasureComponent
     }, {
-        path: 'demo-full',
-        component: _index_1.DemoFullComponent
+        path: 'demo-print',
+        component: _index_1.DemoPrintComponent
     }
 ];
 exports.appRoutingProviders = [];

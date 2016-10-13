@@ -109,7 +109,8 @@ var DemoFullComponent = (function () {
                     layertree: {
                         active: true
                     },
-                    measure: {}
+                    measure: {},
+                    print: {}
                 }
             }
         };

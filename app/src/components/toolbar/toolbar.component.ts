@@ -30,45 +30,58 @@ export class Ng2ol3ToolbarComponent implements OnInit {
     }
 
     public ngOnInit(): any {
-        if(this.options.hasOwnProperty("layertree")) {
+        if (this.options.hasOwnProperty("layertree")) {
+            let obj: any = this.options.layertree;
             this.elements.push({
                 type: "layertree",
-                title: this.options.layertree.title || "Layer manager",
-                fontSet: this.options.layertree.fontSet || "ms",
-                fontIcon: this.options.layertree.fontIcon || "ms-layers",
-                active: this.options.layertree.active || false,
-                disabled: this.options.layertree.disabled || false
+                title: obj.hasOwnProperty("title") ? obj.title : "Layer manager",
+                fontSet: obj.hasOwnProperty("fontSet") ? obj.fontSet : "ms",
+                fontIcon: obj.hasOwnProperty("fontIcon") ? obj.fontIcon : "ms-layers",
+                active: obj.hasOwnProperty("active") ? obj.active : true,
+                disabled: obj.hasOwnProperty("disabled") ? obj.disabled : false
             });
         }
-        if(this.options.hasOwnProperty("measure")) {
+        if (this.options.hasOwnProperty("measure")) {
+            let obj: any = this.options.measure;
             this.elements.push({
                 type: "measure",
-                title: this.options.measure.title || "Measure",
-                fontSet: this.options.measure.fontSet || "ms",
-                fontIcon: this.options.measure.fontIcon || "ms-measure-distance",
-                active: this.options.measure.active || false,
-                disabled: this.options.measure.disabled || false
+                title: obj.hasOwnProperty("title") ? obj.title : "Measure",
+                fontSet: obj.hasOwnProperty("fontSet") ? obj.fontSet : "ms",
+                fontIcon: obj.hasOwnProperty("fontIcon") ? obj.fontIcon : "ms-measure-distance",
+                active: obj.hasOwnProperty("active") ? obj.active : true,
+                disabled: obj.hasOwnProperty("disabled") ? obj.disabled : false
+            });
+        }
+        if (this.options.hasOwnProperty("print")) {
+            let obj: any = this.options.print;
+            this.elements.push({
+                type: "print",
+                title: obj.hasOwnProperty("title") ? obj.title : "Print",
+                fontSet: obj.hasOwnProperty("fontSet") ? obj.fontSet : "ms",
+                fontIcon: obj.hasOwnProperty("fontIcon") ? obj.fontIcon : "ms-printer",
+                active: obj.hasOwnProperty("active") ? obj.active : true,
+                disabled: obj.hasOwnProperty("disabled") ? obj.disabled : false
             });
         }
         //set active the first active element
-        for(let i=0; i<this.elements.length; i++) {
-            if(this.elements[i].active === true && this.elements[i].disabled === false) {
-				this.elementActivated.emit(this.elements[i]);
+        for (let i = 0; i < this.elements.length; i++) {
+            if (this.elements[i].active === true && this.elements[i].disabled === false) {
+                this.activateElement(this.elements[i]);
                 break;
             }
         }
     }
 
     public activateElement(element): any {
-        for(let i=0; i<this.elements.length; i++) {
-            if(this.elements[i] === element) {
+        for (let i = 0; i < this.elements.length; i++) {
+            if (this.elements[i] === element) {
                 this.elements[i].active = true;
-				this.elementActivated.emit(element);
+                this.elementActivated.emit(element);
             } else {
                 this.elements[i].active = false;
             }
         }
-        
+
     }
 
 }

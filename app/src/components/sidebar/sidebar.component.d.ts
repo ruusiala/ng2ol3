@@ -7,6 +7,7 @@ export declare class Ng2ol3SidebarComponent implements OnInit {
     hasToolbar: boolean;
     hasLayertree: boolean;
     hasMeasure: boolean;
+    hasPrint: boolean;
     activeElement: any;
     constructor();
     ngOnInit(): any;

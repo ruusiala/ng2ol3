@@ -22,7 +22,7 @@ var Ng2ol3MeasureComponent = (function () {
     Ng2ol3MeasureComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-measure',
-            template: "\n      <div>\n          Measure will be here\n      </div>\n    ",
+            template: "\n      <div>\n      \t<div class=\"dev\">Measure options will come soon.</div>\n      </div>\n    ",
             host: {
                 class: 'ng2ol3-measure'
             },

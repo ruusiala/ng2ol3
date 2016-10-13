@@ -15,6 +15,7 @@ var sidebar_component_1 = require('./sidebar.component');
 var toolbar_module_1 = require('../toolbar/toolbar.module');
 var layertree_module_1 = require('../layertree/layertree.module');
 var measure_module_1 = require('../measure/measure.module');
+var print_module_1 = require('../print/print.module');
 var Ng2ol3SidebarModule = (function () {
     function Ng2ol3SidebarModule() {
     }
@@ -25,7 +26,8 @@ var Ng2ol3SidebarModule = (function () {
                 material_1.MaterialModule.forRoot(),
                 toolbar_module_1.Ng2ol3ToolbarModule,
                 layertree_module_1.Ng2ol3LayertreeModule,
-                measure_module_1.Ng2ol3MeasureModule
+                measure_module_1.Ng2ol3MeasureModule,
+                print_module_1.Ng2ol3PrintModule
             ],
             declarations: [sidebar_component_1.Ng2ol3SidebarComponent],
             exports: [sidebar_component_1.Ng2ol3SidebarComponent]

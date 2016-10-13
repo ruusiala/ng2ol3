@@ -4,20 +4,17 @@
     background-color: $base-background-color;
     box-shadow: 4px 0 5px -4px #888;
     height: 100%;
-    
-    & .sidebar-main {
+    & .sidebar-outer {
         @include outer-container;
         @include fill-parent;
         @include row(table);
         padding: 0;
         height: 100%;
-
         & .close-button {
             float: right;
             width: 1em;
         }
-
-        & .sidebar-content {
+        & .sidebar-main {
             @include span-columns(10);
             max-height: 200px;
             vertical-align: top;
@@ -26,10 +23,29 @@
             background-color: white;
             padding-left: 5px;
             padding-right: 5px;
-
-            & md-toolbar {
-                background-color: $light-background-color;
-                border: 1px solid shade($light-background-color, 5%);
+            & .sidebar-title {
+                & md-toolbar {
+                    background-color: $light-background-color;
+                    border: 1px solid shade($light-background-color, 5%);
+                }
+            }
+            & .sidebar-content {
+                padding-top: 5px;
+                & button {
+                    background-color: white;
+                    text-transform: uppercase;
+                    color: $dark-gray;
+                    &:hover {
+                        background-color: tint($light-gray, 50%);
+                    }
+                    &:focus {
+                        color: $action-color;
+                    }
+                }
+                & .dev {
+                    color: $medium-gray;
+                    padding-top: 5px;
+                }
             }
         }
     }

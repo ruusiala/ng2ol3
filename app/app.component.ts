@@ -26,6 +26,8 @@ import { Component, Inject } from '@angular/core';
                     [routerLinkActiveOptions]="{ exact: true }">layertree</button>
                 <button md-raised-button routerLink="/demo-measure" routerLinkActive="active"
                     [routerLinkActiveOptions]="{ exact: true }">measure</button>
+                <button md-raised-button routerLink="/demo-print" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{ exact: true }">print</button>
             </nav>
         </div>
         <div class="demo-content">
