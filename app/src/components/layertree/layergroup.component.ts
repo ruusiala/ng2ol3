@@ -7,20 +7,20 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
     selector: 'ng2ol3-layergroup',
     template: `
 	    <div>
-	    	<div (mouseover)="showDetails()" (mouseout)="hideDetails()">
-		    	<md-list dense>
-		            <md-list-item>
-		                <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24 pointer" (click)="toggleExpanded()"></md-icon>
-		                <h3 md-line>{{layerGroup.name | uppercase}}</h3>
-		                <p md-line class="plus-info">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</p>
-		            </md-list-item>
-                    <ng2ol3-layertree-details [element]="layerGroup" [hovered]="detailsVisible"></ng2ol3-layertree-details>
-		        </md-list>
+	    	<div class="element-header" (mouseover)="showDetails()" (mouseout)="hideDetails()">
+                <div>
+                    <button class="header-icon" md-mini-fab (click)="toggleExpanded()">
+                        <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24 pointer"></md-icon>
+                    </button>
+                    <h3>{{layerGroup.name | uppercase}}</h3>
+                    <p class="plus-info">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</p>
+                </div>
+                <ng2ol3-layertree-details [element]="layerGroup" [hovered]="detailsVisible"></ng2ol3-layertree-details>
+                <!--<div class="children" *ngIf="expanded">
+    	            <ng2ol3-layer *ngFor="let l of nestedLayers" [layer]="l"></ng2ol3-layer>
+    	        </div>-->
 		    </div>
-	        <div class="children" *ngIf="expanded">
-	            <!--<ng2ol3-layergroup *ngFor="let lg of nestedLayerGroups" [layerGroup]="lg"></ng2ol3-layergroup>-->
-	            <ng2ol3-layer *ngFor="let l of nestedLayers" [layer]="l"></ng2ol3-layer>
-	        </div>
+	        
 	    </div>
     `,
     host: {
