@@ -2,19 +2,31 @@
     color: $base-font-color;
     $icon-padding: 2px;
     $hoverColor: darken($base-font-color, 50%);
+    $border: 1px solid red;
+
+    & md-list {
+        margin-top: 4px !important;
+        padding-top: 0 !important;
+    }
+
+
     & .ng2ol3-layergroup {
         & md-list {
+            border: 1px solid tint($action-color, 80%) !important;
+            &:hover {
+                border: 1px solid tint($action-color, 70%) !important;
+            }
             & md-list-item {
                 & .md-list-item {
                     background-color: tint($action-color, 80%) !important;
-                    & .ng2ol3-layertree-details {
-                        display: none;
-                    }
+                    // & .ng2ol3-layertree-details {
+                    //     display: none;
+                    // }
                     &:hover {
                         background-color: tint($action-color, 70%) !important;
-                        & .ng2ol3-layertree-details {
-                            display: block;
-                        }
+                        // & .ng2ol3-layertree-details {
+                        //     display: block;
+                        // }
                     }
                 }
                 & md-icon {
@@ -41,14 +53,14 @@
             & md-list-item {
                 & .md-list-item {
                     background-color: tint($action-color, 90%) !important;
-                    & .ng2ol3-layertree-details {
-                        display: none;
-                    }
+                    // & .ng2ol3-layertree-details {
+                    //     display: none;
+                    // }
                     &:hover {
                         background-color: tint($action-color, 80%) !important;
-                        & .ng2ol3-layertree-details {
-                            display: block;
-                        }
+                        // & .ng2ol3-layertree-details {
+                        //     display: block;
+                        // }
                     }
                 }
                 & md-icon {
@@ -67,10 +79,16 @@
     }
     & .ng2ol3-layertree-details {
         & .md-grid-list {
-            margin-top: 4px;
-            & md-icon {
-                font-size: 1em;
-                line-height: 2em;
+            // color: $medium-gray;
+            // &:hover {
+            //     color: $base-font-color;
+            // }
+            // margin-top: 4px;
+            & md-grid-tile {
+                & md-icon {
+                    font-size: 1em;
+                    line-height: 2em;
+                }
             }
         }
     }

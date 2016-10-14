@@ -7,7 +7,7 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
     template: `
         <div>
         	<md-grid-list cols="{{items.length}}" rowHeight="20" gutterSize="0px">
-            	<md-grid-tile *ngFor="let item of items" [colspan]="item.cols" [rowspan]="item.rows" [style.background]="item.color" class="pointer" (click)="onClick(item)">
+            	<md-grid-tile *ngFor="let item of items" [colspan]="item.cols" [rowspan]="item.rows" [style.background]="hovered ? item.color : '#fafafa'" [style.color]="hovered ? '#484848' : '#999999'" class="pointer" (click)="onClick(item)">
                 	<md-icon class="md-24" fontSet="{{item.fontSet}}" fontIcon="{{item.fontIcon}}"></md-icon>
   				</md-grid-tile>
             </md-grid-list>
@@ -20,6 +20,7 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 export class Ng2ol3LayertreeDetailsComponent implements OnInit {
 
     @Input() element: any;
+    @Input() hovered: boolean;
 
     // @Output() expandClicked = new EventEmitter();
     // @Output() visibilityClicked = new EventEmitter();
