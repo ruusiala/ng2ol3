@@ -9,15 +9,52 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var _index_1 = require('../../models/@index');
 var Ng2ol3LayertreeDetailsComponent = (function () {
     function Ng2ol3LayertreeDetailsComponent() {
+        this.items = [];
     }
     Ng2ol3LayertreeDetailsComponent.prototype.ngOnInit = function () {
+        this.items.push({ type: 'visibility', cols: 1, rows: 1, color: 'lightblue', fontSet: "fa", fontIcon: "fa-eye" });
+        this.items.push({ type: 'opacity', cols: 1, rows: 1, color: 'lightgreen', fontSet: "ms", fontIcon: "ms-transparency" });
+        if (this.element instanceof _index_1.Ng2ol3LayerGroup) {
+            this.items.push({ type: 'expand', cols: 1, rows: 1, color: '#ADBDF1', fontSet: "fa", fontIcon: "fa-expand" });
+        }
+        else if (this.element instanceof _index_1.Ng2ol3Layer) {
+            this.items.push({ type: 'style', cols: 1, rows: 1, color: 'lightpink', fontSet: "ms", fontIcon: "ms-style" });
+        }
+        this.items.push({ type: 'settings', cols: 1, rows: 1, color: '#DDBDF1', fontSet: "fa", fontIcon: "fa-cog" });
     };
+    ;
+    Ng2ol3LayertreeDetailsComponent.prototype.onClick = function (item) {
+        switch (item.type) {
+            case "expand":
+                console.log("todo expand change");
+                break;
+            case "visibility":
+                console.log("todo visibility change");
+                break;
+            case "opacity":
+                console.log("todo opacity change");
+                break;
+            case "style":
+                console.log("todo style change");
+                break;
+            case "settings":
+                console.log("todo settings change");
+                break;
+            default:
+                break;
+        }
+    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], Ng2ol3LayertreeDetailsComponent.prototype, "element", void 0);
     Ng2ol3LayertreeDetailsComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layertree-details',
-            template: "\n        <div>details will be here soon</div>\n    ",
+            template: "\n        <div>\n        \t<md-grid-list cols=\"{{items.length}}\" rowHeight=\"20\" gutterSize=\"0px\">\n            \t<md-grid-tile *ngFor=\"let item of items\" [colspan]=\"item.cols\" [rowspan]=\"item.rows\" [style.background]=\"item.color\" class=\"pointer\" (click)=\"onClick(item)\">\n                \t<md-icon class=\"md-24\" fontSet=\"{{item.fontSet}}\" fontIcon=\"{{item.fontIcon}}\"></md-icon>\n  \t\t\t\t</md-grid-tile>\n            </md-grid-list>\n        </div>\n    ",
             host: {
                 class: 'ng2ol3-layertree-details'
             }

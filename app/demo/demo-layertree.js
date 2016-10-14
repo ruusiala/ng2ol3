@@ -47,7 +47,7 @@ var DemoLayertreeComponent = (function () {
                         children: [
                             {
                                 type: 'layer',
-                                name: 'main roads',
+                                name: 'Main roads',
                                 visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({
@@ -64,7 +64,7 @@ var DemoLayertreeComponent = (function () {
                                 })
                             }, {
                                 type: 'layer',
-                                name: 'highways',
+                                name: 'Highways',
                                 visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({
@@ -82,7 +82,7 @@ var DemoLayertreeComponent = (function () {
                             },
                             {
                                 type: 'layer',
-                                name: 'border',
+                                name: 'Country border',
                                 visible: false,
                                 opacity: 1.0,
                                 layer: new ol.layer.Tile({

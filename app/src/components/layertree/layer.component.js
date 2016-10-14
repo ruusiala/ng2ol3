@@ -30,7 +30,7 @@ var Ng2ol3LayerComponent = (function () {
     Ng2ol3LayerComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layer',
-            template: "\n        <md-list dense>\n            <md-list-item (click)=\"toggleVisibility()\" class=\"pointer\">\n                <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24\"></md-icon>\n                <h3 md-line>{{layer.name}}</h3>\n                <p md-line>\n                    <ng2ol3-layertree-details></ng2ol3-layertree-details>\n                </p>\n            </md-list-item>\n        </md-list>\n    ",
+            template: "\n        <md-list dense>\n            <md-list-item>\n                <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\" (click)=\"toggleVisibility()\"></md-icon>\n                <h3 md-line>{{layer.name}}</h3>\n                <p md-line>\n                    <ng2ol3-layertree-details [element]=\"layer\"></ng2ol3-layertree-details>\n                </p>\n            </md-list-item>\n        </md-list>\n    ",
             host: {
                 class: 'ng2ol3-layer'
             }
