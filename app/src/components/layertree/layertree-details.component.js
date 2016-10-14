@@ -8,26 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
-var material_1 = require('@angular/material');
-var layer_component_1 = require('./layer.component');
-var layertree_details_module_1 = require('./layertree-details.module');
-var Ng2ol3LayerModule = (function () {
-    function Ng2ol3LayerModule() {
+var Ng2ol3LayertreeDetailsComponent = (function () {
+    function Ng2ol3LayertreeDetailsComponent() {
     }
-    Ng2ol3LayerModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                common_1.CommonModule,
-                material_1.MaterialModule.forRoot(),
-                layertree_details_module_1.Ng2ol3LayertreeDetailsModule],
-            declarations: [layer_component_1.Ng2ol3LayerComponent],
-            exports: [layer_component_1.Ng2ol3LayerComponent]
+    Ng2ol3LayertreeDetailsComponent.prototype.ngOnInit = function () {
+    };
+    Ng2ol3LayertreeDetailsComponent = __decorate([
+        core_1.Component({
+            selector: 'ng2ol3-layertree-details',
+            template: "\n        <div>details will be here soon</div>\n    ",
+            host: {
+                class: 'ng2ol3-layertree-details'
+            }
         }), 
         __metadata('design:paramtypes', [])
-    ], Ng2ol3LayerModule);
-    return Ng2ol3LayerModule;
+    ], Ng2ol3LayertreeDetailsComponent);
+    return Ng2ol3LayertreeDetailsComponent;
 }());
-exports.Ng2ol3LayerModule = Ng2ol3LayerModule;
-//# sourceMappingURL=layer.module.js.map
+exports.Ng2ol3LayertreeDetailsComponent = Ng2ol3LayertreeDetailsComponent;
+//# sourceMappingURL=layertree-details.component.js.map

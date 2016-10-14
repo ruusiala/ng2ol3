@@ -10,8 +10,10 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
             <md-list-item (click)="toggleExpanded()" class="pointer">
                 <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24"></md-icon>
                 <h3 md-line>{{layerGroup.name | uppercase}}</h3>
-                <p md-line class="plus-info">{{nestedLayerGroups.length}} layer group(s)</p> 
-                <p md-line class="plus-info">{{nestedLayers.length}} layer(s)</p>
+                <p md-line class="plus-info">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</p>
+                <p md-line>
+                    <ng2ol3-layertree-details></ng2ol3-layertree-details>
+                </p>
             </md-list-item>
         </md-list>
         <div class="children" *ngIf="expanded">

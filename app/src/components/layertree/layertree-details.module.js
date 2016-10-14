@@ -11,25 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var common_1 = require('@angular/common');
 var core_1 = require('@angular/core');
 var material_1 = require('@angular/material');
-var layergroup_component_1 = require('./layergroup.component');
-var layer_module_1 = require('./layer.module');
-var layertree_details_module_1 = require('./layertree-details.module');
-var Ng2ol3LayergroupModule = (function () {
-    function Ng2ol3LayergroupModule() {
+var layertree_details_component_1 = require('./layertree-details.component');
+var Ng2ol3LayertreeDetailsModule = (function () {
+    function Ng2ol3LayertreeDetailsModule() {
     }
-    Ng2ol3LayergroupModule = __decorate([
+    Ng2ol3LayertreeDetailsModule = __decorate([
         core_1.NgModule({
             imports: [
                 common_1.CommonModule,
-                material_1.MaterialModule.forRoot(),
-                layer_module_1.Ng2ol3LayerModule,
-                layertree_details_module_1.Ng2ol3LayertreeDetailsModule],
-            declarations: [layergroup_component_1.Ng2ol3LayergroupComponent],
-            exports: [layergroup_component_1.Ng2ol3LayergroupComponent]
+                material_1.MaterialModule.forRoot()],
+            declarations: [layertree_details_component_1.Ng2ol3LayertreeDetailsComponent],
+            exports: [layertree_details_component_1.Ng2ol3LayertreeDetailsComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], Ng2ol3LayergroupModule);
-    return Ng2ol3LayergroupModule;
+    ], Ng2ol3LayertreeDetailsModule);
+    return Ng2ol3LayertreeDetailsModule;
 }());
-exports.Ng2ol3LayergroupModule = Ng2ol3LayergroupModule;
-//# sourceMappingURL=layergroup.module.js.map
+exports.Ng2ol3LayertreeDetailsModule = Ng2ol3LayertreeDetailsModule;
+//# sourceMappingURL=layertree-details.module.js.map

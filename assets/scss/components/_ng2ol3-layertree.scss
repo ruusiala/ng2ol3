@@ -7,8 +7,17 @@
             & md-list-item {
                 & .md-list-item {
                     background-color: tint($action-color, 80%) !important;
+                    & .ng2ol3-layertree-details {
+                        display: none;
+                    }
                     &:hover {
                         background-color: tint($action-color, 70%) !important;
+                        & .ng2ol3-layertree-details {
+                            display: block;
+                        }
+                        & h3 {
+                            text-decoration: underline;
+                        }
                     }
                 }
                 & md-icon {
@@ -38,8 +47,17 @@
             & md-list-item {
                 & .md-list-item {
                     background-color: tint($action-color, 90%) !important;
+                    & .ng2ol3-layertree-details {
+                        display: none;
+                    }
                     &:hover {
                         background-color: tint($action-color, 80%) !important;
+                        & .ng2ol3-layertree-details {
+                            display: block;
+                        }
+                        & h3 {
+                            text-decoration: underline;
+                        }
                     }
                 }
                 & md-icon {
@@ -59,4 +77,5 @@
             }
         }
     }
+    & .ng2ol3-layertree-details {}
 }

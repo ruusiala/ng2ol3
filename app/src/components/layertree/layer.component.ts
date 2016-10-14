@@ -9,6 +9,9 @@ import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
             <md-list-item (click)="toggleVisibility()" class="pointer">
                 <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24"></md-icon>
                 <h3 md-line>{{layer.name}}</h3>
+                <p md-line>
+                    <ng2ol3-layertree-details></ng2ol3-layertree-details>
+                </p>
             </md-list-item>
         </md-list>
     `,
@@ -36,7 +39,7 @@ export class Ng2ol3LayerComponent implements OnInit {
     }
 
     public toggleDetailsExpanded(): any {
-        this.detailsExpanded = !this.detailsExpanded;
+        // this.detailsExpanded = !this.detailsExpanded;
     }
 
 }

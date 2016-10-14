@@ -29,10 +29,10 @@ var Ng2ol3LayerComponent = (function () {
     ], Ng2ol3LayerComponent.prototype, "layer", void 0);
     Ng2ol3LayerComponent = __decorate([
         core_1.Component({
-            selector: 'ng2ol3-layer',
-            template: "\n        <md-list dense>\n            <md-list-item (click)=\"toggleVisibility()\" class=\"pointer\">\n                <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24\"></md-icon>\n                <h3 md-line>{{layer.name}}</h3>\n                <p md-line>\n                    <ng2ol3-layertree-details></ng2ol3-layertree-details>\n                </p>\n            </md-list-item>\n        </md-list>\n    ",
+            selector: 'ng2ol3-layertree-details',
+            template: "\n        <div>details are here</div>\n    ",
             host: {
-                class: 'ng2ol3-layer'
+                class: 'ng2ol3-layertree-details'
             }
         }), 
         __metadata('design:paramtypes', [])
@@ -40,4 +40,4 @@ var Ng2ol3LayerComponent = (function () {
     return Ng2ol3LayerComponent;
 }());
 exports.Ng2ol3LayerComponent = Ng2ol3LayerComponent;
-//# sourceMappingURL=layer.component.js.map
+//# sourceMappingURL=details.component.js.map
