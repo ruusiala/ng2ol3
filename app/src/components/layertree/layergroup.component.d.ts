@@ -8,6 +8,7 @@ export declare class Ng2ol3LayergroupComponent implements OnInit {
     nestedLayerGroups: Ng2ol3LayerGroup[];
     fontIcon: string;
     detailsVisible: boolean;
+    detailsHeight: string;
     constructor();
     ngOnInit(): any;
     /**Expands or closes the layergroup */

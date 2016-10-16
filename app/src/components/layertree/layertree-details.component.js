@@ -47,6 +47,10 @@ var Ng2ol3LayertreeDetailsComponent = (function () {
                 break;
         }
     };
+    Ng2ol3LayertreeDetailsComponent.prototype.haha = function () {
+        // console.log("eee");
+        //     this.divHeight = '0';
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)
@@ -55,10 +59,14 @@ var Ng2ol3LayertreeDetailsComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', Boolean)
     ], Ng2ol3LayertreeDetailsComponent.prototype, "hovered", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], Ng2ol3LayertreeDetailsComponent.prototype, "detailsHeight", void 0);
     Ng2ol3LayertreeDetailsComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layertree-details',
-            template: "\n        <div>\n        \t<md-grid-list cols=\"{{items.length}}\" rowHeight=\"20\" gutterSize=\"0px\">\n            \t<md-grid-tile *ngFor=\"let item of items\" [colspan]=\"item.cols\" [rowspan]=\"item.rows\" [style.background]=\"hovered ? item.color : '#fafafa'\" [style.color]=\"hovered ? '#484848' : '#999999'\" class=\"pointer\" (click)=\"onClick(item)\">\n                \t<md-icon class=\"md-24\" fontSet=\"{{item.fontSet}}\" fontIcon=\"{{item.fontIcon}}\"></md-icon>\n  \t\t\t\t</md-grid-tile>\n            </md-grid-list>\n        </div>\n    ",
+            template: "\n        <div [style.height]='detailsHeight'>\n        \t<md-grid-list cols=\"{{items.length}}\" rowHeight=\"{{detailsHeight}}\" gutterSize=\"0px\">\n            \t<md-grid-tile *ngFor=\"let item of items\" [colspan]=\"item.cols\" [rowspan]=\"item.rows\" [style.background]=\"item.color\" [style.color]=\"'#484848'\" class=\"pointer\" (click)=\"onClick(item)\">\n                \t<md-icon class=\"md-24\" fontSet=\"{{item.fontSet}}\" fontIcon=\"{{item.fontIcon}}\"></md-icon>\n  \t\t\t\t</md-grid-tile>\n            </md-grid-list>\n            \n        </div>\n    ",
             host: {
                 class: 'ng2ol3-layertree-details'
             }

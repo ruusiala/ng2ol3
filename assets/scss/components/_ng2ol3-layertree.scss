@@ -18,17 +18,10 @@
             &.expanded {
                 padding-bottom: 0;
             }
-            & .ng2ol3-layertree-details {
-                display: none;
-            }
             &:hover {
                 padding-bottom: 0;
                 border: 1px solid tint($action-color, 70%) !important;
                 background-color: tint($action-color, 70%) !important;
-                & .ng2ol3-layertree-details {
-                    padding-top: 5px;
-                    display: block;
-                }
             }
             & .element-icon {
                 float: left;
@@ -50,48 +43,56 @@
                 color: $medium-gray;
             }
         }
-        & .children {
-            & md-list {
-                // padding-left: 20px;
-            }
-        }
+        & .children {}
     }
     & .ng2ol3-layer {
-        & md-list {
-            & md-list-item {
-                & .md-list-item {
-                    background-color: tint($action-color, 90%) !important;
-                    // & .ng2ol3-layertree-details {
-                    //     display: none;
-                    // }
-                    &:hover {
-                        background-color: tint($action-color, 80%) !important;
-                        // & .ng2ol3-layertree-details {
-                        //     display: block;
-                        // }
-                    }
+        & .element-header {
+            $bg: tint($action-color, 90%);
+            border: 1px solid $bg !important;
+            background-color: $bg;
+            // margin-top: 5px;
+            // padding-top: 5px;
+            // padding-bottom: 5px;
+            &:hover {
+                // padding-bottom: 0;
+                border: 1px solid tint($action-color, 90%) !important;
+                background-color: tint($action-color, 90%) !important;
+            }
+            & .element-icon {
+                float: left;
+                margin-left: 5px;
+                margin-right: 15px;
+                background-color: rgba(0, 0, 0, 0) !important;
+                box-shadow: none;
+                &:hover {
+                    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+                    transform: translate3d(0, 0, 0);
+                    transition: background 400ms cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
                 }
-                & md-icon {
-                    font-size: 1.5em;
-                    line-height: 2em;
-                    text-align: center !important;
-                }
-                & h3 {
-                    font-size: 1em;
-                }
-                & .plus-info {
-                    color: $medium-gray;
-                }
+            }
+            & .element-name {
+                font-weight: normal;
+                font-size: 1em;
+            }
+            & .element-details {
+                color: $medium-gray;
             }
         }
     }
     & .ng2ol3-layertree-details {
+        padding-top: 5px;
+        & div {
+
+        overflow-y: hidden;
+        transition: height 0.2s ease;
+        }
+        // height: 0 !important;
+        // overflow-y: hidden;
+        // transition: height 2s ease;
+        // &.detailsVisible {
+        // height: 20px;
+        // }
         & .md-grid-list {
-            // color: $medium-gray;
-            // &:hover {
-            //     color: $base-font-color;
-            // }
-            // margin-top: 4px;
             & md-grid-tile {
                 & md-icon {
                     font-size: 1em;

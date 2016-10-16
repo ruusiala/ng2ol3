@@ -5,7 +5,18 @@ import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
 @Component({
     selector: 'ng2ol3-layer',
     template: `
-	    <div (mouseover)="showDetails()" (mouseout)="hideDetails()">
+        <div>
+	    	<div class="element-header" (mouseover)="showDetails()" (mouseout)="hideDetails()">
+                <div>
+                    <button class="element-icon" md-mini-fab (click)="toggleExpanded()">
+                        <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24 pointer"></md-icon>
+                    </button>
+                    <div class="element-name">{{layer.name}}</div>
+                </div>
+                <ng2ol3-layertree-details type="layer" [element]="layer" [class.detailsVisible]="detailsVisible"></ng2ol3-layertree-details>
+		    </div>
+	    </div>
+	    <!--<div (mouseover)="showDetails()" (mouseout)="hideDetails()">
 	        <md-list dense>
 	            <md-list-item>
 	                <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24 pointer" (click)="toggleVisibility()"></md-icon>
@@ -13,7 +24,7 @@ import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
 	            </md-list-item>
 	            <ng2ol3-layertree-details [element]="layer" [hovered]="detailsVisible"></ng2ol3-layertree-details>
 	        </md-list>
-	    </div>
+	    </div>-->
     `,
     host: {
         class: 'ng2ol3-layer'

@@ -16,6 +16,7 @@ var Ng2ol3LayergroupComponent = (function () {
         this.nestedLayers = [];
         this.nestedLayerGroups = [];
         this.detailsVisible = false;
+        this.detailsHeight = '0';
     }
     Ng2ol3LayergroupComponent.prototype.ngOnInit = function () {
         this.expanded = this.layerGroup.getExpanded();
@@ -38,9 +39,11 @@ var Ng2ol3LayergroupComponent = (function () {
     };
     Ng2ol3LayergroupComponent.prototype.showDetails = function () {
         this.detailsVisible = true;
+        this.detailsHeight = '20px';
     };
     Ng2ol3LayergroupComponent.prototype.hideDetails = function () {
         this.detailsVisible = false;
+        this.detailsHeight = '0';
     };
     __decorate([
         core_1.Input(), 
@@ -49,7 +52,7 @@ var Ng2ol3LayergroupComponent = (function () {
     Ng2ol3LayergroupComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layergroup',
-            template: "\n\t    <div>\n\t    \t<div class=\"element-header\" (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\" [class.expanded]=\"expanded\">\n                <div>\n                    <button class=\"element-icon\" md-mini-fab (click)=\"toggleExpanded()\">\n                        <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\"></md-icon>\n                    </button>\n                    <div class=\"element-name\">{{layerGroup.name | uppercase}}</div>\n                    <div class=\"element-details\">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>\n                </div>\n                <ng2ol3-layertree-details [element]=\"layerGroup\" [hovered]=\"detailsVisible\"></ng2ol3-layertree-details>\n                <div class=\"children\" *ngIf=\"expanded\">\n    \t            <ng2ol3-layer *ngFor=\"let l of nestedLayers\" [layer]=\"l\"></ng2ol3-layer>\n    \t        </div>\n\t\t    </div>\n\t        \n\t    </div>\n    ",
+            template: "\n\t    <div>\n\t    \t<div class=\"element-header\" (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\" [class.expanded]=\"expanded\">\n                <div>\n                    <button class=\"element-icon\" md-mini-fab (click)=\"toggleExpanded()\">\n                        <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\"></md-icon>\n                    </button>\n                    <div class=\"element-name\">{{layerGroup.name | uppercase}}</div>\n                    <div class=\"element-details\">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>\n                </div>\n                <ng2ol3-layertree-details type=\"layergroup\" [element]=\"layerGroup\" [class.detailsVisible]=\"detailsVisible\" [detailsHeight]=\"detailsHeight\"></ng2ol3-layertree-details>\n\t\t    </div>\n            <div class=\"children\" *ngIf=\"expanded\">\n                <!--<ng2ol3-layer *ngFor=\"let l of nestedLayers\" [layer]=\"l\"></ng2ol3-layer>-->\n            </div>\n\t    </div>\n    ",
             host: {
                 class: 'ng2ol3-layergroup'
             }

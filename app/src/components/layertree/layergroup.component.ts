@@ -15,12 +15,11 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
                     <div class="element-name">{{layerGroup.name | uppercase}}</div>
                     <div class="element-details">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>
                 </div>
-                <ng2ol3-layertree-details [element]="layerGroup" [hovered]="detailsVisible"></ng2ol3-layertree-details>
-                <div class="children" *ngIf="expanded">
-    	            <ng2ol3-layer *ngFor="let l of nestedLayers" [layer]="l"></ng2ol3-layer>
-    	        </div>
+                <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight"></ng2ol3-layertree-details>
 		    </div>
-	        
+            <div class="children" *ngIf="expanded">
+                <!--<ng2ol3-layer *ngFor="let l of nestedLayers" [layer]="l"></ng2ol3-layer>-->
+            </div>
 	    </div>
     `,
     host: {
@@ -37,12 +36,14 @@ export class Ng2ol3LayergroupComponent implements OnInit {
     nestedLayerGroups: Ng2ol3LayerGroup[];
     fontIcon: string;
     detailsVisible: boolean;
+    detailsHeight: string;
 
     constructor() {
         this.children = [];
         this.nestedLayers = [];
         this.nestedLayerGroups = [];
         this.detailsVisible = false;
+        this.detailsHeight = '0';
     }
 
     public ngOnInit(): any {
@@ -67,10 +68,12 @@ export class Ng2ol3LayergroupComponent implements OnInit {
 
     public showDetails(): void {
         this.detailsVisible = true;
+        this.detailsHeight = '20px';
     }
 
     public hideDetails(): void {
         this.detailsVisible = false;
+        this.detailsHeight = '0';
     }
 
 }

@@ -5,12 +5,13 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 @Component({
     selector: 'ng2ol3-layertree-details',
     template: `
-        <div>
-        	<md-grid-list cols="{{items.length}}" rowHeight="20" gutterSize="0px">
-            	<md-grid-tile *ngFor="let item of items" [colspan]="item.cols" [rowspan]="item.rows" [style.background]="hovered ? item.color : '#fafafa'" [style.color]="hovered ? '#484848' : '#999999'" class="pointer" (click)="onClick(item)">
+        <div [style.height]='detailsHeight'>
+        	<md-grid-list cols="{{items.length}}" rowHeight="{{detailsHeight}}" gutterSize="0px">
+            	<md-grid-tile *ngFor="let item of items" [colspan]="item.cols" [rowspan]="item.rows" [style.background]="item.color" [style.color]="'#484848'" class="pointer" (click)="onClick(item)">
                 	<md-icon class="md-24" fontSet="{{item.fontSet}}" fontIcon="{{item.fontIcon}}"></md-icon>
   				</md-grid-tile>
             </md-grid-list>
+            
         </div>
     `,
     host: {
@@ -21,6 +22,7 @@ export class Ng2ol3LayertreeDetailsComponent implements OnInit {
 
     @Input() element: any;
     @Input() hovered: boolean;
+    @Input() detailsHeight: string;
 
     // @Output() expandClicked = new EventEmitter();
     // @Output() visibilityClicked = new EventEmitter();
@@ -65,6 +67,11 @@ export class Ng2ol3LayertreeDetailsComponent implements OnInit {
             default:
                 break;
         }
+    }
+
+    public haha():any {
+        // console.log("eee");
+        //     this.divHeight = '0';
     }
 
 }
