@@ -47,10 +47,6 @@ var Ng2ol3LayertreeDetailsComponent = (function () {
                 break;
         }
     };
-    Ng2ol3LayertreeDetailsComponent.prototype.haha = function () {
-        // console.log("eee");
-        //     this.divHeight = '0';
-    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', Object)

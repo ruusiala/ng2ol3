@@ -69,9 +69,4 @@ export class Ng2ol3LayertreeDetailsComponent implements OnInit {
         }
     }
 
-    public haha():any {
-        // console.log("eee");
-        //     this.divHeight = '0';
-    }
-
 }

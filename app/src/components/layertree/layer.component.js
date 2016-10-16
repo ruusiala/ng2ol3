@@ -13,6 +13,7 @@ var _index_1 = require('../../models/@index');
 var Ng2ol3LayerComponent = (function () {
     function Ng2ol3LayerComponent() {
         this.detailsVisible = false;
+        this.detailsHeight = '0';
     }
     Ng2ol3LayerComponent.prototype.ngOnInit = function () {
         this.fontIcon = this.layer.getVisible() ? "ms-tiles" : "ms-tiles-o";
@@ -23,9 +24,11 @@ var Ng2ol3LayerComponent = (function () {
     };
     Ng2ol3LayerComponent.prototype.showDetails = function () {
         this.detailsVisible = true;
+        this.detailsHeight = "20px";
     };
     Ng2ol3LayerComponent.prototype.hideDetails = function () {
         this.detailsVisible = false;
+        this.detailsHeight = "0";
     };
     __decorate([
         core_1.Input(), 
@@ -34,7 +37,7 @@ var Ng2ol3LayerComponent = (function () {
     Ng2ol3LayerComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layer',
-            template: "\n        <div>\n\t    \t<div class=\"element-header\" (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\">\n                <div>\n                    <button class=\"element-icon\" md-mini-fab (click)=\"toggleExpanded()\">\n                        <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\"></md-icon>\n                    </button>\n                    <div class=\"element-name\">{{layer.name}}</div>\n                </div>\n                <ng2ol3-layertree-details type=\"layer\" [element]=\"layer\" [class.detailsVisible]=\"detailsVisible\"></ng2ol3-layertree-details>\n\t\t    </div>\n\t    </div>\n\t    <!--<div (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\">\n\t        <md-list dense>\n\t            <md-list-item>\n\t                <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\" (click)=\"toggleVisibility()\"></md-icon>\n\t                <h3 md-line>{{layer.name}}</h3>\n\t            </md-list-item>\n\t            <ng2ol3-layertree-details [element]=\"layer\" [hovered]=\"detailsVisible\"></ng2ol3-layertree-details>\n\t        </md-list>\n\t    </div>-->\n    ",
+            template: "\n        <div>\n\t    \t<div class=\"element-header\" (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\">\n                <div>\n                    <div class=\"element-icon\">\n                        <button md-mini-fab (click)=\"toggleExpanded()\">\n                            <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\"></md-icon>\n                        </button>\n                    </div>\n                    <div class=\"element-content\">\n                        <div class=\"element-name\">{{layer.name}}</div>\n                    </div>\n                </div>\n                <ng2ol3-layertree-details type=\"layer\" [element]=\"layer\" [class.detailsVisible]=\"detailsVisible\" [detailsHeight]=\"detailsHeight\"></ng2ol3-layertree-details>\n\t\t    </div>\n\t    </div>\n    ",
             host: {
                 class: 'ng2ol3-layer'
             }

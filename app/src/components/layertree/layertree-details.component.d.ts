@@ -7,5 +7,4 @@ export declare class Ng2ol3LayertreeDetailsComponent implements OnInit {
     constructor();
     ngOnInit(): any;
     onClick(item: any): void;
-    haha(): any;
 }
