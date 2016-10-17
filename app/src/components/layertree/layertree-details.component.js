@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var _index_1 = require('../../models/@index');
 var Ng2ol3LayertreeDetailsComponent = (function () {
     function Ng2ol3LayertreeDetailsComponent() {
+        this.elementClicked = new core_1.EventEmitter();
         this.items = [];
     }
     Ng2ol3LayertreeDetailsComponent.prototype.ngOnInit = function () {
@@ -27,25 +28,23 @@ var Ng2ol3LayertreeDetailsComponent = (function () {
     };
     ;
     Ng2ol3LayertreeDetailsComponent.prototype.onClick = function (item) {
-        switch (item.type) {
+        var obj = {};
+        obj.type = item.type;
+        switch (obj.type) {
             case "expand":
-                console.log("todo expand change");
                 break;
             case "visibility":
-                console.log("todo visibility change");
                 break;
             case "opacity":
-                console.log("todo opacity change");
                 break;
             case "style":
-                console.log("todo style change");
                 break;
             case "settings":
-                console.log("todo settings change");
                 break;
             default:
                 break;
         }
+        this.elementClicked.emit(obj);
     };
     __decorate([
         core_1.Input(), 
@@ -59,6 +58,10 @@ var Ng2ol3LayertreeDetailsComponent = (function () {
         core_1.Input(), 
         __metadata('design:type', String)
     ], Ng2ol3LayertreeDetailsComponent.prototype, "detailsHeight", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], Ng2ol3LayertreeDetailsComponent.prototype, "elementClicked", void 0);
     Ng2ol3LayertreeDetailsComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layertree-details',

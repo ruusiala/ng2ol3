@@ -19,7 +19,7 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
                         <div class="element-details">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>
                     </div>
                 </div>
-                <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight"></ng2ol3-layertree-details>
+                <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
 		    </div>
             <div class="children" *ngIf="expanded">
                 <ng2ol3-layer *ngFor="let l of nestedLayers" [layer]="l"></ng2ol3-layer>
@@ -78,6 +78,15 @@ export class Ng2ol3LayergroupComponent implements OnInit {
     public hideDetails(): void {
         this.detailsVisible = false;
         this.detailsHeight = '0';
+    }
+
+    public onDetailsElementClicked(obj: any) {
+        switch (obj.type) {
+            case "expand":
+                this.toggleExpanded();
+                break;
+        }
+
     }
 
 }

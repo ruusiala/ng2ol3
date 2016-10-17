@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
+import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 
 @Component({
     selector: 'ng2ol3-layer',
@@ -17,7 +17,7 @@ import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
                         <div class="element-name">{{layer.name}}</div>
                     </div>
                 </div>
-                <ng2ol3-layertree-details type="layer" [element]="layer" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight"></ng2ol3-layertree-details>
+                <ng2ol3-layertree-details type="layer" [element]="layer" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
 		    </div>
 	    </div>
     `,
@@ -57,6 +57,13 @@ export class Ng2ol3LayerComponent implements OnInit {
         this.detailsHeight = "0";
     }
 
+    public onDetailsElementClicked(obj: any) {
+        switch (obj.type) {
+            case "visibility":
+                this.toggleVisibility();
+                break;
+        }
+    }
 
 
 }

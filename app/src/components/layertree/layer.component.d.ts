@@ -10,4 +10,5 @@ export declare class Ng2ol3LayerComponent implements OnInit {
     toggleVisibility(): any;
     showDetails(): void;
     hideDetails(): void;
+    onDetailsElementClicked(obj: any): void;
 }

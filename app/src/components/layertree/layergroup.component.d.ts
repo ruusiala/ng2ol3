@@ -15,4 +15,5 @@ export declare class Ng2ol3LayergroupComponent implements OnInit {
     toggleExpanded(): void;
     showDetails(): void;
     hideDetails(): void;
+    onDetailsElementClicked(obj: any): void;
 }

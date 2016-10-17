@@ -24,11 +24,7 @@ export class Ng2ol3LayertreeDetailsComponent implements OnInit {
     @Input() hovered: boolean;
     @Input() detailsHeight: string;
 
-    // @Output() expandClicked = new EventEmitter();
-    // @Output() visibilityClicked = new EventEmitter();
-    // @Output() opacityClicked = new EventEmitter();
-    // @Output() styleClicked = new EventEmitter();
-    // @Output() settingsClicked = new EventEmitter();
+    @Output() elementClicked = new EventEmitter();
 
     items: any[];
 
@@ -48,25 +44,23 @@ export class Ng2ol3LayertreeDetailsComponent implements OnInit {
     };
 
     public onClick(item: any) {
-        switch (item.type) {
+        var obj: any = {};
+        obj.type = item.type;
+        switch (obj.type) {
             case "expand":
-                console.log("todo expand change");
                 break;
             case "visibility":
-                console.log("todo visibility change");
                 break;
             case "opacity":
-                console.log("todo opacity change");
                 break;
             case "style":
-                console.log("todo style change");
                 break;
             case "settings":
-                console.log("todo settings change");
                 break;
             default:
                 break;
         }
+        this.elementClicked.emit(obj);
     }
 
 }
