@@ -11,7 +11,6 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
                 	<md-icon class="md-24" fontSet="{{item.fontSet}}" fontIcon="{{item.fontIcon}}"></md-icon>
   				</md-grid-tile>
             </md-grid-list>
-            
         </div>
     `,
     host: {

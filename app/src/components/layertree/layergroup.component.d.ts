@@ -9,6 +9,7 @@ export declare class Ng2ol3LayergroupComponent implements OnInit {
     fontIcon: string;
     detailsVisible: boolean;
     detailsHeight: string;
+    childrenVisible: boolean;
     constructor();
     ngOnInit(): any;
     /**Expands or closes the layergroup */

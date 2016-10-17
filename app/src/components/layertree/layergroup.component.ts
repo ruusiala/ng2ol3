@@ -8,16 +8,9 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
     template: `
 	    <div>
 	    	<div class="element-header" (mouseover)="showDetails()" (mouseout)="hideDetails()" [class.expanded]="expanded">
-                <div>
-                    <div class="element-icon">
-                        <button md-mini-fab (click)="toggleExpanded()">
-                            <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24 pointer"></md-icon>
-                        </button>
-                    </div>
-                    <div class="element-content">
-                        <div class="element-name">{{layerGroup.name | uppercase}}</div>
-                        <div class="element-details">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>
-                    </div>
+                <div class="element-content">
+                    <div class="element-name">{{layerGroup.name | uppercase}}</div>
+                    <div class="element-details">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>
                 </div>
                 <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
 		    </div>
@@ -41,6 +34,7 @@ export class Ng2ol3LayergroupComponent implements OnInit {
     fontIcon: string;
     detailsVisible: boolean;
     detailsHeight: string;
+    childrenVisible: boolean;
 
     constructor() {
         this.children = [];
@@ -54,6 +48,7 @@ export class Ng2ol3LayergroupComponent implements OnInit {
         this.expanded = this.layerGroup.getExpanded();
         this.fontIcon = this.expanded ? "ms-directory-open" : "ms-directory";
         this.children = this.layerGroup.getChildren();
+        this.childrenVisible = true;
         for (let i = 0; i < this.children.length; i++) {
             let children = this.children[i];
             if (children instanceof Ng2ol3Layer) {
@@ -84,6 +79,15 @@ export class Ng2ol3LayergroupComponent implements OnInit {
         switch (obj.type) {
             case "expand":
                 this.toggleExpanded();
+                break;
+            case "visibility":
+                this.childrenVisible = !this.childrenVisible;
+                for (var i = 0; i < this.nestedLayers.length; i++) {
+                    this.nestedLayers[i].setVisible(this.childrenVisible);
+                }
+                for(var i=0; i<this.nestedLayerGroups.length; i++) {
+                    //TODO
+                }
                 break;
         }
 

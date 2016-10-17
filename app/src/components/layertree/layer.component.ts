@@ -7,15 +7,8 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
     template: `
         <div>
 	    	<div class="element-header" (mouseover)="showDetails()" (mouseout)="hideDetails()">
-                <div>
-                    <div class="element-icon">
-                        <button md-mini-fab (click)="toggleVisibility()">
-                            <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24 pointer"></md-icon>
-                        </button>
-                    </div>
-                    <div class="element-content">
-                        <div class="element-name">{{layer.name}}</div>
-                    </div>
+                <div class="element-content">
+                    <div class="element-name">{{layer.name}}</div>
                 </div>
                 <ng2ol3-layertree-details type="layer" [element]="layer" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
 		    </div>
