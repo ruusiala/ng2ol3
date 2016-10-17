@@ -60,7 +60,7 @@ export class Ng2ol3SidebarComponent implements OnInit {
     activeElement: any;
 
     constructor() {
-        this.activeElement = {type: 'any'};
+        this.activeElement = {type: 'any', title: 'Empty sidebar'};
     }
 
     public ngOnInit(): any {

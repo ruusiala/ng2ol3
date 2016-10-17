@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var _index_1 = require('../../models/@index');
 var Ng2ol3SidebarComponent = (function () {
     function Ng2ol3SidebarComponent() {
-        this.activeElement = { type: 'any' };
+        this.activeElement = { type: 'any', title: 'Empty sidebar' };
     }
     Ng2ol3SidebarComponent.prototype.ngOnInit = function () {
         this.sidebarClosed = false;
