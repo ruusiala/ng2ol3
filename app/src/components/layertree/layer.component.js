@@ -24,7 +24,7 @@ var Ng2ol3LayerComponent = (function () {
     };
     Ng2ol3LayerComponent.prototype.showDetails = function () {
         this.detailsVisible = true;
-        this.detailsHeight = "20px";
+        this.detailsHeight = "25px";
     };
     Ng2ol3LayerComponent.prototype.hideDetails = function () {
         this.detailsVisible = false;
@@ -37,7 +37,7 @@ var Ng2ol3LayerComponent = (function () {
     Ng2ol3LayerComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layer',
-            template: "\n        <div>\n\t    \t<div class=\"element-header\" (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\">\n                <div>\n                    <div class=\"element-icon\">\n                        <button md-mini-fab (click)=\"toggleExpanded()\">\n                            <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\"></md-icon>\n                        </button>\n                    </div>\n                    <div class=\"element-content\">\n                        <div class=\"element-name\">{{layer.name}}</div>\n                    </div>\n                </div>\n                <ng2ol3-layertree-details type=\"layer\" [element]=\"layer\" [class.detailsVisible]=\"detailsVisible\" [detailsHeight]=\"detailsHeight\"></ng2ol3-layertree-details>\n\t\t    </div>\n\t    </div>\n    ",
+            template: "\n        <div>\n\t    \t<div class=\"element-header\" (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\">\n                <div>\n                    <div class=\"element-icon\">\n                        <button md-mini-fab (click)=\"toggleVisibility()\">\n                            <md-icon md-list-avatar fontSet=\"ms\" fontIcon=\"{{fontIcon}}\" class=\"md-24 pointer\"></md-icon>\n                        </button>\n                    </div>\n                    <div class=\"element-content\">\n                        <div class=\"element-name\">{{layer.name}}</div>\n                    </div>\n                </div>\n                <ng2ol3-layertree-details type=\"layer\" [element]=\"layer\" [class.detailsVisible]=\"detailsVisible\" [detailsHeight]=\"detailsHeight\"></ng2ol3-layertree-details>\n\t\t    </div>\n\t    </div>\n    ",
             host: {
                 class: 'ng2ol3-layer'
             }

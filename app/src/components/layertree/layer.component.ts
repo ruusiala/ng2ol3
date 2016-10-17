@@ -9,7 +9,7 @@ import {Ng2ol3LayerGroup, Ng2ol3Layer} from '../../models/@index';
 	    	<div class="element-header" (mouseover)="showDetails()" (mouseout)="hideDetails()">
                 <div>
                     <div class="element-icon">
-                        <button md-mini-fab (click)="toggleExpanded()">
+                        <button md-mini-fab (click)="toggleVisibility()">
                             <md-icon md-list-avatar fontSet="ms" fontIcon="{{fontIcon}}" class="md-24 pointer"></md-icon>
                         </button>
                     </div>
@@ -49,7 +49,7 @@ export class Ng2ol3LayerComponent implements OnInit {
 
     public showDetails(): void {
         this.detailsVisible = true;
-        this.detailsHeight = "20px";
+        this.detailsHeight = "25px";
     }
 
     public hideDetails(): void {

@@ -11,7 +11,7 @@
         & .element-header {
             @include outer-container();
             $bg: tint($action-color, 80%);
-            border: 1px solid $bg !important;
+            // border: 1px solid $bg !important;
             background-color: $bg;
             margin-top: 5px;
             padding-top: 5px;
@@ -21,7 +21,7 @@
             }
             &:hover {
                 padding-bottom: 0;
-                border: 1px solid tint($action-color, 70%) !important;
+                // border: 1px solid tint($action-color, 70%) !important;
                 background-color: tint($action-color, 70%) !important;
             }
             & .element-icon {
@@ -57,13 +57,13 @@
         & .element-header {
             @include outer-container();
             $bg: tint($action-color, 90%);
-            border: 1px solid $bg !important;
+            // border: 1px solid $bg !important;
             background-color: $bg;
             margin-top: 0;
             padding-top: 5px;
             &:hover {
-                padding-bottom: 5px;
-                border: 1px solid tint($action-color, 80%) !important;
+                padding-bottom: 0px;
+                // border: 1px solid tint($action-color, 80%) !important;
                 background-color: tint($action-color, 80%) !important;
             }
             & .element-icon {
@@ -87,13 +87,15 @@
                 // @include omega();
                 & .element-name {
                     font-weight: normal;
-                    font-size: 1.2em;
+                    font-size: 1em;
+                    margin-top: 10px;
                 }
             }
         }
     }
     & .ng2ol3-layertree-details {
         & div {
+            @include row(table);
             padding-top: 2px;
             overflow-y: hidden;
             transition: height 0.3s ease;

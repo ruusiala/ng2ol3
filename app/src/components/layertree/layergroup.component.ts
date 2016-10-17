@@ -72,7 +72,7 @@ export class Ng2ol3LayergroupComponent implements OnInit {
 
     public showDetails(): void {
         this.detailsVisible = true;
-        this.detailsHeight = '20px';
+        this.detailsHeight = '25px';
     }
 
     public hideDetails(): void {

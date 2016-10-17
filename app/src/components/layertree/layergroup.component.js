@@ -39,7 +39,7 @@ var Ng2ol3LayergroupComponent = (function () {
     };
     Ng2ol3LayergroupComponent.prototype.showDetails = function () {
         this.detailsVisible = true;
-        this.detailsHeight = '20px';
+        this.detailsHeight = '25px';
     };
     Ng2ol3LayergroupComponent.prototype.hideDetails = function () {
         this.detailsVisible = false;
