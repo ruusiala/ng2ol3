@@ -6,17 +6,22 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 @Component({
     selector: 'ng2ol3-layergroup',
     template: `
-	    <div>
-	    	<div class="element-header" (mouseover)="showDetails()" (mouseout)="hideDetails()" [class.expanded]="expanded">
+	    <div (mouseover)="showDetails()" (mouseout)="hideDetails()">
+        <md-sidenav-layout>
+            <md-sidenav #start align="start" opened="{{detailsVisible}}" (close)="detailsVisible=false" mode="over">
+                <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
+            </md-sidenav>
+	    	<div class="element-header" [class.expanded]="expanded">
                 <div class="element-content">
                     <div class="element-name">{{layerGroup.name | uppercase}}</div>
                     <div class="element-details">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>
                 </div>
-                <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
+                <!--<ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>-->
 		    </div>
-            <div class="children" *ngIf="expanded">
+            <!--<div class="children" *ngIf="expanded">
                 <ng2ol3-layer *ngFor="let l of nestedLayers" [layer]="l"></ng2ol3-layer>
-            </div>
+            </div>-->
+        </md-sidenav-layout>
 	    </div>
     `,
     host: {
@@ -66,13 +71,15 @@ export class Ng2ol3LayergroupComponent implements OnInit {
     }
 
     public showDetails(): void {
-        this.detailsVisible = true;
-        this.detailsHeight = '25px';
+        if (!this.detailsVisible) {
+            this.detailsVisible = true;
+        }
+        this.detailsHeight = '100%';
     }
 
     public hideDetails(): void {
         this.detailsVisible = false;
-        this.detailsHeight = '0';
+        // this.detailsHeight = '0';
     }
 
     public onDetailsElementClicked(obj: any) {
@@ -85,7 +92,7 @@ export class Ng2ol3LayergroupComponent implements OnInit {
                 for (var i = 0; i < this.nestedLayers.length; i++) {
                     this.nestedLayers[i].setVisible(this.childrenVisible);
                 }
-                for(var i=0; i<this.nestedLayerGroups.length; i++) {
+                for (var i = 0; i < this.nestedLayerGroups.length; i++) {
                     //TODO
                 }
                 break;

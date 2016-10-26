@@ -3,6 +3,18 @@
     $icon-padding: 2px;
     $hoverColor: darken($base-font-color, 50%);
     $border: 1px solid red;
+    & md-sidenav-layout {
+        z-index: 100;
+        & md-sidenav {
+            background: rgba(white, 0.5);
+            width: 100%;
+        }
+        & .md-sidenav-backdrop {
+            &.md-sidenav-shown {
+                display: none !important;
+            }
+        }
+    }
     & md-list {
         margin-top: 0 !important;
         padding-top: 0 !important;
@@ -12,7 +24,7 @@
             $bg: tint($action-color, 80%);
             // border: 1px solid $bg !important;
             background-color: $bg;
-            margin-top: 5px;
+            // margin-top: 5px;
             padding-top: 5px;
             padding-bottom: 5px;
             &.expanded {
@@ -62,9 +74,9 @@
     & .ng2ol3-layertree-details {
         & div {
             @include row(table);
-            padding-top: 2px;
-            overflow-y: hidden;
-            transition: height 0.3s ease;
+            // padding-top: 2px;
+            // overflow-y: hidden;
+            // transition: height 0.3s ease;
             & .md-grid-list {
                 & md-grid-tile {
                     & md-icon {
