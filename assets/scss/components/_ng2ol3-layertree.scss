@@ -24,9 +24,7 @@
             background-color: $bg;
             padding-top: 5px;
             padding-bottom: 5px;
-            &.expanded {
-
-            }
+            &.expanded {}
             & .element-content {
                 padding-left: 10px;
                 & .element-name {
@@ -51,6 +49,7 @@
                     font-weight: normal;
                     font-size: 1em;
                     margin-top: 10px;
+                    margin-bottom: 10px;
                 }
             }
         }
