@@ -21,6 +21,7 @@ import { Ng2ol3Map } from '../../models/@index';
           <div class="sidebar-main">
           	  <div class="sidebar-title">
 	              <md-toolbar>
+                    <!--<div class="closediv">X</div>-->
 	                <span>{{activeElement.title}}</span>    
 	              </md-toolbar>
               </div>

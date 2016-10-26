@@ -13,7 +13,7 @@ var _index_1 = require('../../models/@index');
 var Ng2ol3LayerComponent = (function () {
     function Ng2ol3LayerComponent() {
         this.detailsVisible = false;
-        this.detailsHeight = '0';
+        this.detailsHeight = '100%';
     }
     Ng2ol3LayerComponent.prototype.ngOnInit = function () {
         this.fontIcon = this.layer.getVisible() ? "ms-tiles" : "ms-tiles-o";
@@ -24,11 +24,9 @@ var Ng2ol3LayerComponent = (function () {
     };
     Ng2ol3LayerComponent.prototype.showDetails = function () {
         this.detailsVisible = true;
-        this.detailsHeight = "25px";
     };
     Ng2ol3LayerComponent.prototype.hideDetails = function () {
         this.detailsVisible = false;
-        this.detailsHeight = "0";
     };
     Ng2ol3LayerComponent.prototype.onDetailsElementClicked = function (obj) {
         switch (obj.type) {
@@ -44,7 +42,7 @@ var Ng2ol3LayerComponent = (function () {
     Ng2ol3LayerComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layer',
-            template: "\n        <div>\n\t    \t<div class=\"element-header\" (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\">\n                <div class=\"element-content\">\n                    <div class=\"element-name\">{{layer.name}}</div>\n                </div>\n                <ng2ol3-layertree-details type=\"layer\" [element]=\"layer\" [class.detailsVisible]=\"detailsVisible\" [detailsHeight]=\"detailsHeight\" (elementClicked)=\"onDetailsElementClicked($event)\"></ng2ol3-layertree-details>\n\t\t    </div>\n\t    </div>\n    ",
+            template: "\n        <div>\n        \t<md-sidenav-layout (mouseover)=\"showDetails()\" (mouseout)=\"hideDetails()\">\n\t            <md-sidenav #end align=\"end\" opened=\"{{detailsVisible}}\" mode=\"over\">\n\t                <ng2ol3-layertree-details type=\"layer\" [element]=\"layer\" [class.detailsVisible]=\"detailsVisible\" [detailsHeight]=\"detailsHeight\" (elementClicked)=\"onDetailsElementClicked($event)\"></ng2ol3-layertree-details>\n\t            </md-sidenav>\n\t\t    \t<div class=\"element-header\">\n\t                <div class=\"element-content\">\n\t                    <div class=\"element-name\">{{layer.name}}</div>\n\t                </div>\n\t\t\t    </div>\n\t        </md-sidenav-layout>\n\t    </div>\n    ",
             host: {
                 class: 'ng2ol3-layer'
             }

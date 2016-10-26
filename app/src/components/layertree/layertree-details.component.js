@@ -14,19 +14,25 @@ var Ng2ol3LayertreeDetailsComponent = (function () {
     function Ng2ol3LayertreeDetailsComponent() {
         this.elementClicked = new core_1.EventEmitter();
         this.items = [];
+        this.bgOpacity = 0.6;
     }
     Ng2ol3LayertreeDetailsComponent.prototype.ngOnInit = function () {
-        this.items.push({ type: 'visibility', cols: 1, rows: 1, color: 'lightblue', fontSet: "fa", fontIcon: "fa-eye" });
-        this.items.push({ type: 'opacity', cols: 1, rows: 1, color: 'lightgreen', fontSet: "ms", fontIcon: "ms-transparency" });
+        this.items.push({ type: 'visibility', cols: 1, rows: 1, color: [173, 216, 230], fontSet: "fa", fontIcon: "fa-eye" });
+        this.items.push({ type: 'opacity', cols: 1, rows: 1, color: [144, 238, 144], fontSet: "ms", fontIcon: "ms-transparency" });
         if (this.element instanceof _index_1.Ng2ol3LayerGroup) {
-            this.items.push({ type: 'expand', cols: 1, rows: 1, color: '#ADBDF1', fontSet: "fa", fontIcon: "fa-expand" });
+            this.items.push({ type: 'expand', cols: 1, rows: 1, color: [173, 189, 241], fontSet: "fa", fontIcon: "fa-expand" });
         }
         else if (this.element instanceof _index_1.Ng2ol3Layer) {
-            this.items.push({ type: 'style', cols: 1, rows: 1, color: 'lightpink', fontSet: "ms", fontIcon: "ms-style" });
+            this.items.push({ type: 'style', cols: 1, rows: 1, color: [255, 182, 193], fontSet: "ms", fontIcon: "ms-style" });
         }
-        this.items.push({ type: 'settings', cols: 1, rows: 1, color: '#DDBDF1', fontSet: "fa", fontIcon: "fa-cog" });
+        this.items.push({ type: 'settings', cols: 1, rows: 1, color: [221, 189, 241], fontSet: "fa", fontIcon: "fa-cog" });
     };
-    ;
+    Ng2ol3LayertreeDetailsComponent.prototype._calcRGBAColor = function (rgbArray) {
+        if (rgbArray.length !== 3) {
+            rgbArray = [255, 255, 255];
+        }
+        return "rgba(" + rgbArray[0] + "," + rgbArray[1] + "," + rgbArray[2] + ", " + this.bgOpacity + ")";
+    };
     Ng2ol3LayertreeDetailsComponent.prototype.onClick = function (item) {
         var obj = {};
         obj.type = item.type;
@@ -65,7 +71,7 @@ var Ng2ol3LayertreeDetailsComponent = (function () {
     Ng2ol3LayertreeDetailsComponent = __decorate([
         core_1.Component({
             selector: 'ng2ol3-layertree-details',
-            template: "\n        <div [style.height]='detailsHeight'>\n        \t<md-grid-list cols=\"{{items.length}}\" rowHeight=\"{{detailsHeight}}\" gutterSize=\"0px\">\n            \t<md-grid-tile *ngFor=\"let item of items\" [colspan]=\"item.cols\" [rowspan]=\"item.rows\" [style.background]=\"item.color\" [style.color]=\"'#484848'\" class=\"pointer\" (click)=\"onClick(item)\">\n                \t<md-icon class=\"md-24\" fontSet=\"{{item.fontSet}}\" fontIcon=\"{{item.fontIcon}}\"></md-icon>\n  \t\t\t\t</md-grid-tile>\n            </md-grid-list>\n        </div>\n    ",
+            template: "\n        <div [style.height]='detailsHeight'>\n        \t<md-grid-list cols=\"{{items.length}}\" rowHeight=\"{{detailsHeight}}\" gutterSize=\"0px\">\n            \t<md-grid-tile *ngFor=\"let item of items\" [colspan]=\"item.cols\" [rowspan]=\"item.rows\" [style.background]=\"_calcRGBAColor(item.color)\" [style.color]=\"'#484848'\" class=\"pointer\" (click)=\"onClick(item)\">\n                \t<md-icon class=\"md-24\" fontSet=\"{{item.fontSet}}\" fontIcon=\"{{item.fontIcon}}\"></md-icon>\n  \t\t\t\t</md-grid-tile>\n            </md-grid-list>\n        </div>\n    ",
             host: {
                 class: 'ng2ol3-layertree-details'
             }

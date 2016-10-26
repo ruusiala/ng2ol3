@@ -6,22 +6,21 @@ import { Ng2ol3LayerGroup, Ng2ol3Layer } from '../../models/@index';
 @Component({
     selector: 'ng2ol3-layergroup',
     template: `
-	    <div (mouseover)="showDetails()" (mouseout)="hideDetails()">
-        <md-sidenav-layout>
-            <md-sidenav #start align="start" opened="{{detailsVisible}}" (close)="detailsVisible=false" mode="over">
-                <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
-            </md-sidenav>
-	    	<div class="element-header" [class.expanded]="expanded">
-                <div class="element-content">
-                    <div class="element-name">{{layerGroup.name | uppercase}}</div>
-                    <div class="element-details">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>
-                </div>
-                <!--<ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>-->
-		    </div>
-            <!--<div class="children" *ngIf="expanded">
+	    <div>
+	        <md-sidenav-layout (mouseover)="showDetails()" (mouseout)="hideDetails()">
+	            <md-sidenav #start align="start" opened="{{detailsVisible}}" mode="over">
+	                <ng2ol3-layertree-details type="layergroup" [element]="layerGroup" [class.detailsVisible]="detailsVisible" [detailsHeight]="detailsHeight" (elementClicked)="onDetailsElementClicked($event)"></ng2ol3-layertree-details>
+	            </md-sidenav>
+		    	<div class="element-header" [class.expanded]="expanded">
+	                <div class="element-content">
+	                    <div class="element-name">{{layerGroup.name | uppercase}}</div>
+	                    <div class="element-details">{{nestedLayerGroups.length}} layer group(s), {{nestedLayers.length}} layer(s)</div>
+	                </div>
+			    </div>
+	        </md-sidenav-layout>
+            <div class="children" *ngIf="expanded">
                 <ng2ol3-layer *ngFor="let l of nestedLayers" [layer]="l"></ng2ol3-layer>
-            </div>-->
-        </md-sidenav-layout>
+            </div>
 	    </div>
     `,
     host: {
@@ -46,7 +45,7 @@ export class Ng2ol3LayergroupComponent implements OnInit {
         this.nestedLayers = [];
         this.nestedLayerGroups = [];
         this.detailsVisible = false;
-        this.detailsHeight = '0';
+        this.detailsHeight = '100%';
     }
 
     public ngOnInit(): any {
@@ -71,15 +70,11 @@ export class Ng2ol3LayergroupComponent implements OnInit {
     }
 
     public showDetails(): void {
-        if (!this.detailsVisible) {
-            this.detailsVisible = true;
-        }
-        this.detailsHeight = '100%';
+        this.detailsVisible = true;
     }
 
     public hideDetails(): void {
         this.detailsVisible = false;
-        // this.detailsHeight = '0';
     }
 
     public onDetailsElementClicked(obj: any) {
@@ -97,7 +92,6 @@ export class Ng2ol3LayergroupComponent implements OnInit {
                 }
                 break;
         }
-
     }
 
 }
