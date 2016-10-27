@@ -52,7 +52,7 @@ export class DemoFullComponent implements OnInit {
                                     source: new ol.source.TileWMS({
                                         url: "http://188.166.116.137:8080/geoserver/wms",
                                         params: {
-                                            LAYERS: "osmWsp:v_trunk_primary",
+                                            LAYERS: "osmWsp:trunk_primary",
                                             SRS: "EPSG:900913",
                                             FORMAT: "image/png",
                                             TILED: true
@@ -69,7 +69,7 @@ export class DemoFullComponent implements OnInit {
                                     source: new ol.source.TileWMS({
                                         url: "http://188.166.116.137:8080/geoserver/wms",
                                         params: {
-                                            LAYERS: "osmWsp:v_motorway",
+                                            LAYERS: "osmWsp:motorway",
                                             SRS: "EPSG:900913",
                                             FORMAT: "image/png",
                                             TILED: true
@@ -87,7 +87,7 @@ export class DemoFullComponent implements OnInit {
                                     source: new ol.source.TileWMS({
                                         url: "http://188.166.116.137:8080/geoserver/wms",
                                         params: {
-                                            LAYERS: "osmWsp:v_country",
+                                            LAYERS: "osmWsp:country",
                                             SRS: "EPSG:900913",
                                             FORMAT: "image/png",
                                             TILED: true
