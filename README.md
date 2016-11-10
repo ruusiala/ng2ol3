@@ -26,6 +26,6 @@ Ng2ol3 has been updated to work with the latest Angular2 (2.1.1) and TypeScript2
 <img src="assets/img/screenshots/demo_20161013_03.png" width="100%">
 
 ## Author
-```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://188.166.116.137)
+```ng2ol3``` was created by [Gergely Padányi-Gulyás](http://gpadanyig.com)
 
 <img src="assets/img/logo/favicon-96x96.png">
